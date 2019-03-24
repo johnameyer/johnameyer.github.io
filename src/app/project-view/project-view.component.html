@@ -1,0 +1,15 @@
+<div class="row justify-content-md-center m-2" *ngIf="project$ | async as project">
+  <div class="col-md-7">
+    <h1>{{project.title}}</h1>
+    <h2>{{project.dates}}</h2>
+    <p>{{project.awards | json}}</p>
+    <p>{{project.desc}}</p>
+    <span><span *ngFor="let tech of project.technologies" [style.background-color]="getColor(tech)" class="badge">{{tech}}</span></span>
+    <br>
+    <a href="{{project.github}}">To Github</a>
+    <a *ngFor="let link of project.links" href="{{link}}">Link</a>
+  </div>
+  <div class="col-md-3">
+    <img *ngIf="project.cardImg" class="img-responsive" src="{{project.cardImg}}" alt="Card image cap">
+  </div>
+</div>
