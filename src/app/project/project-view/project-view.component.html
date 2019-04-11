@@ -3,7 +3,8 @@
     <h1>{{project.title}}</h1>
     <h2>{{project.dates}}</h2>
     <p>{{project.awards | json}}</p>
-    <p>{{project.desc}}</p>
+    <p *ngIf="project.desc.length > 0; else noDesc">{{project.desc}}</p>
+    <ng-template #noDesc><p>{{project.shortDesc}}</p></ng-template>
     <span><span *ngFor="let tech of project.technologies" [style.background-color]="getColor(tech)" class="badge">{{tech}}</span></span>
     <br>
     <a href="{{project.github}}">To Github</a>

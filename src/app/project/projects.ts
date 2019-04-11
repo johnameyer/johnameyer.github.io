@@ -1,4 +1,26 @@
-export const projects = [
+class Project {
+    slug: string;
+    title: string;
+    cardImg?: string;
+    dates: string;
+    awards: Award[];
+    shortDesc: string;
+    desc: string;
+    technologies: string[];
+    github?: string;
+    links?: string[];
+    hackathon ? = false;
+    startup ? = false;
+}
+
+class Award {
+    award: string;
+    from: string;
+    date: string;
+    of?: string;
+}
+
+export const projects: Project[] = [
     {
         slug: 'rtb',
         title: 'Team Raise the Bar',
@@ -6,7 +28,7 @@ export const projects = [
         dates: '9/2016 - 1/2017',
         awards: [
             {
-                award: '3rd place National Finalist',
+                award: 'Third Place National Finalist',
                 from: 'AT&T Hackathon Invitational',
                 date: '2017',
                 of: '20 teams (winners of other hackathons) selected nationally'
@@ -19,7 +41,7 @@ export const projects = [
             },
         ],
         shortDesc: 'Developed an application for Android that interfaced with a smart' +
-                    ' weight bar (TI SensorTag) and calculated reps and other statistics',
+        ' weight bar (TI SensorTag) and calculated reps and other statistics',
         desc: '',
         technologies: ['Android', 'Bluetooth Low Energy', 'PHP'],
         github: 'https://github.com/johnameyer/rtb-android-client',
@@ -28,7 +50,8 @@ export const projects = [
             'https://developer.att.com/blog/notre-dame-hackathon-winners-2016',
             'https://developer.att.com/blog/hackathon-invitational-finalists',
             'https://developer.att.com/blog/2017-summit-challenge-winners'
-        ]
+        ],
+        hackathon: true
     },
     {
         slug: 'rasduino',
@@ -38,17 +61,24 @@ export const projects = [
         shortDesc: '\'Mood\' music playlist generator based on live environmental conditions',
         desc: '',
         technologies: ['Android', 'Raspberry Pi', 'NodeRed', 'Spotify API'],
-        github: 'https://github.com/johnameyer/rasduino'
+        github: 'https://github.com/johnameyer/rasduino',
+        hackathon: true
     },
     {
         slug: 'reach',
         title: 'Reach',
         dates: '2/2017',
-        awards: [],
+        awards: [{
+            award: 'Third Place',
+            from: 'Startup Weekend',
+            date: '2017',
+            of: ''
+        }],
         shortDesc: 'Live shareable contact cards that follow you wherever you go',
         desc: '',
         technologies: ['Android', 'Flask'],
-        github: ''
+        github: '',
+        startup: true
     },
     {
         slug: 'dunne',
@@ -65,7 +95,8 @@ export const projects = [
         title: 'Engage',
         dates: '',
         awards: [],
-        shortDesc: '',
+        shortDesc: 'Project started at the Mobile Computing Lab with the intention of increasing public awareness'
+        + 'of new technology in ones\' area',
         desc: '',
         technologies: ['Ionic', 'Angular', 'Typescript', 'Firebase'],
         github: 'https://github.com/ndmobilecomplab/Engage'
@@ -85,20 +116,22 @@ export const projects = [
         title: 'Fluffle',
         dates: '',
         awards: [],
-        shortDesc: '',
+        shortDesc: 'Smart bed application that detects seizures',
         desc: '',
-        technologies: '',
-        github: ''
+        technologies: [],
+        github: '',
+        hackathon: true
     },
     {
         slug: 'battuta',
         title: 'Battuta',
         dates: '',
         awards: [],
-        shortDesc: '',
+        shortDesc: 'Web project / startup concept consisting of "tour videos" placed on the map',
         desc: '',
-        technologies: ['PHP', 'Javascript', 'Youtube API'],
-        github: 'https://github.com/johnameyer/battuta-web'
+        technologies: ['PHP', 'Javascript', 'Google Maps API', 'Youtube API'],
+        github: 'https://github.com/johnameyer/battuta-web',
+        startup: true
     },
     {
         slug: 'sri',
@@ -114,11 +147,16 @@ export const projects = [
         slug: 'lucy',
         title: 'Lucy',
         dates: '2/2018',
-        awards: [],
+        awards: [{
+            award: 'Second Place',
+            from: 'Startup Weekend',
+            date: '2018'
+        }],
         shortDesc: 'Prototype software for a gig economy centered around recurring jobs like lawn care and grocery pickup',
         desc: '',
         technologies: [],
-        github: ''
+        github: '',
+        startup: true
     },
     {
         slug: 'ndht',

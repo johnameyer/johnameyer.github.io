@@ -10,7 +10,8 @@ const mapping = {
     javascript: 'JavaScript',
     mysql: 'SQL',
     opencv: 'OpenCV',
-    swing: 'Java'
+    swing: 'Java',
+    nodered: 'JavaScript'
 };
 
 export default class ColorUtil {

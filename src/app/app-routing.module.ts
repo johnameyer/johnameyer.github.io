@@ -1,11 +1,27 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ProjectsListComponent } from './projects-list/projects-list.component';
-import { ProjectViewComponent } from './project-view/project-view.component';
+import { ProjectsListComponent } from './project/projects-list/projects-list.component';
+import { ProjectViewComponent } from './project/project-view/project-view.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  { path: 'projects', component: ProjectsListComponent },
-  { path: 'project/:slug', component: ProjectViewComponent}
+  {
+    path: 'project',
+    loadChildren: './project/project.module#ProjectModule'
+  },
+  {
+    path: 'course',
+    loadChildren: './course/course.module#CourseModule'
+  },
+  {
+    path: '',
+    pathMatch: 'full',
+    component: HomeComponent
+  },
+  {
+    path: '**',
+    redirectTo: ''
+  }
 ];
 
 @NgModule({

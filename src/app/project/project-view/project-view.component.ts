@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { projects } from '../projects';
-import ColorUtil from '../color-util';
+import ColorUtil from '../../color-util';
 
 @Component({
   selector: 'app-project-view',
