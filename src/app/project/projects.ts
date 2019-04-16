@@ -1,28 +1,4 @@
-export class Project {
-    title: string;
-    img?: string;
-    dates: string;
-    desc: string;
-    technologies: string[];
-    github?: string;
-    links?: string[];
-    hackathon ? = false;
-    startup ? = false;
-    outcomes?: string;
-}
-
-export class StandaloneProject extends Project {
-    shortDesc: string;
-    slug: string;
-    awards: Award[];
-}
-
-class Award {
-    award: string;
-    from: string;
-    date: string;
-    of?: string;
-}
+import { StandaloneProject } from '../models/standalone-project';
 
 export const projects: StandaloneProject[] = [
     {

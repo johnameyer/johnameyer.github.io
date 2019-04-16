@@ -7,11 +7,14 @@
   
   <div class="collapse navbar-collapse" id="navbarSupportedContent" [ngbCollapse]="isCollapsed">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" [routerLink]="'/project'">Projects</a>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'/project'" [routerLinkActive]="'link-active'">Projects</a>
       </li>
-      <li class="nav-item active">
-        <a class="nav-link" [routerLink]="'/course'">Coursework</a>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'/course'" [routerLinkActive]="'link-active'">Coursework</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'/resume'" [routerLinkActive]="'link-active'">Resume</a>
       </li>
     </ul>
   </div>

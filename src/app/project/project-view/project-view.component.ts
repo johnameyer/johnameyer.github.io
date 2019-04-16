@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { projects, StandaloneProject } from '../projects';
+import { projects } from '../projects';
 import ColorUtil from '../../color-util';
+import { StandaloneProject } from 'src/app/models/standalone-project';
 
 @Component({
   selector: 'app-project-view',

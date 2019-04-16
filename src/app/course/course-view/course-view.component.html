@@ -19,8 +19,15 @@
             <ng-container *ngIf="project.links">
               <b>Links:</b>
               <div *ngFor="let link of project.links">
-                <a [href]="link">{{link}}</a>
+                <span *ngIf="link.type; else linkStr">
+                  <fa-icon [icon]="['fab', link.type]"></fa-icon>
+                  <a [href]="link.link" class="ml-1">{{link.link}}</a> {{link.desc}}
+                </span>
+                <ng-template #linkStr>
+                  <a [href]="link">{{link}}</a>
+                </ng-template>
                 <br>
+                
               </div>
             </ng-container>
           </div>

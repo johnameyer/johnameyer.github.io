@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ProjectsListComponent } from './project/projects-list/projects-list.component';
-import { ProjectViewComponent } from './project/project-view/project-view.component';
 import { HomeComponent } from './home/home.component';
+import { ResumeViewComponent } from './resume-view/resume-view.component';
 
 const routes: Routes = [
   {
@@ -12,6 +11,11 @@ const routes: Routes = [
   {
     path: 'course',
     loadChildren: './course/course.module#CourseModule'
+  },
+  {
+    path: 'resume',
+    pathMatch: 'full',
+    component: ResumeViewComponent
   },
   {
     path: '',

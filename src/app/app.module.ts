@@ -9,12 +9,15 @@ import { AppComponent } from './app.component';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faAward, faLightbulb, faFlask } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { HomeComponent } from './home/home.component';
+import { ResumeViewComponent } from './resume-view/resume-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    ResumeViewComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +31,6 @@ import { HomeComponent } from './home/home.component';
 export class AppModule {
   constructor() {
     // Add an icon to the library for convenient access in other components
-    library.add(faAward, faLightbulb, faFlask);
+    library.add(faAward, faLightbulb, faFlask, faGithub, faYoutube);
   }
 }

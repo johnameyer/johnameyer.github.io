@@ -1,15 +1,4 @@
-import { Project } from '../project/projects';
-
-export class Course {
-    subj: string;
-    num: number;
-    name: string;
-    hidden ? = false;
-    desc ?: string;
-    primaryLang ?: string;
-    semester ?: string;
-    projects ?: Project[];
-}
+import { Course } from '../models/course';
 
 export const courses: Course[] = [
     {
@@ -126,7 +115,13 @@ as well as set a desired wake-up and bedtime which our model would then appropri
 the time of day. We had developed a linear model matching each channel of our bulb to coordinates in the CIE color space using provided \
 color matching functions. Our system then powered an Arduino to appropriately modulate (PWM) the desired channel to give the bulb a \
 certain hue and brightness',
-                links: ['https://www.youtube.com/watch?v=PaCzTv-gPG4']
+                links: [
+                    {
+                        link: 'https://www.youtube.com/watch?v=PaCzTv-gPG4',
+                        type: 'youtube',
+                        description: 'Final video presentation of our project.'
+                    }
+                ]
             }
         ]
     },

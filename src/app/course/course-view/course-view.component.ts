@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { courses, Course } from '../courses';
+import { courses } from '../courses';
 import ColorUtil from '../../color-util';
+import { Course } from 'src/app/models/course';
 
 @Component({
   selector: 'app-course-view',
