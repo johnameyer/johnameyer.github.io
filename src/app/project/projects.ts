@@ -1,16 +1,20 @@
-class Project {
-    slug: string;
+export class Project {
     title: string;
-    cardImg?: string;
+    img?: string;
     dates: string;
-    awards: Award[];
-    shortDesc: string;
     desc: string;
     technologies: string[];
     github?: string;
     links?: string[];
     hackathon ? = false;
     startup ? = false;
+    outcomes?: string;
+}
+
+export class StandaloneProject extends Project {
+    shortDesc: string;
+    slug: string;
+    awards: Award[];
 }
 
 class Award {
@@ -20,11 +24,11 @@ class Award {
     of?: string;
 }
 
-export const projects: Project[] = [
+export const projects: StandaloneProject[] = [
     {
         slug: 'rtb',
         title: 'Team Raise the Bar',
-        cardImg: 'https://developer.att.com/wp-content/uploads/2016/12/hack-finalist-raise-the-bar-sm.png',
+        img: 'https://developer.att.com/wp-content/uploads/2016/12/hack-finalist-raise-the-bar-sm.png',
         dates: '9/2016 - 1/2017',
         awards: [
             {

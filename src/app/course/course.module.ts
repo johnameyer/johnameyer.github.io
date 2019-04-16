@@ -5,11 +5,13 @@ import { CoursesListComponent } from './courses-list/courses-list.component';
 import { CourseRoutingModule } from './course-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { CourseItemComponent } from './course-item/course-item.component';
 
 @NgModule({
   declarations: [
     CoursesListComponent,
-    CourseViewComponent
+    CourseViewComponent,
+    CourseItemComponent
   ],
   imports: [
     CommonModule,

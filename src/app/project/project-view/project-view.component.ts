@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { projects } from '../projects';
+import { projects, StandaloneProject } from '../projects';
 import ColorUtil from '../../color-util';
 
 @Component({
@@ -11,7 +11,7 @@ import ColorUtil from '../../color-util';
   styleUrls: ['./project-view.component.scss']
 })
 export class ProjectViewComponent implements OnInit {
-  project$: Observable<any>;
+  project$: Observable<StandaloneProject>;
 
   constructor(private route: ActivatedRoute) { }
 

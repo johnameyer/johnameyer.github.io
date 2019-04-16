@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterContentChecked, ViewChild, ElementRef } from '@angular/core';
+import { Component, ViewChild, ElementRef, AfterViewChecked } from '@angular/core';
 import { courses } from '../courses';
 import * as Masonry from 'masonry-layout';
 
@@ -7,7 +7,7 @@ import * as Masonry from 'masonry-layout';
   templateUrl: './courses-list.component.html',
   styleUrls: ['./courses-list.component.scss']
 })
-export class CoursesListComponent implements AfterContentChecked {
+export class CoursesListComponent implements AfterViewChecked {
 
   @ViewChild('grid') gridElem: ElementRef;
   courses = courses;
@@ -15,7 +15,7 @@ export class CoursesListComponent implements AfterContentChecked {
 
   constructor() { }
 
-  ngAfterContentChecked() {
+  ngAfterViewChecked() {
     this.grid = new Masonry( this.gridElem.nativeElement, {
       itemSelector: '.grid-item',
       percentPosition: true

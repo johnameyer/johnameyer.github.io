@@ -1,4 +1,6 @@
-class Course {
+import { Project } from '../project/projects';
+
+export class Course {
     subj: string;
     num: number;
     name: string;
@@ -6,6 +8,7 @@ class Course {
     desc ?: string;
     primaryLang ?: string;
     semester ?: string;
+    projects ?: Project[];
 }
 
 export const courses: Course[] = [
@@ -108,7 +111,24 @@ disciplines. Multidisciplinary projects are used to illustrate the application o
 to solve a variety of practical problems. The projects are intended to span areas of interest in all departments of the College of \
 Engineering. Structured programming and software skills are further developed. Spring.',
         primaryLang: 'Matlab',
-        semester: 'Spring 2017'
+        semester: 'Spring 2017',
+        projects: [
+            {
+                title: 'GE Align Lighting',
+                dates: 'Semester-long',
+                desc: 'Our group was tasked with developing a model and prototype for a single energy-efficient, color-tunable LED \
+light bulb capable of producing both the energizing effect of the GE Align AM bulb and the soothing effect of the GE Align PM bulb. \
+A combined AM/PM bulb is easier for customers to install and use, and enables them to manage their circadian rhythms more effectively.',
+                technologies: ['Matlab', 'Arduino'],
+                img: '/assets/GE-Align.png',
+                outcomes: 'Developed an application that would allow a user to manually specify the hue they desired the bulb to show, \
+as well as set a desired wake-up and bedtime which our model would then appropriately change to simulate the AM and PM bulbs based on \
+the time of day. We had developed a linear model matching each channel of our bulb to coordinates in the CIE color space using provided \
+color matching functions. Our system then powered an Arduino to appropriately modulate (PWM) the desired channel to give the bulb a \
+certain hue and brightness',
+                links: ['https://www.youtube.com/watch?v=PaCzTv-gPG4']
+            }
+        ]
     },
     {
         subj: 'FYS',
@@ -144,7 +164,20 @@ structures, graphs, and machine computation.',
         desc: 'Boolean algebra and switching circuits, Karnaugh maps, design of combinational and of sequential logic networks, and \
 sequential machines.',
         primaryLang: 'Verilog',
-        semester: 'Fall 2017'
+        semester: 'Fall 2017',
+        projects: [
+            {
+                title: 'Brok-man',
+                dates: 'Final Project',
+                desc: 'The goal behind the final project was to make an application for the Altera FPGA board in Verilog that also \
+utilized a VGA connection to a screen as well as a keyboard input. We eventually decided to make a game because it best fit these \
+goals and seemed entertaining.',
+                outcomes: 'In the end, we implemented Brok-Man, a clone of Pac-Man named after our professor. As seen in the video, \
+one can move the character around the level, avoiding the ghosts while picking up points along the way.',
+                technologies: ['Verilog'],
+                links: ['https://www.youtube.com/watch?v=cSL-TNYXvBs']
+            }
+        ]
     },
     {
         subj: 'CSE',
@@ -156,7 +189,16 @@ analyzing it conceptually, to designing, implementing, and testing a program on 
 basic design principles for programs, students learn to define basic data structures, such as lists and trees, and to apply various \
 algorithms for operating on them. The course also introduces object-oriented methods.',
         primaryLang: 'C++',
-        semester: 'Fall 2017'
+        semester: 'Fall 2017',
+        projects: [
+            {
+                title: 'Final Project',
+                dates: '',
+                technologies: ['C++'],
+                desc: 'Developed on my own an implementation of Pac-Man more similar to the original game using C++ and a simple \
+graphics library',
+            }
+        ]
     },
     {
         subj: 'EG',
@@ -198,7 +240,17 @@ course will focus these topics on design and use of elementary data structures s
 advanced techniques such as divide-and-conquer, sorting, searching and graph algorithms. More advanced data structures such as priority \
 queues and search trees will also be covered.',
         primaryLang: 'C++',
-        semester: 'Spring 2018'
+        semester: 'Spring 2018',
+        projects: [
+            {
+                title: 'Hungry Leprechaun',
+                dates: '',
+                technologies: ['PHP', 'C++', 'Bootstrap', 'Google Maps'],
+                desc: 'The project goal was to develop an application using an interesting (not discussed in class) data structure. We chose to use a kd-tree implementation to easily manipulate locational data',
+                outcomes: 'We successfully developed an application that allows you to query restaurants around Notre Dame\'s campus, finding those closest to you, and plotting them on a map',
+                links: ['https://github.com/lukesonggg/HungryLeprechaun']
+            }
+        ]
     },
     {
         subj: 'CSE',

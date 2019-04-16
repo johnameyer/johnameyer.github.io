@@ -1,3 +1,40 @@
-<p>
-  course-view works!
-</p>
+<div class="m-2" *ngIf="course$ | async as course; else notFound">
+  <div>
+    <h1>{{course.name}}</h1>
+    <h2>{{course.semester}}</h2>
+    <h4>Formal Class Description:</h4>
+    <p>{{course.desc}}</p>
+    <div *ngIf="course.projects">
+      <h4>Coursework:</h4>
+      <div *ngFor="let project of course.projects; let index = index">
+        <h5>{{project.title}}</h5>
+        <div class="row">
+          <div class="col-lg">
+            <b *ngIf="project.outcomes">Description:</b> {{project.desc}}
+            <br>
+            <ng-container *ngIf="project.outcomes">
+              <b>Outcomes: </b>{{project.outcomes}}
+              <br>
+            </ng-container>
+            <ng-container *ngIf="project.links">
+              <b>Links:</b>
+              <div *ngFor="let link of project.links">
+                <a [href]="link">{{link}}</a>
+                <br>
+              </div>
+            </ng-container>
+          </div>
+          <div *ngIf="project.img" class="col-lg-5">
+            <img [src]="project.img" class="img-fluid">
+          </div>
+        </div>
+      </div>
+      <br *ngIf="index != 0">
+    </div>
+  </div>
+</div>
+<ng-template #notFound>
+  <p>
+    Course not found
+  </p>
+</ng-template>

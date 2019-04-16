@@ -24,8 +24,4 @@ export class ProjectsListComponent implements AfterContentChecked {
       });
     });
   }
-
-  getAwardsJoined(awards: any[]): string {
-    return awards.map(award => award.award + ' (' + award.from + ')').join(' & ');
-  }
 }

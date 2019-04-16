@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { courses, Course } from '../courses';
+import ColorUtil from '../../color-util';
 
 @Component({
   selector: 'app-course-view',
@@ -6,10 +11,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./course-view.component.scss']
 })
 export class CourseViewComponent implements OnInit {
+  course$: Observable<Course>;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    ColorUtil.init();
+    this.course$ = this.route.params.pipe(map(params => courses.find(course => params.slug === course.subj + course.num)));
   }
 
 }
