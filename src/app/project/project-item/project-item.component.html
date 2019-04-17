@@ -1,11 +1,13 @@
 <div class="card">
-  <img *ngIf="project.img" class="card-img-top" src="{{project.img}}" alt="Card image cap">
+  <img *ngIf="project.img" class="card-img-top" [src]="project.img">
+  <!--TODO different form for mobile devices-->
   <div class="card-body">
     <h5 class="card-title">
       {{project.title}}
       <fa-icon *ngIf="project.awards.length > 0" [icon]="['fas', 'award']" [title]="getAwardsJoined(project.awards)"></fa-icon>
       <fa-icon *ngIf="project.hackathon" [icon]="['fas', 'lightbulb']" title="Hackathon Project"></fa-icon>
       <fa-icon *ngIf="project.startup" [icon]="['fas', 'flask']" title="Startup Weekend Project"></fa-icon>
+      <fa-icon *ngIf="project.live" [icon]="['fab','chrome']" title="Live Product"></fa-icon>
     </h5>
     <h6 class="card-subtitle mb-2 text-muted">{{project.dates}}</h6>
     <p class="card-text">{{project.shortDesc}}</p>

@@ -1,6 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">John Meyer</a>
+  <a class="navbar-brand" routerLink="/">John Meyer</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -8,13 +8,13 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent" [ngbCollapse]="isCollapsed">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="'/project'" [routerLinkActive]="'link-active'">Projects</a>
+        <a class="nav-link" routerLink="/project" routerLinkActive="link-active" (click)="isCollapsed = true">Projects</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="'/course'" [routerLinkActive]="'link-active'">Coursework</a>
+        <a class="nav-link" routerLink="/course" routerLinkActive="link-active" (click)="isCollapsed=true">Coursework</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="'/resume'" [routerLinkActive]="'link-active'">Resume</a>
+        <a class="nav-link" routerLink="/resume" routerLinkActive="link-active" (click)="isCollapsed = true">Resume</a>
       </li>
     </ul>
   </div>

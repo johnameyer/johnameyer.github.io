@@ -170,7 +170,13 @@ goals and seemed entertaining.',
                 outcomes: 'In the end, we implemented Brok-Man, a clone of Pac-Man named after our professor. As seen in the video, \
 one can move the character around the level, avoiding the ghosts while picking up points along the way.',
                 technologies: ['Verilog'],
-                links: ['https://www.youtube.com/watch?v=cSL-TNYXvBs']
+                links: [
+                    {
+                        link: 'https://www.youtube.com/watch?v=cSL-TNYXvBs',
+                        description: '',
+                        type: 'youtube'
+                    }
+                ]
             }
         ]
     },
@@ -281,7 +287,17 @@ relational databases, the course presents the entity-relationship model, query p
 calculus and algebra, integrity constraints, distributed databases, and data security will also be discussed. A final project will \
 consist of the design and the implementation of a database system with a Web interface.',
         primaryLang: 'PHP',
-        semester: 'Fall 2018'
+        semester: 'Fall 2018',
+        projects: [
+            {
+                title: 'Breaddit',
+                dates: 'Semester-long',
+                desc: '',
+                technologies: ['PHP', 'MySQL'],
+                links: ['https://github.com/samanthaccorn/reddit_data_processing'],
+                img: '/assets/databases.png'
+            }
+        ]
     },
     {
         subj: 'CSE',

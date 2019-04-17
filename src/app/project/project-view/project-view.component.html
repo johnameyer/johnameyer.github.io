@@ -1,16 +1,42 @@
 <div class="row justify-content-md-center m-2" *ngIf="project$ | async as project">
-  <div class="col-md-7">
+  <div class="col-md">
     <h1>{{project.title}}</h1>
     <h2>{{project.dates}}</h2>
-    <p>{{project.awards | json}}</p>
-    <p *ngIf="project.desc.length > 0; else noDesc">{{project.desc}}</p>
-    <ng-template #noDesc><p>{{project.shortDesc}}</p></ng-template>
-    <span><span *ngFor="let tech of project.technologies" [style.background-color]="getColor(tech)" class="badge">{{tech}}</span></span>
+    <div class="div">
+      <b *ngIf="project.outcomes">Description:</b>
+      <p *ngIf="project.desc.length > 0; else noDesc">{{project.desc}}</p>
+      <ng-template #noDesc><p>{{project.shortDesc}}</p></ng-template>
+    </div>
+    <div>
+      <ng-container *ngIf="project.outcomes">
+        <b>Outcomes:</b>
+        <p>{{project.outcomes}}</p>
+      </ng-container>
+    </div>
+    <span>Built on: <span *ngFor="let tech of project.technologies" [style.background-color]="getColor(tech)" class="badge">{{tech}}</span></span>
     <br>
-    <a href="{{project.github}}">To Github</a>
-    <a *ngFor="let link of project.links" href="{{link}}">Link</a>
+    <ng-container *ngIf="project.awards && project.awards.length">
+      <h4>Awards:</h4>
+      <div *ngFor="let award of project.awards">
+        <b>{{award.award}}</b> ({{award.from}}) - {{award.date}}
+        <br>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="project.links && project.links.length">
+      <h4>Links:</h4>
+      <div *ngFor="let link of project.links">
+        <span *ngIf="link.type; else linkStr">
+          <fa-icon [icon]="getIcon(link.type)"></fa-icon>
+          <a [href]="link.link" class="ml-1">{{link.link}}</a> {{link.desc}}
+        </span>
+        <ng-template #linkStr>
+          <a [href]="link">{{link}}</a>
+        </ng-template>
+        <br>
+      </div>
+    </ng-container>
   </div>
-  <div class="col-md-3">
-    <img *ngIf="project.img" class="img-responsive" src="{{project.img}}" alt="Card image cap">
+  <div class="col-md-auto" id="projectImg">
+    <img *ngIf="project.img" class="img-fluid d-block mx-auto border border-dark" src="{{project.img}}" alt="Card image cap">
   </div>
 </div>

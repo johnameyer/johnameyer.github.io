@@ -23,4 +23,6 @@ export class ProjectViewComponent implements OnInit {
 
   getColor = (tech: string) => ColorUtil.getColor(tech);
 
+  getIcon = (type: string | string[]): string[] => Array.isArray(type) ? type : ['fab', type];
+
 }

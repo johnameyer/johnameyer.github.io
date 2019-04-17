@@ -6,9 +6,9 @@ export class Project {
     dates: string;
     desc: string;
     technologies: string[];
-    github?: string;
     links?: GenericLink[];
     hackathon ? = false;
     startup ? = false;
+    live ? = false;
     outcomes?: string;
 }
