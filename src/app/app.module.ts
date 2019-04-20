@@ -12,12 +12,15 @@ import { faAward, faLightbulb, faFlask } from '@fortawesome/free-solid-svg-icons
 import { faGithub, faYoutube, faChrome } from '@fortawesome/free-brands-svg-icons';
 import { HomeComponent } from './home/home.component';
 import { ResumeViewComponent } from './resume-view/resume-view.component';
+import { ProjectItemComponent } from './project/project-item/project-item.component';
+import { HomeItemComponent } from './home-item/home-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ResumeViewComponent
+    ResumeViewComponent,
+    HomeItemComponent
   ],
   imports: [
     BrowserModule,

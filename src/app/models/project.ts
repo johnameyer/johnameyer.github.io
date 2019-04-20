@@ -4,6 +4,7 @@ export class Project {
     title: string;
     img?: string;
     dates: string;
+    shortDesc: string;
     desc: string;
     technologies: string[];
     links?: GenericLink[];

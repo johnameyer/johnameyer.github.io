@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef, AfterContentChecked, OnInit, AfterViewInit, AfterViewChecked } from '@angular/core';
+import { Component, ViewChild, ElementRef, AfterViewInit, AfterViewChecked, OnDestroy } from '@angular/core';
 import { projects } from '../projects';
 import * as Masonry from 'masonry-layout';
 import * as imagesLoaded from 'imagesloaded';
@@ -8,11 +8,12 @@ import * as imagesLoaded from 'imagesloaded';
   templateUrl: './projects-list.component.html',
   styleUrls: ['./projects-list.component.scss']
 })
-export class ProjectsListComponent implements AfterViewInit, AfterViewChecked {
+export class ProjectsListComponent implements AfterViewInit, AfterViewChecked, OnDestroy {
 
   @ViewChild('grid') gridElem: ElementRef;
   projects = projects;
   grid: any = null;
+  loadListener: any;
 
   constructor() { }
 
@@ -24,6 +25,12 @@ export class ProjectsListComponent implements AfterViewInit, AfterViewChecked {
   }
 
   ngAfterViewChecked() {
-    imagesLoaded(this.gridElem.nativeElement, () => this.grid.layout());
+    if (!this.loadListener) {
+      this.loadListener = imagesLoaded(this.gridElem.nativeElement).on('progress', () => this.grid.layout());
+    }
+  }
+
+  ngOnDestroy() {
+    this.loadListener = null;
   }
 }

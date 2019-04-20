@@ -13,7 +13,10 @@
         <p>{{project.outcomes}}</p>
       </ng-container>
     </div>
-    <span>Built on: <span *ngFor="let tech of project.technologies" [style.background-color]="getColor(tech)" class="badge">{{tech}}</span></span>
+    <span *ngIf="project.technologies && project.technologies.length">
+      Built on: 
+      <span *ngFor="let tech of project.technologies" [style.background-color]="getColor(tech)" class="badge">{{tech}}</span>
+    </span>
     <br>
     <ng-container *ngIf="project.awards && project.awards.length">
       <h4>Awards:</h4>

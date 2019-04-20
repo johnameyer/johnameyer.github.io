@@ -105,6 +105,7 @@ Engineering. Structured programming and software skills are further developed. S
             {
                 title: 'GE Align Lighting',
                 dates: 'Semester-long',
+                shortDesc: 'Software application built to drive a multi-channel colored lightbulb using Matlab and Arduino',
                 desc: 'Our group was tasked with developing a model and prototype for a single energy-efficient, color-tunable LED \
 light bulb capable of producing both the energizing effect of the GE Align AM bulb and the soothing effect of the GE Align PM bulb. \
 A combined AM/PM bulb is easier for customers to install and use, and enables them to manage their circadian rhythms more effectively.',
@@ -164,6 +165,7 @@ sequential machines.',
             {
                 title: 'Brok-man',
                 dates: 'Final Project',
+                shortDesc: 'Pac-Man-esque game implemented on a FPGA board using a keyboard and VGA monitor',
                 desc: 'The goal behind the final project was to make an application for the Altera FPGA board in Verilog that also \
 utilized a VGA connection to a screen as well as a keyboard input. We eventually decided to make a game because it best fit these \
 goals and seemed entertaining.',
@@ -196,8 +198,9 @@ algorithms for operating on them. The course also introduces object-oriented met
                 title: 'Final Project',
                 dates: '',
                 technologies: ['C++'],
-                desc: 'Developed on my own an implementation of Pac-Man more similar to the original game using C++ and a simple \
+                shortDesc: 'Developed on my own an implementation of Pac-Man more similar to the original game using C++ and a simple \
 graphics library',
+                desc: ''
             }
         ]
     },
@@ -247,6 +250,7 @@ queues and search trees will also be covered.',
                 title: 'Hungry Leprechaun',
                 dates: '',
                 technologies: ['PHP', 'C++', 'Bootstrap', 'Google Maps'],
+                shortDesc: 'Implemented a location-based searh engine finding nearby restaurants that meet certain criteria',
                 desc: 'The project goal was to develop an application using an interesting (not discussed in class) data structure. We chose to use a kd-tree implementation to easily manipulate locational data',
                 outcomes: 'We successfully developed an application that allows you to query restaurants around Notre Dame\'s campus, finding those closest to you, and plotting them on a map',
                 links: ['https://github.com/lukesonggg/HungryLeprechaun']
@@ -292,6 +296,7 @@ consist of the design and the implementation of a database system with a Web int
             {
                 title: 'Breaddit',
                 dates: 'Semester-long',
+                shortDesc: '',
                 desc: '',
                 technologies: ['PHP', 'MySQL'],
                 links: ['https://github.com/samanthaccorn/reddit_data_processing'],

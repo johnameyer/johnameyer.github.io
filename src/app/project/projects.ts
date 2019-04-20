@@ -41,9 +41,15 @@ export const projects: StandaloneProject[] = [
         slug: 'rasduino',
         title: 'Rasduino',
         dates: '11/2018',
-        awards: [],
+        awards: [
+            {
+                award: 'Best IoT Solution',
+                date: '11/2018',
+                from: 'Irish Hacks'
+            }
+        ],
         shortDesc: '\'Mood\' music playlist generator based on live environmental conditions',
-        desc: '',
+        desc: 'At my third AT&T Hackathon, I regrettably had a concert to perform at Friday night so I missed coding the first night. However, upon arriving the next morning, I was able to find a team that also had just arrived. Together, we decided to go for the IoT approach yet again, using sensors provided to make a mood music recommender - an app that would take in live environmental conditions and design a playlist based on that. I was chiefly responsible for creating the backend that created the playlist, and the Android application that discovered the devices nearby and played the playlist.',
         technologies: ['Android', 'Raspberry Pi', 'NodeRed', 'Spotify API'],
         links: [
             {
@@ -64,8 +70,8 @@ export const projects: StandaloneProject[] = [
             of: ''
         }],
         shortDesc: 'Live shareable contact cards that follow you wherever you go',
-        desc: '',
-        technologies: ['Android', 'Flask'],
+        desc: 'At my first Startup Weekend, I met a few students from the Notre Dame Esteem Program, who had a great idea but not much experience programming themselves. Together with two other developers, we built a Flask API that hosted all the contact information in MongoDB, and I made an Android application that would insert the cloud contacts into one\'s native local contacts and syncing occasionally. Our business plan was to sell as a service to universities, as college grads often change their email and address after leaving school, making it hard to get in touch for alumni fundraising purposes.',
+        technologies: ['Android', 'Flask', 'MongoDB'],
         startup: true
     },
     {
@@ -75,7 +81,8 @@ export const projects: StandaloneProject[] = [
         img: '/assets/dunne-website.png',
         awards: [],
         shortDesc: 'Official website of Dunne Hall, the newest all-mens dorm on Notre Dame\'s campus',
-        desc: '',
+        desc: 'As a member of the first class entering Dunne Hall, I thought it was a shame that our dorm could not be recognized for its greatness by the rest of the world. As such, I asked to become the Technology / Website commissioner so our greatness and the making of history could be witnessed by all the world. I have since served in this role since then.',
+        outcomes: 'I built our website using PHP, which was the web language I was most familiar with at the time. Over the years, I added a mechanism to sync up the website with Google Docs so that non-technical members of the hall can update the various pages. As well, I am able to include the weekly newsletters so that parents can also see the weekly goings-on of the dorm.',
         technologies: ['PHP', 'Bootstrap'],
         links: [
             {
@@ -134,7 +141,7 @@ export const projects: StandaloneProject[] = [
         awards: [],
         shortDesc: 'Smart bed application that detects seizures',
         desc: '',
-        technologies: [],
+        technologies: ['Android', 'Bluetooth Low Energy'],
         hackathon: true
     },
     {
@@ -173,7 +180,7 @@ export const projects: StandaloneProject[] = [
         }],
         shortDesc: 'Prototype software for a gig economy centered around recurring jobs like lawn care and grocery pickup',
         desc: '',
-        technologies: [],
+        technologies: null,
         startup: true
     },
     {
@@ -195,3 +202,12 @@ export const projects: StandaloneProject[] = [
         technologies: ['Java', 'Swing']
     },
 ];
+
+export const technologies: string[] = Array.from(new Set (
+    projects.map(project => project.technologies) // no flatmap
+    .filter(x => x)
+    .reduce((arr: string[], value: string[]) => {
+        value.forEach(x => arr.push(x));
+        return arr;
+    }, [])
+));
