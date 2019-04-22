@@ -6,10 +6,11 @@ export class Project {
     dates: string;
     shortDesc: string;
     desc: string;
+    challenge?: string;
+    outcomes?: string;
     technologies: string[];
     links?: GenericLink[];
     hackathon ? = false;
     startup ? = false;
     live ? = false;
-    outcomes?: string;
 }

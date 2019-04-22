@@ -2,31 +2,37 @@
   <div class="col-md">
     <h1>{{project.title}}</h1>
     <h2>{{project.dates}}</h2>
-    <div class="div">
-      <b *ngIf="project.outcomes">Description:</b>
+    <div>
+      <b *ngIf="project.outcomes || project.challenge">Description:</b>
       <p *ngIf="project.desc.length > 0; else noDesc">{{project.desc}}</p>
       <ng-template #noDesc><p>{{project.shortDesc}}</p></ng-template>
     </div>
-    <div>
-      <ng-container *ngIf="project.outcomes">
+    <ng-container *ngIf="project.challenge">
+      <div>
+        <b>Favorite Challenge:</b>
+        <p>{{project.challenge}}</p>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="project.outcomes">
+      <div>
         <b>Outcomes:</b>
         <p>{{project.outcomes}}</p>
-      </ng-container>
-    </div>
+      </div>
+    </ng-container>
     <span *ngIf="project.technologies && project.technologies.length">
       Built on: 
       <span *ngFor="let tech of project.technologies" [style.background-color]="getColor(tech)" class="badge">{{tech}}</span>
     </span>
     <br>
     <ng-container *ngIf="project.awards && project.awards.length">
-      <h4>Awards:</h4>
+      <h4 class="mt-3">Awards:</h4>
       <div *ngFor="let award of project.awards">
         <b>{{award.award}}</b> ({{award.from}}) - {{award.date}}
         <br>
       </div>
     </ng-container>
     <ng-container *ngIf="project.links && project.links.length">
-      <h4>Links:</h4>
+      <h4 class="mt-3">Links:</h4>
       <div *ngFor="let link of project.links">
         <span *ngIf="link.type; else linkStr">
           <fa-icon [icon]="getIcon(link.type)"></fa-icon>

@@ -13,7 +13,13 @@
             <b *ngIf="project.outcomes">Description:</b> {{project.desc}}
             <br>
             <ng-container *ngIf="project.outcomes">
-              <b>Outcomes: </b>{{project.outcomes}}
+              <b>Outcomes: </b>
+              {{project.outcomes}}
+              <br>
+            </ng-container>
+            <ng-container *ngIf="project.challenge">
+              <b>Favorite challenge: </b>
+              {{project.challenge}}
               <br>
             </ng-container>
             <ng-container *ngIf="project.links">
