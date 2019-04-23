@@ -37,8 +37,9 @@
               </div>
             </ng-container>
           </div>
-          <div *ngIf="project.img" class="col-lg-5">
-            <img [src]="project.img" class="img-fluid border border-dark">
+          <div *ngIf="project.imgs" class="col-lg-5">
+            <!-- TODO the same way as in project-view -->
+            <img [src]="project.imgs[0]" class="img-fluid border border-dark">
           </div>
         </div>
       </div>

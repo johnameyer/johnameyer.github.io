@@ -4,7 +4,7 @@ export const projects: StandaloneProject[] = [
     {
         slug: 'rtb',
         title: 'Team Raise the Bar',
-        img: 'https://developer.att.com/wp-content/uploads/2016/12/hack-finalist-raise-the-bar-sm.png',
+        cardImg: 'https://developer.att.com/wp-content/uploads/2016/12/hack-finalist-raise-the-bar-sm.png',
         dates: '9/2016 - 1/2017',
         awards: [
             {
@@ -83,7 +83,7 @@ export const projects: StandaloneProject[] = [
         slug: 'dunne',
         title: 'Dunne Hall Website',
         dates: '',
-        img: '/assets/dunne-website.png',
+        cardImg: '/assets/card/dunne-website.png',
         awards: [],
         shortDesc: 'Official website of Dunne Hall, the newest all-mens dorm on Notre Dame\'s campus',
         desc: 'As a member of the first class entering Dunne Hall, I thought it was a shame that our dorm could not be recognized for its greatness by the rest of the world. As such, I asked to become the Technology / Website commissioner so our greatness and the making of history could be witnessed by all the world. I have since served in this role since then.',
@@ -100,33 +100,45 @@ export const projects: StandaloneProject[] = [
                 type: 'chrome'
             }
         ],
-        live: true
+        live: true,
+        imgs: [
+            '/assets/screenshots/dunne/home.png',
+            '/assets/screenshots/dunne/gallery.png',
+            '/assets/screenshots/dunne/leaders.png'
+        ]
     },
     {
         slug: 'engage',
         title: 'Engage',
         dates: '',
-        img: '/assets/ionic.png',
+        cardImg: '/assets/ionic.png',
         awards: [],
         shortDesc: 'Project started at the Mobile Computing Lab with the intention of increasing public awareness'
         + 'of new technology in ones\' area',
-        desc: '',
+        desc: 'In the fall of 2019, I was invited to join Dr. Poellabauer\'s lab on a project of my choice. Since I had worked with both mobile and web applications quite a bit, I decided to join onto this project, an application intending to educate the general public about technologies being used in their area. The example we always used was that of drones - e.g. we should be able to see where the drones are in our local area and learn more about what their purpose is, so people are less afraid of the unknown. The grand vision too was that this platform would engage the public too through educational articles and events.',
+        challenge: 'The primary challenge I faced was in that of making the website as live as possible. Since it was desired to have the live positions of drones plotted on the map, we opted to use Firebase\'s Realtime Database, which uses websockets to get live changes pushed from the server, rather than needing to poll. A difficulty here was mapping the basic callback function that Firebase has to the Observable model Angular uses, while making sure to clean up properly after detaching and subscribe only once. In the end, through creative use of the Observable constructor, share operator, and a dictionary.',
+        outcomes: 'In the end, I implemented an application that allowed for a user to sign up or in through email and password or a Google account through Firebase Authentication, see the live positions of a subset of drones or other devices in the area, report invasive devices, and see events on a calendar that are happening in one\'s area.',
         technologies: ['Ionic', 'Angular', 'Typescript', 'Firebase'],
         links: [
             {
                 link: 'https://github.com/ndmobilecomplab/Engage',
                 type: 'github'
             }
+        ],
+        imgs: [
+            '/assets/ionic.png'
         ]
     },
     {
         slug: 'cdmc',
         title: 'Cincinnati Dance and Movement Center Website',
         dates: '8/2018',
-        img: '/assets/cdmc-website.png',
+        cardImg: '/assets/card/cdmc-website.png',
         awards: [],
         shortDesc: 'Freelance web project featuring a class registration mechanic',
-        desc: '',
+        desc: 'Before the beginning of school in the summer, my brother and I were connected with our client through the alumni network of Miami (where my brother attends). Our client was concerned that her website looked too out of date and was scaring away customers because of that, and contracted us to build her a new site that additionally had the ability for students to register for their classes by paying a 25 dollar fee.',
+        challenge: 'The primary challenge we had was not technical in nature, but instead it was one of communication. Almost all of our contact was done over phone and email as we were unable to meet in person at all. This was my first experience coordinating a remote project, and I had difficulty managing by brother and communicating to him that which was discussed and what his next task was, and as well we had problems with growing scope as the project was not fully communicated at first. Over time, we were able to resolve the problem by checking in often and making sure everyone was in the loop.',
+        outcomes: 'In the end, we were able to implement a class listing and account system as requested, allowing for users to sign onto the website and pay for their classes. For the first year, we signed up over 100 students using our platform. We expect to continue to improve the platform next summer.',
         technologies: ['PHP', 'MySQL', 'PayPal'],
         links: [
             {
@@ -138,16 +150,34 @@ export const projects: StandaloneProject[] = [
                 type: 'chrome'
             }
         ],
-        live: true
+        live: true,
+        imgs: [
+            '/assets/screenshots/cdmc/home.png',
+            '/assets/screenshots/cdmc/class-category.png',
+            '/assets/screenshots/cdmc/class.png',
+            '/assets/screenshots/cdmc/payment.png'
+        ]
     },
     {
         slug: 'fluffle',
         title: 'Fluffle',
-        dates: '',
-        awards: [],
+        dates: '10/2017',
+        awards: [
+            {
+                award: '2nd Place Overall',
+                date: '10/2017',
+                from: 'AT&T Notre Dame Hackathon'
+            },
+            {
+                award: 'Best Use of IBM Bluemix',
+                date: '10/2017',
+                from: 'AT&T Notre Dame Hackathon'
+            }
+        ],
         shortDesc: 'Smart bed application that detects seizures',
-        desc: '',
-        technologies: ['Android', 'Bluetooth Low Energy'],
+        desc: 'At the second hackathon I went to, they again had the TI SensorTag available and I was pitched another idea that I felt could merit its use - a smart bed that would automatically alert someone when it detected a seizure occuring.',
+        outcomes: 'In addition to our application, we developed a backend using the NodeRed JS server platform, which handled the data submitted to the cloud and was responsible for using the Twilio platform to call a loved one if a seizure was detected - and then emergency services if the loved one did not answer. Our application won 2nd place best overall and the best use of IBM Bluemix.',
+        technologies: ['Android', 'Bluetooth Low Energy', 'NodeRed'],
         hackathon: true
     },
     {
@@ -204,8 +234,21 @@ export const projects: StandaloneProject[] = [
         dates: '2013 - 2015',
         awards: [],
         shortDesc: 'My first major project, a Tile-based Roguelike built as a Java Desktop Application',
-        desc: '',
+        desc: 'When I first started out learning Java, I figured that the easiest way to quickly get a lot of experience with all the various features of Java was to simply start by building an actual application with a GUI and learn the pieces as I went. At the time, I was well familiar with the genre of the Rogue-like and thought it would be the most straight-forward (as in dealing mostly with function rather than graphics) game that would allow me some complexity and room to have some fun.',
+        challenge: 'The greatest challenge I faced was that of making the level / floor generator - the algorithm that generates the rooms and hallways that the player navigates through. I originally tried to generate all the rooms and then connect them all with straight hallways or hallways with a single bend using Prim\'s algorithm. However, this approach had the problem that sometimes the hallways would intersect and would not actually connect to the rooms. Eventually I moved to a different algorithm, wherein I would first generate the rooms, then generate a maze in all of the empty (non-room spaces), eventually connecting the rooms to the maze and then pruning the maze tree down to remove dead-ends.',
+        outcomes: 'While I was initially successful in creating a working game that generated levels and allowed one to battle enemies, I started to work on several pieces at once that ended up breaking the application, which led to a rewrite of the code, which ended in a similar fashion as well. However, the project was successful in that I learned much about the core Java libraries and also learned a lesson about project management and organization.',
         technologies: ['Java', 'Swing']
+    },
+    {
+        slug: 'cards',
+        title: 'Can I Have That',
+        dates: '2017 -',
+        awards: [],
+        shortDesc: 'Implementation of a card game my grandmother invented, currently for command line but other platforms coming soon',
+        desc: 'At some point in 2017, since I had never done a significant project in Python and was feeling inspired to make an online version of my grandmother\'s card game like there are of so many other games, I decided to create a Python command line implementation of the game that users could play.',
+        challenge: 'The greatest challenge I have faced so far has been making an artificial intelligence that can play the game as well as a human could. The game is fairly tricky for a human to play and this is also seen for the AI. I had never had any experience with making a game AI save for the limited experience I had from the Labyrinthine game. Finding the optimum strategy way to pick cards could be done by counting all the potential cards that could be obtained and finding the chance of victory for each, but counting cards is considered cheating for humans. The current, imperfect approach instead looks at the cards and tries to see how adding the card improves the AI\'s current standings',
+        outcomes: 'Currently, one is able to play the game locally against several AI opponents. Future plans include making a networked version for command line, and a web (Websocket) and Electron interface.',
+        technologies: ['Python']
     },
 ];
 

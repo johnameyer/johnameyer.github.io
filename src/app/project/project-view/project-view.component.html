@@ -2,6 +2,9 @@
   <div class="col-md">
     <h1>{{project.title}}</h1>
     <h2>{{project.dates}}</h2>
+    <div *ngIf="project.imgs" class="img-wrapper-lg d-none d-lg-block">
+      <img *ngFor="let img of project.imgs" class="img-fluid d-block border border-dark" src="{{img}}" alt="Card image cap">
+    </div>
     <div>
       <b *ngIf="project.outcomes || project.challenge">Description:</b>
       <p *ngIf="project.desc.length > 0; else noDesc">{{project.desc}}</p>
@@ -44,8 +47,9 @@
         <br>
       </div>
     </ng-container>
-  </div>
-  <div class="col-md-auto" id="projectImg">
-    <img *ngIf="project.img" class="img-fluid d-block mx-auto border border-dark" src="{{project.img}}" alt="Card image cap">
+    <div *ngIf="project.imgs" class="img-wrapper-sm d-lg-none">
+      <h4 class="mt-3">Screenshots:</h4>
+      <img *ngFor="let img of project.imgs" class="img-fluid d-block border border-dark" src="{{img}}" alt="Card image cap">
+    </div>
   </div>
 </div>

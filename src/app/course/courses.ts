@@ -110,7 +110,7 @@ Engineering. Structured programming and software skills are further developed. S
 light bulb capable of producing both the energizing effect of the GE Align AM bulb and the soothing effect of the GE Align PM bulb. \
 A combined AM/PM bulb is easier for customers to install and use, and enables them to manage their circadian rhythms more effectively.',
                 technologies: ['Matlab', 'Arduino'],
-                img: '/assets/GE-Align.png',
+                imgs: ['/assets/GE-Align.png'],
                 outcomes: 'Developed an application that would allow a user to manually specify the hue they desired the bulb to show, \
 as well as set a desired wake-up and bedtime which our model would then appropriately change to simulate the AM and PM bulbs based on \
 the time of day. We had developed a linear model matching each channel of our bulb to coordinates in the CIE color space using provided \
@@ -300,7 +300,7 @@ consist of the design and the implementation of a database system with a Web int
                 desc: '',
                 technologies: ['PHP', 'MySQL'],
                 links: ['https://github.com/samanthaccorn/reddit_data_processing'],
-                img: '/assets/databases.png'
+                imgs: ['/assets/databases.png']
             }
         ]
     },
