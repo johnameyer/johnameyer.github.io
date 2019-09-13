@@ -9,9 +9,13 @@
     <img class="img-fluid d-block mx-auto" src="/assets/profile-pic.jpg">
   </div>
 </div>
-<h2>Favorite Projects</h2>
-<div #grid class="row">
-  <div *ngFor="let project of selected" class="col-md-4 col-lg-3 col-sm-6 grid-item">
-    <app-home-item [project]="project"></app-home-item>
+<div class="row">
+  <div class="col-lg-10 offset-lg-1">
+    <h2>Favorite Projects</h2>
+    <div #grid class="row">
+      <div *ngFor="let project of selected" class="col-md-4 col-xl-3 col-sm-6 grid-item">
+        <app-home-item [project]="project"></app-home-item>
+      </div>
+    </div>
   </div>
 </div>

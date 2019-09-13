@@ -296,11 +296,13 @@ consist of the design and the implementation of a database system with a Web int
             {
                 title: 'Breaddit',
                 dates: 'Semester-long',
-                shortDesc: '',
-                desc: '',
+                shortDesc: 'Our databases project was to create a better version of Reddit that we naturally called \'Breaddit\'',
+                desc: 'Our two primary goals for the project were to: 1) remove images that were posted multiple times and link their tags together, and 2) to recommend posts/memes to the user based on their interestes and on the interests of similar people.',
+                challenge: 'The most interesting challenge I faced was creating a MYSQL query that calculated how interested a user might be in a particular post based on the post\'s tags and based on how in-line those are with that user\'s interests, and similar user\'s interests.',
                 technologies: ['PHP', 'MySQL'],
                 links: ['https://github.com/samanthaccorn/reddit_data_processing'],
-                imgs: ['/assets/databases.png']
+                imgs: ['/assets/screenshots/breaddit.png'],
+                cardImg: '/assets/card/breaddit.png'
             }
         ]
     },
@@ -362,8 +364,8 @@ Inspired to consider pursuing computing-based entrepreneurship opportunity.',
         desc: 'Introduction to formal languages and automata, computability theory, and complexity theory with the goal of developing \
  understanding of the power and limits of different computational models. Topics covered include: regular languages and finite automata; \
  context-free grammars and pushdown automata; Turing machines; undecidable languages; the classes P and NP; NP completeness.',
-         primaryLang: '',
-         semester: 'Spring 2019'
+        primaryLang: '',
+        semester: 'Spring 2019'
     },
     {
         subj: 'CSE',
@@ -394,7 +396,29 @@ solutions that lead to human-centered innovation.',
     {
         subj: 'PHIL',
         num: 24448,
-        name: 'Tech & Innovtion Ethics',
+        name: 'Tech & Innovation Ethics',
         hidden: true
+    },
+    {
+        subj: 'CSE',
+        num: 40175,
+        desc: 'This course seeks to develop a solid foundation for reasoning about ethical, professional, and social issues that arise in the context of computer science and engineering. Emphasis is placed on identifying appropriate legal, professional and moral contexts and on applying sound critical thinking skills to a problem. Topics covered include professional codes of ethics, safety-critical systems, whistle blowing, privacy and surveillance, freedom of speech, intellectual property, and cross-cultural issues. This course relies heavily on case studies of real-world incidents.',
+        name: 'Ethical and Professional Issues',
+        semester: 'Fall 2019'
+    },
+    {
+        subj: 'CSE',
+        num: 40113,
+        name: 'Design/Analysis of Algorithms',
+        desc: 'Techniques for designing efficient computer algorithms and for analyzing computational costs of algorithms. Common design strategies such as dynamic programming, divide-and-conquer, and Greedy methods. Problem-solving approaches such as sorting, searching, and selection; lower bounds; data structures; algorithms for graph problems; geometric problems; and other selected problems. Computationally intractable problems (NP-completeness).',
+        semester: 'Fall 2019'
+    },
+    {
+        subj: 'PHIL',
+        num: 24448,
+        name: 'Compilers and Language Design',
+        desc: 'Compilers is a challenging and fun course for students who are planning a career in advanced software development. In this class, students will design and implement a complete compiler for a C-like language from top to bottom. The course brings together many different elements of computer science, ranging from the theoretical (formal grammar classes) to the very practical (x86 assembly language) with a pinch of software engineering in the middle. After completing the course, you will be able to write programs that manipulate computer languages in different ways, ranging from simple interactive calculators to programs that translate one language to another. Students completing the course may also experience some side effects: (1) You will learn how to use pointers really well. (2) You will gain experience in engineering a complex piece of software including revision control, testing, and evolution. (3) You will understand the C language inside and out, which will make you a better programmer all around.',
+        primaryLang: 'C',
+        semester: 'Fall 2019'
     }
 ];

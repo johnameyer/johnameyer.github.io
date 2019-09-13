@@ -6,8 +6,10 @@ import { StandaloneProject } from '../models/standalone-project';
 
 const selectedNames: (string | [string, number])[] = [
     'rtb',
-    ['CSE20221', 0],
-    'dunne'
+    'dunne',
+    'cdmc',
+    'ndht',
+    ['CSE30246', 0]
 ];
 
 export const selected: (StandaloneProject | CourseProject)[] = selectedNames.map((name) => {

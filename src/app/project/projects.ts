@@ -41,6 +41,7 @@ export const projects: StandaloneProject[] = [
     {
         slug: 'rasduino',
         title: 'Rasduino',
+        cardImg: '/assets/card/rasduino.png',
         dates: '11/2018',
         awards: [
             {
@@ -82,7 +83,7 @@ export const projects: StandaloneProject[] = [
     {
         slug: 'dunne',
         title: 'Dunne Hall Website',
-        dates: '',
+        dates: '8/2016 - 7/2019',
         cardImg: '/assets/card/dunne-website.png',
         awards: [],
         shortDesc: 'Official website of Dunne Hall, the newest all-mens dorm on Notre Dame\'s campus',
@@ -110,7 +111,7 @@ export const projects: StandaloneProject[] = [
     {
         slug: 'engage',
         title: 'Engage',
-        dates: '',
+        dates: '8/2018 - 12/2018',
         cardImg: '/assets/ionic.png',
         awards: [],
         shortDesc: 'Project started at the Mobile Computing Lab with the intention of increasing public awareness'
@@ -222,11 +223,25 @@ export const projects: StandaloneProject[] = [
     {
         slug: 'ndht',
         title: 'Notre Dame Dining Hall Tracker',
+        cardImg: '/assets/card/dining-hall-tracker.png',
         dates: '2017 - 2018',
         awards: [],
         shortDesc: 'Android client giving users an easier way to see what items are at the dining hall on a given day',
-        desc: '',
-        technologies: ['Java', 'Android']
+        desc: 'After being at Notre Dame for a semester, I rapidly discovered that the dining halls had different meal schedules on different days and I found a need to be alerted when my favorite items would be at the dining hall. Since I had worked with Android apps before a little bit, I thought it would be a good way to develop my Android skills.',
+        challenge: 'One of the most interesting challenges I faced was trying to set up geofences, such that when you entered into the range of the dining hall, it would alert you of which of your favorites were at the dining hall.',
+        outcomes: 'By the end of my time developing the application I had put it up on the Android Play store and given several demonstrations at the app fair Notre Dame held to showcase student app developers. I hope to revisit the app and improve it using new Android functionality in the future.',
+        technologies: ['Java', 'Android'],
+        imgs: [
+            'image0.png',
+            'image1.png',
+            'image2.png',
+            'image3.png',
+            'image4.png',
+            'image5.png',
+            'image6.png',
+            'image7.png',
+            'image8.png'
+        ].map(img => '/assets/screenshots/ndht/' + img)
     },
     {
         slug: 'lab',
@@ -244,11 +259,11 @@ export const projects: StandaloneProject[] = [
         title: 'Can I Have That',
         dates: '2017 -',
         awards: [],
-        shortDesc: 'Implementation of a card game my grandmother invented, currently for command line but other platforms coming soon',
+        shortDesc: 'Implementation of a card game my grandmother popularized in our family, currently for command line but other platforms coming soon',
         desc: 'At some point in 2017, since I had never done a significant project in Python and was feeling inspired to make an online version of my grandmother\'s card game like there are of so many other games, I decided to create a Python command line implementation of the game that users could play.',
         challenge: 'The greatest challenge I have faced so far has been making an artificial intelligence that can play the game as well as a human could. The game is fairly tricky for a human to play and this is also seen for the AI. I had never had any experience with making a game AI save for the limited experience I had from the Labyrinthine game. Finding the optimum strategy way to pick cards could be done by counting all the potential cards that could be obtained and finding the chance of victory for each, but counting cards is considered cheating for humans. The current, imperfect approach instead looks at the cards and tries to see how adding the card improves the AI\'s current standings',
-        outcomes: 'Currently, one is able to play the game locally against several AI opponents. Future plans include making a networked version for command line, and a web (Websocket) and Electron interface.',
-        technologies: ['Python']
+        outcomes: 'Currently, one is able to play the game locally against several AI opponents, in the Python version, as well as the Typescript version I am migrating the codebase to. Future plans include making a networked version for command line, and a web (Websocket) and Electron interface.',
+        technologies: ['Python', 'Typescript']
     },
 ];
 
