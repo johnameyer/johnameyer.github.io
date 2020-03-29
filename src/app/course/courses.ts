@@ -414,11 +414,79 @@ solutions that lead to human-centered innovation.',
         semester: 'Fall 2019'
     },
     {
-        subj: 'PHIL',
+        subj: 'CSE',
         num: 24448,
         name: 'Compilers and Language Design',
         desc: 'Compilers is a challenging and fun course for students who are planning a career in advanced software development. In this class, students will design and implement a complete compiler for a C-like language from top to bottom. The course brings together many different elements of computer science, ranging from the theoretical (formal grammar classes) to the very practical (x86 assembly language) with a pinch of software engineering in the middle. After completing the course, you will be able to write programs that manipulate computer languages in different ways, ranging from simple interactive calculators to programs that translate one language to another. Students completing the course may also experience some side effects: (1) You will learn how to use pointers really well. (2) You will gain experience in engineering a complex piece of software including revision control, testing, and evolution. (3) You will understand the C language inside and out, which will make you a better programmer all around.',
         primaryLang: 'C',
         semester: 'Fall 2019'
+    },
+    {
+        name: 'Social Sensing / Cyber-Physical Systems',
+        subj: 'CSE',
+        num: 40437,
+        desc: 'Online social media (e.g., Twitter, Facebook), smartphones, and ubiquitous internet connectivity have greatly facilitated data sharing at scale, allowing for a firehose of human and sensor observations to pour in about the physical world in real-time. This opens up unprecedented challenges and opportunities in the field of social sensing and cyber-physical systems where the goal is to efficiently organize the real-time data feeds and accurately reconstruct the "states of the world," both physical and social. This course offers students the opportunity to learn the theoretical foundations, state-of-the-art techniques, and hands-on experience in this exciting area. The topic of this class is timely due to the increasing interest in online social networks, big data, and human-in-the-loop systems, as well as the proliferation of computing artifacts that interact with or monitor the physical world. In particular, the class contains four main components: (i) the introduction to social sensing and cyber-physical systems; (ii) key technical challenges (e.g., big data analytics, system reliability, user mobility, energy, privacy, etc.); (iii) state-of-art techniques and systems (e.g., MapReduce/Hadoop, fact-finding, data cube, etc); (iv) emerging applications (smartphone-based crowdsensing, online social media sensing, participatory/opportunistic sensing, intelligent transportation, smart buildings, body area networks etc). The students will have the opportunities to work with real world social sensing and cyber-physical system problems.',
+        hidden: false,
+        links: [
+
+        ],
+        primaryLang: 'Python',
+        projects: [
+
+        ],
+        semester: 'Spring 2020'
+    },
+    {
+        name: 'Open Source Software Dev.',
+        subj: 'CSE',
+        num: 40677,
+        desc: 'Students will work as a team to construct a significant open source software product over the course of a semester. In addition to the software itself, students will develop the infrastructure necessary to sustain the software as part of an open source community, such as public web pages, documentation, discussion groups, bug tracking, and automated testing. Interested students should first form a small group of 4-6 students willing to work together, and then contact the instructor for permission to register.',
+        hidden: false,
+        links: [
+
+        ],
+        primaryLang: 'Typescript',
+        projects: [
+
+        ],
+        semester: 'Spring 2020'
+    },
+    {
+        name: 'Advanced Database Projects',
+        subj: 'CSE',
+        num: 40746,
+        desc: 'Advanced topics in database concepts; the course\'s main goal is a major final project, where groups will compete for prizes and awards.',
+        hidden: false,
+        links: [
+
+        ],
+        primaryLang: 'SQL',
+        projects: [
+
+        ],
+        semester: 'Spring 2020'
+    },
+    {
+        name: 'Game-Based AI Agents',
+        subj: 'CSE',
+        num: 40971,
+        desc: 'This course seeks to develop an understanding of core topics in game-based artificial intelligence (AI) also commonly called bots. Emphasis is placed on exploring topics in game AI in practice using an open source bot for the popular real-time strategy video game StarCraft. Topics covered include agent pathfinding, resource management, task automation, developing scripted strategy playbooks, and applying heuristics for real-time decision making with incomplete information.',
+        hidden: false,
+        links: [
+
+        ],
+        primaryLang: 'Java',
+        projects: [
+
+        ],
+        semester: 'Spring 2020'
+    },
+    {
+        name: 'Theory II',
+        subj: 'MUS',
+        num: 20002,
+        desc: 'A systematic approach to the understanding and manipulation of the basic materials of music. Required of and intended for music majors and minors, but open to students with sufficient musical background.',
+        hidden: true,
+        semester: 'Spring 2020'
     }
 ];

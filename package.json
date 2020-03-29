@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng build --prod --base-href 'https://johnameyer.github.io/' && ngh -r git@github.com:johnameyer/johnameyer.github.io.git -b master"
+    "deploy": "ng build --prod --base-href 'https://johnmeyer.dev' && ngh -r git@github.com:johnameyer/johnameyer.github.io.git -b master"
   },
   "private": true,
   "dependencies": {

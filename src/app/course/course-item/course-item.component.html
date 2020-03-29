@@ -5,6 +5,6 @@
     </h5>
     <h6 class="card-subtitle mb-2 text-muted">{{course.semester}}</h6>
     <p *ngIf="course.desc" class="card-text">{{course.desc}}</p>
-    <a *ngIf="course.projects" [routerLink]="[course.subj + course.num]" class="card-link">Read more</a>
+    <a *ngIf="course.projects && course.projects.length" [routerLink]="[course.subj + course.num]" class="card-link">Read more</a>
   </div>
 </div>
