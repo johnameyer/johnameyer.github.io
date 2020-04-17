@@ -78,14 +78,14 @@ export class ProjectsListComponent implements AfterViewInit, AfterViewChecked, O
     }
   }
 
-  sort(field: string, direction: 1 | -1) {
+  sort(field: string, direction: number) {
     let ordering: (a: Project, b: Project) => any;
     switch(field) {
       case 'date':
       default:
         ordering = dateOrdering;
     }
-    if(direction == -1) {
+    if(Math.sign(direction) == -1) {
       this.ordering$.next((a: Project, b: Project) => -ordering(a,b));
     } else {
       this.ordering$.next(ordering);

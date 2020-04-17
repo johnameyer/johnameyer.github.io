@@ -1,14 +1,20 @@
 <h1>Past Projects</h1>
 <p>Projects I have had the pleasure of working on in the past outside of a course environment</p>
-<div class="form-group row">
-  <label for="typeahead-focus" class="col-sm-2 col-form-label">Filter by Technology:</label>
-  <input id="typeahead-focus" type="text" class="col-sm-10 form-control" [formControl]="selectedTechnology" [ngbTypeahead]="search" (focus)="focus$.next($any($event).target.value)" (click)="click$.next($any($event).target.value)" #instance="ngbTypeahead"/>
-</div>
-<div ngbDropdown class="d-inline-block">
-  <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Ordering by</button>
-  <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-    <button ngbDropdownItem (click)="sort('date', -1)">Order By Date Desc</button>
-    <button ngbDropdownItem (click)="sort('date', 1)">Order By Date Asc</button>
+<div class="row mb-2">
+  <div class="col-md-auto">
+    <div class="form-group row">
+      <label for="typeahead-focus" class="col-sm-auto col-form-label">Filter by Technology:</label>
+      <input id="typeahead-focus" type="text" class="col form-control" [formControl]="selectedTechnology" [ngbTypeahead]="search" (focus)="focus$.next($any($event).target.value)" (click)="click$.next($any($event).target.value)" #instance="ngbTypeahead"/>
+    </div>
+  </div>
+  <div class="col-md-auto">
+    <div ngbDropdown class="d-inline-block">
+      <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Ordering by</button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button ngbDropdownItem (click)="sort('date', -1)">Order By Date Desc</button>
+        <button ngbDropdownItem (click)="sort('date', 1)">Order By Date Asc</button>
+      </div>
+    </div>
   </div>
 </div>
 <div class="grid" #grid>

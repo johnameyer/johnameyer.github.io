@@ -52,7 +52,7 @@ export class CoursesListComponent implements AfterViewChecked, AfterViewInit, On
     }
   }
 
-  sort(field: string, direction: 1 | -1) {
+  sort(field: string, direction: number) {
     let ordering: (a: Course, b: Course) => any;
     switch(field) {
       case 'number':
@@ -62,7 +62,7 @@ export class CoursesListComponent implements AfterViewChecked, AfterViewInit, On
       default:
         ordering = dateOrdering;
     }
-    if(direction == -1) {
+    if(Math.sign(direction) == -1) {
       this.ordering.next((a: Course, b: Course) => -ordering(a,b));
     } else {
       this.ordering.next(ordering);

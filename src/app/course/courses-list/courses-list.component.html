@@ -1,14 +1,14 @@
 <h1>Courses</h1>
 <p>Courses related to computer science that I have taken while at Notre Dame</p>
-<div class="row">
-  <div class="col">
+<div class="row mb-4">
+  <div class="col-sm-auto">
     <div class="btn-group btn-group-toggle">
       <label class="btn-primary" ngbButtonLabel>
-        <input type="checkbox" ngbButton name="hasProject" [formControl]="hasProjects"> Courses with Projects
+        <input type="checkbox" ngbButton name="hasProject" [formControl]="hasProjects"> Filter Courses with Projects
       </label>
     </div>
   </div>
-  <div class="col">
+  <div class="col-sm-auto">
     <div ngbDropdown class="d-inline-block">
       <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Ordering by</button>
       <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
