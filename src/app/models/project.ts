@@ -1,10 +1,10 @@
 import { GenericLink } from './link';
+import { Award } from './award';
 
 export class Project {
     title: string;
     cardImg?: string;
     imgs?: string[];
-    dates: string;
     shortDesc: string;
     desc: string;
     challenge?: string;
@@ -12,6 +12,7 @@ export class Project {
     future?: string;
     technologies: string[];
     links?: GenericLink[];
+    awards ?: Award[];
     hackathon ? = false;
     startup ? = false;
     live ? = false;

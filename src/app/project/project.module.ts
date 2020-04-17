@@ -6,6 +6,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProjectRoutingModule } from './project-routing.module';
 import { ProjectItemComponent } from './project-item/project-item.component';
+import { SharedModule } from '../shared/shared.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { ProjectItemComponent } from './project-item/project-item.component';
     ProjectRoutingModule,
     CommonModule,
     NgbModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    SharedModule,
+    ReactiveFormsModule
   ]
 })
 export class ProjectModule { }

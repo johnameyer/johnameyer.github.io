@@ -15,8 +15,9 @@ const selectedNames: (string | [string, number])[] = [
 export const selected: (StandaloneProject | CourseProject)[] = selectedNames.map((name) => {
     if (Array.isArray(name)) {
         const c: Course = courses.find((course) => course.subj + course.num === name[0]);
-        const p: CourseProject = c.projects[name[1]] as CourseProject;
+        const p: CourseProject = {...c.projects[name[1]]} as CourseProject;
         p.link = '/course/' + c.subj + c.num;
+        p.semester = c.semester;
         return p;
     } else {
         return projects.find((project) => project.slug === name);

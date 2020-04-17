@@ -3,7 +3,6 @@ import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { projects } from '../projects';
-import ColorUtil from '../../color-util';
 import { Project } from 'src/app/models/project';
 
 @Component({
@@ -17,11 +16,8 @@ export class ProjectViewComponent implements OnInit {
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
-    ColorUtil.init();
     this.project$ = this.route.params.pipe(map(params => projects.find(project => params.slug === project.slug)));
   }
-
-  getColor = (tech: string) => ColorUtil.getColor(tech);
 
   getIcon = (type: string | string[]): string[] => Array.isArray(type) ? type : ['fab', type];
 

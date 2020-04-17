@@ -1,6 +1,7 @@
 import { Project } from './project';
-import { Course } from './course';
 
 export class CourseProject extends Project {
-    link: string;
+    link?: string;
+    semester?: ["Spring" | "Fall", number];
+    duration?: string;
 }

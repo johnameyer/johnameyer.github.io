@@ -24,7 +24,7 @@
     </ng-container>
     <span *ngIf="project.technologies && project.technologies.length">
       Built on: 
-      <span *ngFor="let tech of project.technologies" [style.background-color]="getColor(tech)" class="badge">{{tech}}</span>
+      <app-technology-badge *ngFor="let tech of project.technologies" [tech]="tech"></app-technology-badge>
     </span>
     <br>
     <ng-container *ngIf="project.awards && project.awards.length">

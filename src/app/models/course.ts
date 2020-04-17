@@ -1,5 +1,6 @@
 import { Project } from './project';
 import { GenericLink } from './link';
+import { CourseProject } from './course-project';
 
 export class Course {
     subj: string;
@@ -8,7 +9,7 @@ export class Course {
     hidden ? = false;
     desc ?: string;
     primaryLang ?: string;
-    semester ?: string;
-    projects ?: Project[];
+    semester ?: [ 'Spring' | 'Fall', number ];
+    projects ?: CourseProject[];
     links ?: GenericLink[];
 }

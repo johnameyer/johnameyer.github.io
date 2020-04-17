@@ -100,11 +100,11 @@ disciplines. Multidisciplinary projects are used to illustrate the application o
 to solve a variety of practical problems. The projects are intended to span areas of interest in all departments of the College of \
 Engineering. Structured programming and software skills are further developed. Spring.',
         primaryLang: 'Matlab',
-        semester: 'Spring 2017',
+        semester: ['Spring', 2017],
         projects: [
             {
                 title: 'GE Align Lighting',
-                dates: 'Semester-long',
+                duration: 'Semester-Long',
                 shortDesc: 'Software application built to drive a multi-channel colored lightbulb using Matlab and Arduino',
                 desc: 'Our group was tasked with developing a model and prototype for a single energy-efficient, color-tunable LED \
 light bulb capable of producing both the energizing effect of the GE Align AM bulb and the soothing effect of the GE Align PM bulb. \
@@ -151,7 +151,7 @@ certain hue and brightness',
         desc: 'Introduction to mathematical techniques fundamental to computer engineering and computer science. Topics: mathematical \
 logic, induction, set theory, relations, functions, recursion, recurrence relations, introduction to asymptotic analysis, algebraic \
 structures, graphs, and machine computation.',
-        semester: 'Fall 2017'
+        semester: ['Fall', 2017]
     },
     {
         subj: 'CSE',
@@ -160,11 +160,11 @@ structures, graphs, and machine computation.',
         desc: 'Boolean algebra and switching circuits, Karnaugh maps, design of combinational and of sequential logic networks, and \
 sequential machines.',
         primaryLang: 'Verilog',
-        semester: 'Fall 2017',
+        semester: ['Fall', 2017],
         projects: [
             {
                 title: 'Brok-man',
-                dates: 'Final Project',
+                duration: 'Final Project',
                 shortDesc: 'Pac-Man-esque game implemented on a FPGA board using a keyboard and VGA monitor',
                 desc: 'The goal behind the final project was to make an application for the Altera FPGA board in Verilog that also \
 utilized a VGA connection to a screen as well as a keyboard input. We eventually decided to make a game because it best fit these \
@@ -192,11 +192,11 @@ analyzing it conceptually, to designing, implementing, and testing a program on 
 basic design principles for programs, students learn to define basic data structures, such as lists and trees, and to apply various \
 algorithms for operating on them. The course also introduces object-oriented methods.',
         primaryLang: 'C++',
-        semester: 'Fall 2017',
+        semester: ['Fall', 2017],
         projects: [
             {
-                title: 'Final Project',
-                dates: '',
+                title: 'Untitled Game',
+                duration: 'Final Project',
                 technologies: ['C++'],
                 shortDesc: 'Developed on my own an implementation of Pac-Man more similar to the original game using C++ and a simple \
 graphics library',
@@ -213,7 +213,7 @@ graphics library',
 businesses operate. Subjects covered include business financial reporting, business plans, the development processes, project \
 management, the supply chain, and a history of quality topics. Numerous guest speakers are utilized to give the students exposure to \
 successful business executives and reinforce the business processes covered in class. Fall.',
-        semester: 'Fall 2017'
+        semester: ['Fall', 2017]
     },
     {
         subj: 'PHIL',
@@ -231,7 +231,7 @@ calls, data structures, networking, and concurrency. Examining these topics will
 with the lower level aspects of computing, while providing the foundation for further study in subsequent systems courses such as \
 computer architecture and operating systems.',
         primaryLang: 'Python',
-        semester: 'Spring 2018'
+        semester: ['Spring', 2018]
     },
     {
         subj: 'CSE',
@@ -244,11 +244,11 @@ course will focus these topics on design and use of elementary data structures s
 advanced techniques such as divide-and-conquer, sorting, searching and graph algorithms. More advanced data structures such as priority \
 queues and search trees will also be covered.',
         primaryLang: 'C++',
-        semester: 'Spring 2018',
+        semester: ['Spring', 2018],
         projects: [
             {
                 title: 'Hungry Leprechaun',
-                dates: '',
+                duration: 'Final Project',
                 technologies: ['PHP', 'C++', 'Bootstrap', 'Google Maps'],
                 shortDesc: 'Implemented a location-based searh engine finding nearby restaurants that meet certain criteria',
                 desc: 'The project goal was to develop an application using an interesting (not discussed in class) data structure. We chose to use a kd-tree implementation to easily manipulate locational data',
@@ -264,7 +264,7 @@ queues and search trees will also be covered.',
         desc: 'Introduction to basic architectural concepts that are present in current scalar machines, together with an introduction \
 to assembly language programming, computer arithmetic, and performance evaluation. Commercial computer-aided-design software is used to \
 deepen the student\'s understanding of the top-down processor design methodology. MIPS-based assembly language will be used.',
-        semester: 'Spring 2018'
+        semester: ['Spring', 2018]
     },
     {
         subj: 'EG',
@@ -274,7 +274,7 @@ deepen the student\'s understanding of the top-down processor design methodology
         desc: 'The second course in the sequence integrates the elements taught in the fundamentals course. Subjects covered include a \
 team-oriented Web-based business simulation exercise, management, effective communications, and a review of leading-edge trends in \
 modern corporations. Spring.',
-        semester: 'Spring 2018'
+        semester: ['Spring', 2018]
     },
     {
         subj: 'THEO',
@@ -291,11 +291,11 @@ relational databases, the course presents the entity-relationship model, query p
 calculus and algebra, integrity constraints, distributed databases, and data security will also be discussed. A final project will \
 consist of the design and the implementation of a database system with a Web interface.',
         primaryLang: 'PHP',
-        semester: 'Fall 2018',
+        semester: ['Fall', 2018],
         projects: [
             {
                 title: 'Breaddit',
-                dates: 'Semester-long',
+                duration: 'Semester-Long',
                 shortDesc: 'Our databases project was to create a better version of Reddit that we naturally called \'Breaddit\'',
                 desc: 'Our two primary goals for the project were to: 1) remove images that were posted multiple times and link their tags together, and 2) to recommend posts/memes to the user based on their interestes and on the interests of similar people.',
                 challenge: 'The most interesting challenge I faced was creating a MYSQL query that calculated how interested a user might be in a particular post based on the post\'s tags and based on how in-line those are with that user\'s interests, and similar user\'s interests.',
@@ -314,7 +314,7 @@ consist of the design and the implementation of a database system with a Web int
 computer networks. Topics include: Internet architecture, protocols, socket programming, congestion control, switching and routing, \
 local area networks, mobile and ad-hoc networks, network security, the end-to-end arguments and resource allocation.',
         primaryLang: 'C',
-        semester: 'Fall 2018'
+        semester: ['Fall', 2018]
     },
     {
         subj: 'CSE',
@@ -323,7 +323,7 @@ local area networks, mobile and ad-hoc networks, network security, the end-to-en
         desc: 'Programming language overview: imperative and functional languages; logic programming. Scripting languages and tools. \
 Development environments. Multilanguage interfacing. Case studies. Comprehensive programming practice using several languages.',
         primaryLang: '',
-        semester: 'Fall 2018'
+        semester: ['Fall', 2018]
     },
     {
         subj: 'CSE',
@@ -336,7 +336,7 @@ using data structures, performing searching and sorting, utilizing recursion, ma
 techniques such as dynamic programming. Additionally, basic software engineering practices such as debugging, testing, and source code \
 management will be utilized throughout the course.',
         primaryLang: 'Java',
-        semester: 'Fall 2018'
+        semester: ['Fall', 2018]
     },
     {
         subj: 'CSE',
@@ -349,7 +349,7 @@ management will be utilized throughout the course.',
  founding companies, running companies, selecting technologies for venture capital investment, etc. As a result, you will hopefully be \
 Inspired to consider pursuing computing-based entrepreneurship opportunity.',
         primaryLang: '',
-        semester: 'Fall 2018'
+        semester: ['Fall', 2018]
     },
     {
         subj: 'CSE',
@@ -365,7 +365,7 @@ Inspired to consider pursuing computing-based entrepreneurship opportunity.',
  understanding of the power and limits of different computational models. Topics covered include: regular languages and finite automata; \
  context-free grammars and pushdown automata; Turing machines; undecidable languages; the classes P and NP; NP completeness.',
         primaryLang: '',
-        semester: 'Spring 2019'
+        semester: ['Spring', 2019]
     },
     {
         subj: 'CSE',
@@ -377,7 +377,7 @@ variable partitions), Paging Technique, Segmentation Technique, Virtual Memory. 
 Directories, File System Implementation. Introduction to Security and Protection: Basic Issues, Security Problem, Authentication, \
 Encryption, Protection Problem, Trusted Systems. Case Studies: Unix, WinNT.',
         primaryLang: 'C',
-        semester: 'Spring 2019'
+        semester: ['Spring', 2019]
     },
     {
         subj: 'CSE',
@@ -391,7 +391,7 @@ Encryption, Protection Problem, Trusted Systems. Case Studies: Unix, WinNT.',
         name: 'Design Thinking SVS Immersion',
         desc: 'Students will engage in the principles and methodology known as design thinking to identify problems and compelling \
 solutions that lead to human-centered innovation.',
-        semester: 'Spring 2019'
+        semester: ['Spring', 2019]
     },
     {
         subj: 'PHIL',
@@ -404,22 +404,22 @@ solutions that lead to human-centered innovation.',
         num: 40175,
         desc: 'This course seeks to develop a solid foundation for reasoning about ethical, professional, and social issues that arise in the context of computer science and engineering. Emphasis is placed on identifying appropriate legal, professional and moral contexts and on applying sound critical thinking skills to a problem. Topics covered include professional codes of ethics, safety-critical systems, whistle blowing, privacy and surveillance, freedom of speech, intellectual property, and cross-cultural issues. This course relies heavily on case studies of real-world incidents.',
         name: 'Ethical and Professional Issues',
-        semester: 'Fall 2019'
+        semester: ['Fall', 2019]
     },
     {
         subj: 'CSE',
         num: 40113,
         name: 'Design/Analysis of Algorithms',
         desc: 'Techniques for designing efficient computer algorithms and for analyzing computational costs of algorithms. Common design strategies such as dynamic programming, divide-and-conquer, and Greedy methods. Problem-solving approaches such as sorting, searching, and selection; lower bounds; data structures; algorithms for graph problems; geometric problems; and other selected problems. Computationally intractable problems (NP-completeness).',
-        semester: 'Fall 2019'
+        semester: ['Fall', 2019]
     },
     {
         subj: 'CSE',
-        num: 24448,
+        num: 40243,
         name: 'Compilers and Language Design',
         desc: 'Compilers is a challenging and fun course for students who are planning a career in advanced software development. In this class, students will design and implement a complete compiler for a C-like language from top to bottom. The course brings together many different elements of computer science, ranging from the theoretical (formal grammar classes) to the very practical (x86 assembly language) with a pinch of software engineering in the middle. After completing the course, you will be able to write programs that manipulate computer languages in different ways, ranging from simple interactive calculators to programs that translate one language to another. Students completing the course may also experience some side effects: (1) You will learn how to use pointers really well. (2) You will gain experience in engineering a complex piece of software including revision control, testing, and evolution. (3) You will understand the C language inside and out, which will make you a better programmer all around.',
         primaryLang: 'C',
-        semester: 'Fall 2019'
+        semester: ['Fall', 2019]
     },
     {
         name: 'Social Sensing / Cyber-Physical Systems',
@@ -434,7 +434,7 @@ solutions that lead to human-centered innovation.',
         projects: [
 
         ],
-        semester: 'Spring 2020'
+        semester: ['Spring', 2020]
     },
     {
         name: 'Open Source Software Dev.',
@@ -449,7 +449,7 @@ solutions that lead to human-centered innovation.',
         projects: [
 
         ],
-        semester: 'Spring 2020'
+        semester: ['Spring', 2020]
     },
     {
         name: 'Advanced Database Projects',
@@ -464,7 +464,7 @@ solutions that lead to human-centered innovation.',
         projects: [
 
         ],
-        semester: 'Spring 2020'
+        semester: ['Spring', 2020]
     },
     {
         name: 'Game-Based AI Agents',
@@ -479,7 +479,7 @@ solutions that lead to human-centered innovation.',
         projects: [
 
         ],
-        semester: 'Spring 2020'
+        semester: ['Spring', 2020]
     },
     {
         name: 'Theory II',
@@ -487,6 +487,6 @@ solutions that lead to human-centered innovation.',
         num: 20002,
         desc: 'A systematic approach to the understanding and manipulation of the basic materials of music. Required of and intended for music majors and minors, but open to students with sufficient musical background.',
         hidden: true,
-        semester: 'Spring 2020'
+        semester: ['Spring', 2020]
     }
 ];

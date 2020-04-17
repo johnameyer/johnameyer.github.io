@@ -13,6 +13,7 @@
     <p class="card-text">{{project.shortDesc}}</p>
     <a [routerLink]="'/project/' + project.slug" class="card-link">Read More</a>
   </div>
-  <!--div class="card-footer text-muted">
-  </div-->
+  <div class="card-footer"><!--.text-muted-->
+    <app-technology-badge *ngFor="let tech of project.technologies" [tech]="tech"></app-technology-badge>
+  </div>
 </div>

@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class CourseItemComponent implements OnInit {
 
   @Input() course;
+  truncate = true;
 
   constructor() { }
 

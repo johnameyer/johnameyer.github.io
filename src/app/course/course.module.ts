@@ -6,6 +6,7 @@ import { CourseRoutingModule } from './course-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CourseItemComponent } from './course-item/course-item.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CourseItemComponent } from './course-item/course-item.component';
     CommonModule,
     CourseRoutingModule,
     NgbModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    ReactiveFormsModule
   ]
 })
 export class CourseModule { }

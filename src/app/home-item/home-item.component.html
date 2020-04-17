@@ -9,7 +9,7 @@
         <fa-icon *ngIf="project.startup" [icon]="['fas', 'flask']" title="Startup Weekend Project"></fa-icon>
         <fa-icon *ngIf="project.live" [icon]="['fab','chrome']" title="Live Product"></fa-icon>
       </h5>
-      <h6 class="card-subtitle mb-2 text-muted">{{project.dates}}</h6>
+      <h6 class="card-subtitle mb-2 text-muted">{{renderDate()}}</h6>
       <p class="card-text">{{project.shortDesc}}</p>
       <a [routerLink]="getLink()" class="card-link">Read More</a>
     </div>

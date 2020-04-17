@@ -1,7 +1,27 @@
 <h1>Courses</h1>
 <p>Courses related to computer science that I have taken while at Notre Dame</p>
+<div class="row">
+  <div class="col">
+    <div class="btn-group btn-group-toggle">
+      <label class="btn-primary" ngbButtonLabel>
+        <input type="checkbox" ngbButton name="hasProject" [formControl]="hasProjects"> Courses with Projects
+      </label>
+    </div>
+  </div>
+  <div class="col">
+    <div ngbDropdown class="d-inline-block">
+      <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Ordering by</button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button ngbDropdownItem (click)="sort('number', -1)">Order By Number Desc</button>
+        <button ngbDropdownItem (click)="sort('number', 1)">Order By Number Asc</button>
+        <button ngbDropdownItem (click)="sort('date', -1)">Order By Date Desc</button>
+        <button ngbDropdownItem (click)="sort('date', 1)">Order By Date Asc</button>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="grid" #grid>
-  <ng-container *ngFor="let course of courses">
+  <ng-container *ngFor="let course of selectedCourses">
     <div *ngIf="!course.hidden" class="grid-item col-md-6 col-lg-4">
       <app-course-item [course]="course"></app-course-item>
     </div>

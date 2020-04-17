@@ -1,4 +1,4 @@
-class Award {
+export class Award {
     award: string;
     from: string;
     date: string;

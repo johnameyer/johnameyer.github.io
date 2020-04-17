@@ -5,7 +5,8 @@ export const projects: StandaloneProject[] = [
         slug: 'rtb',
         title: 'Team Raise the Bar',
         cardImg: 'https://developer.att.com/wp-content/uploads/2016/12/hack-finalist-raise-the-bar-sm.png',
-        dates: '9/2016 - 1/2017',
+        startDate: 'Sept 2016',
+        endDate: 'Jan 2017',
         awards: [
             {
                 award: 'Third Place National Finalist',
@@ -42,11 +43,12 @@ export const projects: StandaloneProject[] = [
         slug: 'rasduino',
         title: 'Rasduino',
         cardImg: '/assets/card/rasduino.png',
-        dates: '11/2018',
+        startDate: 'Nov 2018',
+        endDate: 'Nov 2018',
         awards: [
             {
                 award: 'Best IoT Solution',
-                date: '11/2018',
+                date: 'Nov 2018',
                 from: 'Irish Hacks'
             }
         ],
@@ -66,7 +68,8 @@ export const projects: StandaloneProject[] = [
     {
         slug: 'reach',
         title: 'Reach',
-        dates: '2/2017',
+        startDate: 'Feb 2017',
+        endDate: 'Feb 2017',
         awards: [{
             award: 'Third Place',
             from: 'Startup Weekend',
@@ -83,7 +86,8 @@ export const projects: StandaloneProject[] = [
     {
         slug: 'dunne',
         title: 'Dunne Hall Website',
-        dates: '8/2016 - 7/2019',
+        startDate: 'Aug 2016',
+        endDate: 'Jul 2019',
         cardImg: '/assets/card/dunne-website.png',
         awards: [],
         shortDesc: 'Official website of Dunne Hall, the newest all-mens dorm on Notre Dame\'s campus',
@@ -111,7 +115,8 @@ export const projects: StandaloneProject[] = [
     {
         slug: 'engage',
         title: 'Engage',
-        dates: '8/2018 - 12/2018',
+        startDate: 'Aug 2018',
+        endDate: 'Dec 2018',
         cardImg: '/assets/ionic.png',
         awards: [],
         shortDesc: 'Project started at the Mobile Computing Lab with the intention of increasing public awareness'
@@ -133,7 +138,8 @@ export const projects: StandaloneProject[] = [
     {
         slug: 'cdmc',
         title: 'Cincinnati Dance and Movement Center Website',
-        dates: '8/2018',
+        startDate: 'Aug 2018',
+        endDate: 'Aug 2019',
         cardImg: '/assets/card/cdmc-website.png',
         awards: [],
         shortDesc: 'Freelance web project featuring a class registration mechanic',
@@ -162,16 +168,17 @@ export const projects: StandaloneProject[] = [
     {
         slug: 'fluffle',
         title: 'Fluffle',
-        dates: '10/2017',
+        startDate: 'Oct 2017',
+        endDate: 'Oct 2017',
         awards: [
             {
                 award: '2nd Place Overall',
-                date: '10/2017',
+                date: 'Oct 2017',
                 from: 'AT&T Notre Dame Hackathon'
             },
             {
                 award: 'Best Use of IBM Bluemix',
-                date: '10/2017',
+                date: 'Oct 2017',
                 from: 'AT&T Notre Dame Hackathon'
             }
         ],
@@ -184,8 +191,9 @@ export const projects: StandaloneProject[] = [
     {
         slug: 'battuta',
         title: 'Battuta',
-        dates: '',
         awards: [],
+        startDate: 'Mar 2018',
+        endDate: 'Mar 2018',
         shortDesc: 'Web project / startup concept consisting of "tour videos" placed on the map',
         desc: '',
         technologies: ['PHP', 'Javascript', 'Google Maps API', 'Youtube API'],
@@ -200,8 +208,9 @@ export const projects: StandaloneProject[] = [
     {
         slug: 'sri',
         title: 'Science Research Institute',
-        dates: '',
         awards: [],
+        startDate: 'May 2015',
+        endDate: 'May 2016',
         shortDesc: 'Research project generating a color-based 3-D controller',
         desc: '',
         technologies: ['Java', 'OpenCV']
@@ -209,11 +218,12 @@ export const projects: StandaloneProject[] = [
     {
         slug: 'lucy',
         title: 'Lucy',
-        dates: '2/2018',
+        startDate: 'Feb 2018',
+        endDate: 'Feb 2018',
         awards: [{
             award: 'Second Place',
             from: 'Startup Weekend',
-            date: '2018'
+            date: 'Feb 2018'
         }],
         shortDesc: 'Prototype software for a gig economy centered around recurring jobs like lawn care and grocery pickup',
         desc: '',
@@ -224,7 +234,8 @@ export const projects: StandaloneProject[] = [
         slug: 'ndht',
         title: 'Notre Dame Dining Hall Tracker',
         cardImg: '/assets/card/dining-hall-tracker.png',
-        dates: '2017 - 2018',
+        startDate: '2017',
+        endDate: '2018',
         awards: [],
         shortDesc: 'Android client giving users an easier way to see what items are at the dining hall on a given day',
         desc: 'After being at Notre Dame for a semester, I rapidly discovered that the dining halls had different meal schedules on different days and I found a need to be alerted when my favorite items would be at the dining hall. Since I had worked with Android apps before a little bit, I thought it would be a good way to develop my Android skills.',
@@ -246,7 +257,8 @@ export const projects: StandaloneProject[] = [
     {
         slug: 'lab',
         title: 'Labyrinthine',
-        dates: '2013 - 2015',
+        startDate: '2013',
+        endDate: '2015',
         awards: [],
         shortDesc: 'My first major project, a Tile-based Roguelike built as a Java Desktop Application',
         desc: 'When I first started out learning Java, I figured that the easiest way to quickly get a lot of experience with all the various features of Java was to simply start by building an actual application with a GUI and learn the pieces as I went. At the time, I was well familiar with the genre of the Rogue-like and thought it would be the most straight-forward (as in dealing mostly with function rather than graphics) game that would allow me some complexity and room to have some fun.',
@@ -257,7 +269,8 @@ export const projects: StandaloneProject[] = [
     {
         slug: 'cards',
         title: 'Can I Have That',
-        dates: '2017 -',
+        startDate: '2017',
+        endDate: 'Current',
         awards: [],
         shortDesc: 'Implementation of a card game my grandmother popularized in our family, currently for command line but other platforms coming soon',
         desc: 'At some point in 2017, since I had never done a significant project in Python and was feeling inspired to make an online version of my grandmother\'s card game like there are of so many other games, I decided to create a Python command line implementation of the game that users could play.',
