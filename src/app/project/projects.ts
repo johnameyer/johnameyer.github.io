@@ -272,11 +272,45 @@ export const projects: StandaloneProject[] = [
         startDate: '2017',
         endDate: 'Current',
         awards: [],
-        shortDesc: 'Implementation of a card game my grandmother popularized in our family, currently for command line but other platforms coming soon',
-        desc: 'At some point in 2017, since I had never done a significant project in Python and was feeling inspired to make an online version of my grandmother\'s card game like there are of so many other games, I decided to create a Python command line implementation of the game that users could play.',
-        challenge: 'The greatest challenge I have faced so far has been making an artificial intelligence that can play the game as well as a human could. The game is fairly tricky for a human to play and this is also seen for the AI. I had never had any experience with making a game AI save for the limited experience I had from the Labyrinthine game. Finding the optimum strategy way to pick cards could be done by counting all the potential cards that could be obtained and finding the chance of victory for each, but counting cards is considered cheating for humans. The current, imperfect approach instead looks at the cards and tries to see how adding the card improves the AI\'s current standings',
-        outcomes: 'Currently, one is able to play the game locally against several AI opponents, in the Python version, as well as the Typescript version I am migrating the codebase to. Future plans include making a networked version for command line, and a web (Websocket) and Electron interface.',
-        technologies: ['Python', 'Typescript']
+        shortDesc: 'Implementation of a card game my grandmother popularized in our family, currently for command line and web browser',
+        desc: 'At some point in 2017, since I had never done a significant project in Python and was feeling inspired to make an online version of my grandmother\'s card game like there are of so many other games, I decided to create a Python command line implementation of the game that users could play. Eventually I decided to port the project over to Typescript to allow for maximum cross-platform possibility.',
+        challenge: 'The greatest challenge I had faced was been making an artificial intelligence that can play the game as well as a human could. The game is fairly tricky for a human to play and this is also seen for the AI. When writing the Python version, I had never had any experience with making a game AI save for the limited experience I had from the Labyrinthine game. However, the implementation I have chosen for the Typescript version seeks to minimize the value the current set of cards would give the player turn end (as the game is golf-scored). This seems to perform better and cover more edge cases than the original hand-written rules based version for Python. This performs very well, but additional functionality in the search is needed, like strategizing around other players discards and pick-ups or long term strategy. Additionally some way to control the difficulty of this might be desired.',
+        outcomes: 'Currently, one is able to play the game locally against several AI opponents in the Typescript version as well as in a basic web client-server websocket implementation. Future plans include making a networked version for command line, and a nice web (Websocket) and Electron interface.',
+        technologies: ['Python', 'Typescript', 'Inquirer', 'Mocha'],
+        links: [
+            {
+                link: 'https://github.com/johnameyer/can-i-have-that',
+                type: 'github'
+            }
+        ],
+        cardImg: '/assets/card/can-i-have-that.png',
+        imgs: [
+            '/assets/screenshots/can-i-have-that/terminal.png'
+        ]
+    },
+    {
+        slug: 'harmony',
+        title: 'Harmony-TS',
+        startDate: '2020',
+        endDate: 'Current',
+        awards: [],
+        shortDesc: 'This project is an engine for generating and analyzing four-part textures (and eventually other forms) in the style of Bach and the classical era. Currently, it allows one to pass a series of constraints and it will produce the complete texture using the settings provided.',
+        desc: 'In the midst of my second music theory class, I again realized how formulaic and rule-based writing music for four-parts is. This inspired me to start working on an engine that could handle the basic music theory concepts but also generate valid four part textures given any number of constraints (like those given in a homework assignment). Since Typescript has been my current language of choice and I know I wanted to make a web interface for it that language was a natural choice.',
+        challenge: 'In this project I\'ve tried to take a different approach to development from the lessons I learned over the last two semesters at college. My main goals were to try to use a new development flow making use of testing and Github Actions, project management through Github as well, and avoiding my usual tendency to over-engineer. These have not been the easiest for me but it has been good learning.',
+        outcomes: 'Currently I am able to run the application through a web demo, which given a sequence of chords and key will try to generate a valid harmonization. The core library has a support for 90% of the content in the Music Theory I course, and I hope to continue expanding into the future.',
+        future: 'For the 1.0 release, I hope to be able to support all of Music Theory II concepts as well and I have already broken these up into stories and issues on Github.',
+        technologies: ['Typescript', 'Tone.JS', 'Vexflow'],
+        links: [{
+            link: 'https://github.com/johnameyer/harmony-ts',
+            type: 'github'
+        },{
+            link: 'http://johnameyer.github.io/harmony-ts-demo',
+            type: 'chrome'
+        }],
+        cardImg: '/assets/card/harmony-ts.png',
+        imgs: [
+            '/assets/screenshots/harmony-ts/chorale-ui.png'
+        ]
     },
 ];
 

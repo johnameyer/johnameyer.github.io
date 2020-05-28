@@ -1,18 +1,19 @@
 <div class="card">
-    <img *ngIf="project.cardImg" class="card-img-top" [src]="project.cardImg">
-    <!--TODO different form for mobile devices-->
-    <div class="card-body">
-      <h5 class="card-title">
-        {{project.title}}
-        <fa-icon *ngIf="project.awards && project.awards.length > 0" [icon]="['fas', 'award']" [title]="getAwardsJoined(project.awards)"></fa-icon>
-        <fa-icon *ngIf="project.hackathon" [icon]="['fas', 'lightbulb']" title="Hackathon Project"></fa-icon>
-        <fa-icon *ngIf="project.startup" [icon]="['fas', 'flask']" title="Startup Weekend Project"></fa-icon>
-        <fa-icon *ngIf="project.live" [icon]="['fab','chrome']" title="Live Product"></fa-icon>
-      </h5>
-      <h6 class="card-subtitle mb-2 text-muted">{{renderDate()}}</h6>
-      <p class="card-text">{{project.shortDesc}}</p>
-      <a [routerLink]="getLink()" class="card-link">Read More</a>
-    </div>
-    <!--div class="card-footer text-muted">
-    </div-->
+  <img *ngIf="project.cardImg" class="card-img-top" [src]="project.cardImg">
+  <!--TODO different form for mobile devices-->
+  <div class="card-body">
+    <h5 class="card-title">
+      {{project.title}}
+      <fa-icon *ngIf="project.awards && project.awards.length > 0" [icon]="['fas', 'award']" [title]="getAwardsJoined(project.awards)"></fa-icon>
+      <fa-icon *ngIf="project.hackathon" [icon]="['fas', 'lightbulb']" title="Hackathon Project"></fa-icon>
+      <fa-icon *ngIf="project.startup" [icon]="['fas', 'flask']" title="Startup Weekend Project"></fa-icon>
+      <fa-icon *ngIf="project.live" [icon]="['fab','chrome']" title="Live Product"></fa-icon>
+    </h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{renderDate()}}</h6>
+    <p class="card-text">{{project.shortDesc}}</p>
+    <a [routerLink]="getLink()" class="card-link">Read More</a>
   </div>
+  <div class="card-footer"><!--.text-muted-->
+    <app-technology-badge *ngFor="let tech of project.technologies" [tech]="tech" style="margin-right: 5px"></app-technology-badge>
+  </div>
+</div>

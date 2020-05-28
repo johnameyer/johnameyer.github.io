@@ -6,6 +6,8 @@ import { StandaloneProject } from '../models/standalone-project';
 
 const selectedNames: (string | [string, number])[] = [
     'rtb',
+    'harmony',
+    'cards',
     'dunne',
     'cdmc',
     'ndht',

@@ -292,19 +292,17 @@ calculus and algebra, integrity constraints, distributed databases, and data sec
 consist of the design and the implementation of a database system with a Web interface.',
         primaryLang: 'PHP',
         semester: ['Fall', 2018],
-        projects: [
-            {
-                title: 'Breaddit',
-                duration: 'Semester-Long',
-                shortDesc: 'Our databases project was to create a better version of Reddit that we naturally called \'Breaddit\'',
-                desc: 'Our two primary goals for the project were to: 1) remove images that were posted multiple times and link their tags together, and 2) to recommend posts/memes to the user based on their interestes and on the interests of similar people.',
-                challenge: 'The most interesting challenge I faced was creating a MYSQL query that calculated how interested a user might be in a particular post based on the post\'s tags and based on how in-line those are with that user\'s interests, and similar user\'s interests.',
-                technologies: ['PHP', 'MySQL'],
-                links: ['https://github.com/samanthaccorn/reddit_data_processing'],
-                imgs: ['/assets/screenshots/breaddit.png'],
-                cardImg: '/assets/card/breaddit.png'
-            }
-        ]
+        projects: [{
+            title: 'Breaddit',
+            duration: 'Semester-Long',
+            shortDesc: 'Our databases project was to create a better version of Reddit that we naturally called \'Breaddit\'',
+            desc: 'Our two primary goals for the project were to: 1) remove images that were posted multiple times and link their tags together, and 2) to recommend posts/memes to the user based on their interestes and on the interests of similar people.',
+            challenge: 'The most interesting challenge I faced was creating a MYSQL query that calculated how interested a user might be in a particular post based on the post\'s tags and based on how in-line those are with that user\'s interests, and similar user\'s interests.',
+            technologies: ['PHP', 'MySQL'],
+            links: ['https://github.com/samanthaccorn/reddit_data_processing'],
+            imgs: ['/assets/screenshots/breaddit.png'],
+            cardImg: '/assets/card/breaddit.png'
+        }]
     },
     {
         subj: 'CSE',
@@ -314,7 +312,29 @@ consist of the design and the implementation of a database system with a Web int
 computer networks. Topics include: Internet architecture, protocols, socket programming, congestion control, switching and routing, \
 local area networks, mobile and ad-hoc networks, network security, the end-to-end arguments and resource allocation.',
         primaryLang: 'C',
-        semester: ['Fall', 2018]
+        semester: ['Fall', 2018],
+        /*
+        projects: [{
+            title: 'Chat Client-Server',
+            shortDesc: 'Implementation of a basic client-server application allowing for users to log in and chat with others both through private and public messages.',
+            desc: 'Client-Server application written in C++ using TCP allowing for users to communicate with each other through private and public messages.',
+            links: ['https://web.archive.org/web/20200528022244/https://www3.nd.edu/~dwang5/courses/fall18/programming/prog3.html'],
+            technologies: ['C++', 'pthread']
+        },{
+            title: 'FTP Client-Server',
+            shortDesc: 'Basic FTP Client-Server written in C allowing for users to upload, download, and explore files on a remote host.',
+            desc: 'Basic FTP Client-Server written in C allowing for users to upload, download, and explore files on a remote host.',
+            links: ['https://web.archive.org/web/20200528022248/https://www3.nd.edu/~dwang5/courses/fall18/programming/prog2.html'],
+            technologies: ['C']
+        }, {
+            title: 'Networked Pong Game',
+            shortDesc: 'Modification of a Pong implementation to support playing against a remote player.',
+            desc: 'Modification of a Pong implementation to support playing against a remote player.',
+            technologies: ['C'],
+            links: ['https://web.archive.org/web/20200528022254/https://www3.nd.edu/~dwang5/courses/fall18/programming/prog4.html']
+        }],
+        */
+        links: ['https://web.archive.org/web/20200528022223/https://www3.nd.edu/~dwang5/courses/fall18/']
     },
     {
         subj: 'CSE',
@@ -323,7 +343,12 @@ local area networks, mobile and ad-hoc networks, network security, the end-to-en
         desc: 'Programming language overview: imperative and functional languages; logic programming. Scripting languages and tools. \
 Development environments. Multilanguage interfacing. Case studies. Comprehensive programming practice using several languages.',
         primaryLang: '',
-        semester: ['Fall', 2018]
+        semester: ['Fall', 2018],
+        /*
+        projects: [{
+
+        }]
+        */
     },
     {
         subj: 'CSE',
@@ -402,7 +427,11 @@ solutions that lead to human-centered innovation.',
     {
         subj: 'CSE',
         num: 40175,
-        desc: 'This course seeks to develop a solid foundation for reasoning about ethical, professional, and social issues that arise in the context of computer science and engineering. Emphasis is placed on identifying appropriate legal, professional and moral contexts and on applying sound critical thinking skills to a problem. Topics covered include professional codes of ethics, safety-critical systems, whistle blowing, privacy and surveillance, freedom of speech, intellectual property, and cross-cultural issues. This course relies heavily on case studies of real-world incidents.',
+        desc: 'This course seeks to develop a solid foundation for reasoning about ethical, professional, and social issues \
+that arise in the context of computer science and engineering. Emphasis is placed on identifying appropriate legal, \
+professional and moral contexts and on applying sound critical thinking skills to a problem. Topics covered include \
+professional codes of ethics, safety-critical systems, whistle blowing, privacy and surveillance, freedom of speech, \
+intellectual property, and cross-cultural issues. This course relies heavily on case studies of real-world incidents.',
         name: 'Ethical and Professional Issues',
         semester: ['Fall', 2019]
     },
@@ -410,82 +439,151 @@ solutions that lead to human-centered innovation.',
         subj: 'CSE',
         num: 40113,
         name: 'Design/Analysis of Algorithms',
-        desc: 'Techniques for designing efficient computer algorithms and for analyzing computational costs of algorithms. Common design strategies such as dynamic programming, divide-and-conquer, and Greedy methods. Problem-solving approaches such as sorting, searching, and selection; lower bounds; data structures; algorithms for graph problems; geometric problems; and other selected problems. Computationally intractable problems (NP-completeness).',
+        desc: 'Techniques for designing efficient computer algorithms and for analyzing computational costs of algorithms. \
+Common design strategies such as dynamic programming, divide-and-conquer, and Greedy methods. Problem-solving approaches \
+such as sorting, searching, and selection; lower bounds; data structures; algorithms for graph problems; geometric \
+problems; and other selected problems. Computationally intractable problems (NP-completeness).',
         semester: ['Fall', 2019]
     },
     {
         subj: 'CSE',
         num: 40243,
         name: 'Compilers and Language Design',
-        desc: 'Compilers is a challenging and fun course for students who are planning a career in advanced software development. In this class, students will design and implement a complete compiler for a C-like language from top to bottom. The course brings together many different elements of computer science, ranging from the theoretical (formal grammar classes) to the very practical (x86 assembly language) with a pinch of software engineering in the middle. After completing the course, you will be able to write programs that manipulate computer languages in different ways, ranging from simple interactive calculators to programs that translate one language to another. Students completing the course may also experience some side effects: (1) You will learn how to use pointers really well. (2) You will gain experience in engineering a complex piece of software including revision control, testing, and evolution. (3) You will understand the C language inside and out, which will make you a better programmer all around.',
+        desc: 'Compilers is a challenging and fun course for students who are planning a career in advanced software development. \
+In this class, students will design and implement a complete compiler for a C-like language from top to bottom. The course brings \
+together many different elements of computer science, ranging from the theoretical (formal grammar classes) to the very practical \
+(x86 assembly language) with a pinch of software engineering in the middle. After completing the course, you will be able to write \
+programs that manipulate computer languages in different ways, ranging from simple interactive calculators to programs that translate \
+one language to another. Students completing the course may also experience some side effects: (1) You will learn how to use pointers \
+really well. (2) You will gain experience in engineering a complex piece of software including revision control, testing, and \
+evolution. (3) You will understand the C language inside and out, which will make you a better programmer all around.',
         primaryLang: 'C',
+        projects: [{
+            semester: ['Fall', 2019],
+            duration: 'Semester-Long',
+            title: 'B-Minor Compiler',
+            shortDesc: 'A fully-fledged compiler for the language B-Minor, featuring type-checking and code generation.',
+            desc: 'In the compilers course, we built up a compiler from the ground, creating a scanner, parser, typechecker, and code generator for the language B-Minor.',
+            technologies: ['C', 'Flex', 'Bison'],
+            links: [
+                'https://web.archive.org/web/20200527201515/https://www3.nd.edu/~dthain/courses/cse40243/fall2019/bminor.html'
+            ]
+        }],
+        links: [
+            'https://web.archive.org/web/20200527201332/https://www3.nd.edu/~dthain/courses/cse40243/fall2019/',
+            'https://web.archive.org/web/20200527201354/https://www3.nd.edu/~dthain/courses/cse40243/fall2019/syllabus.html'
+        ],
         semester: ['Fall', 2019]
     },
     {
         name: 'Social Sensing / Cyber-Physical Systems',
         subj: 'CSE',
         num: 40437,
-        desc: 'Online social media (e.g., Twitter, Facebook), smartphones, and ubiquitous internet connectivity have greatly facilitated data sharing at scale, allowing for a firehose of human and sensor observations to pour in about the physical world in real-time. This opens up unprecedented challenges and opportunities in the field of social sensing and cyber-physical systems where the goal is to efficiently organize the real-time data feeds and accurately reconstruct the "states of the world," both physical and social. This course offers students the opportunity to learn the theoretical foundations, state-of-the-art techniques, and hands-on experience in this exciting area. The topic of this class is timely due to the increasing interest in online social networks, big data, and human-in-the-loop systems, as well as the proliferation of computing artifacts that interact with or monitor the physical world. In particular, the class contains four main components: (i) the introduction to social sensing and cyber-physical systems; (ii) key technical challenges (e.g., big data analytics, system reliability, user mobility, energy, privacy, etc.); (iii) state-of-art techniques and systems (e.g., MapReduce/Hadoop, fact-finding, data cube, etc); (iv) emerging applications (smartphone-based crowdsensing, online social media sensing, participatory/opportunistic sensing, intelligent transportation, smart buildings, body area networks etc). The students will have the opportunities to work with real world social sensing and cyber-physical system problems.',
+        desc: 'Online social media (e.g., Twitter, Facebook), smartphones, and ubiquitous internet connectivity have greatly \
+facilitated data sharing at scale, allowing for a firehose of human and sensor observations to pour in about the physical world \
+in real-time. This opens up unprecedented challenges and opportunities in the field of social sensing and cyber-physical systems \
+where the goal is to efficiently organize the real-time data feeds and accurately reconstruct the "states of the world," both \
+physical and social. This course offers students the opportunity to learn the theoretical foundations, state-of-the-art \
+techniques, and hands-on experience in this exciting area. The topic of this class is timely due to the increasing interest \
+in online social networks, big data, and human-in-the-loop systems, as well as the proliferation of computing artifacts that \
+interact with or monitor the physical world. In particular, the class contains four main components: (i) the introduction to \
+social sensing and cyber-physical systems; (ii) key technical challenges (e.g., big data analytics, system reliability, user \
+mobility, energy, privacy, etc.); (iii) state-of-art techniques and systems (e.g., MapReduce/Hadoop, fact-finding, data cube, \
+etc); (iv) emerging applications (smartphone-based crowdsensing, online social media sensing, participatory/opportunistic \
+sensing, intelligent transportation, smart buildings, body area networks etc). The students will have the opportunities to work \
+with real world social sensing and cyber-physical system problems.',
         hidden: false,
         links: [
 
         ],
         primaryLang: 'Python',
-        projects: [
-
-        ],
+        // projects: [],
         semester: ['Spring', 2020]
     },
     {
         name: 'Open Source Software Dev.',
         subj: 'CSE',
         num: 40677,
-        desc: 'Students will work as a team to construct a significant open source software product over the course of a semester. In addition to the software itself, students will develop the infrastructure necessary to sustain the software as part of an open source community, such as public web pages, documentation, discussion groups, bug tracking, and automated testing. Interested students should first form a small group of 4-6 students willing to work together, and then contact the instructor for permission to register.',
+        desc: 'Students will work as a team to construct a significant open source software product over the course of a semester. \
+In addition to the software itself, students will develop the infrastructure necessary to sustain the software as part of an open \
+source community, such as public web pages, documentation, discussion groups, bug tracking, and automated testing. Interested \
+students should first form a small group of 4-6 students willing to work together, and then contact the instructor for permission \
+to register.',
         hidden: false,
         links: [
 
         ],
         primaryLang: 'Typescript',
-        projects: [
-
-        ],
+        projects: [{
+            semester: ['Spring', 2020],
+            title: 'WebTerminal',
+            shortDesc: 'The hope of the WebTerminal project was to create a terminal like Jupyter that could be opened in the browser and be easier to use for new programmers.',
+            desc: 'The WebTerminal project, done in the context of our open source projects course, was meant to be a larger project created with the intent to potentially allow external developers also come in and develop, and thus the project was more than the code at face value would suggest. The idea of the project was to create an application that can be opened in the web browser like Jupyter but instead is based on the terminal programmers use. The user installs and starts the Python client which links them to the browser side and gives them a unique code so that they can then enter commands.',
+            technologies: ['Typescript', 'Python', 'Angular', 'Websockets'],
+            links: [{
+                link: 'https://github.com/danielle-galvao/web-terminal',
+                type: 'github'
+            }]
+        }],
         semester: ['Spring', 2020]
     },
     {
         name: 'Advanced Database Projects',
         subj: 'CSE',
         num: 40746,
-        desc: 'Advanced topics in database concepts; the course\'s main goal is a major final project, where groups will compete for prizes and awards.',
+        desc: 'Advanced topics in database concepts; the course\'s main goal is a major final project, where groups will compete for \
+prizes and awards.',
         hidden: false,
         links: [
 
         ],
         primaryLang: 'SQL',
-        projects: [
-
-        ],
+        projects: [{
+            semester: ['Spring', 2020],
+            title: 'tiNDer',
+            shortDesc: 'An dating application for the discerning Notre Dame, Holy Cross, or Saint Mary\'s student providing a more laid-back environment than mainline dating apps.',
+            desc: 'In the course we were meant to choose between the topics of restaurants and dating for the app we were making. We thought that creating a dating app tailored for the Notre Dame community would be a novel idea, but would allow us to get some experience with a level of complexity that doesn\'t normally come up in normal projects.',
+            challenge: 'The greatest challenge for the two of us was, since we decided to push ourselves and use popular technologies we hadn\'t worked with yet, getting all the pieces to mesh together and dealing with the various issues that came up we hadn\'t experienced before.',
+            technologies: ['SQL', 'OracleDB', 'Vue', 'Node', 'Express', 'Javascript', 'GraphQL', 'Websockets'],
+            links: [{
+                link: 'https://github.com/rkarim0598/not-tiNDer',
+                type: 'github'
+            }]
+        }],
         semester: ['Spring', 2020]
     },
     {
         name: 'Game-Based AI Agents',
         subj: 'CSE',
         num: 40971,
-        desc: 'This course seeks to develop an understanding of core topics in game-based artificial intelligence (AI) also commonly called bots. Emphasis is placed on exploring topics in game AI in practice using an open source bot for the popular real-time strategy video game StarCraft. Topics covered include agent pathfinding, resource management, task automation, developing scripted strategy playbooks, and applying heuristics for real-time decision making with incomplete information.',
+        desc: 'This course seeks to develop an understanding of core topics in game-based artificial intelligence (AI) also \
+commonly called bots. Emphasis is placed on exploring topics in game AI in practice using an open source bot for the popular \
+real-time strategy video game StarCraft. Topics covered include agent pathfinding, resource management, task automation, \
+developing scripted strategy playbooks, and applying heuristics for real-time decision making with incomplete information.',
         hidden: false,
         links: [
 
         ],
         primaryLang: 'Java',
-        projects: [
-
-        ],
+        projects: [{
+            semester: ['Spring', 2020],
+            title: 'Settlers of BOTan',
+            shortDesc: 'Bot developed for the game Settlers of Catan using the open-source Java \'JSettlers2\' implementation.',
+            desc: 'Our team decided to implement a bot for the game Settlers of Catan since our team was all pretty familiar with the game and we thought it would be feasible to create a bot that performed reasonably well.',
+            links: [{
+                link: 'https://github.com/sambattalio/settlers_of_botan',
+                type: 'github'
+            }],
+            technologies: ['Java']
+        }],
         semester: ['Spring', 2020]
     },
     {
         name: 'Theory II',
         subj: 'MUS',
         num: 20002,
-        desc: 'A systematic approach to the understanding and manipulation of the basic materials of music. Required of and intended for music majors and minors, but open to students with sufficient musical background.',
+        desc: 'A systematic approach to the understanding and manipulation of the basic materials of music. Required of and \
+intended for music majors and minors, but open to students with sufficient musical background.',
         hidden: true,
         semester: ['Spring', 2020]
     }

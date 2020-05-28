@@ -14,6 +14,6 @@
     <a [routerLink]="'/project/' + project.slug" class="card-link">Read More</a>
   </div>
   <div class="card-footer"><!--.text-muted-->
-    <app-technology-badge *ngFor="let tech of project.technologies" [tech]="tech"></app-technology-badge>
+    <app-technology-badge *ngFor="let tech of project.technologies" [tech]="tech" style="margin-right: 5px"></app-technology-badge>
   </div>
 </div>

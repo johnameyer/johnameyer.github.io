@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef, AfterViewChecked, OnDestroy, AfterViewInit } from '@angular/core';
+import { Component, ViewChild, ElementRef, AfterViewChecked, OnDestroy, AfterViewInit, ChangeDetectorRef, OnInit } from '@angular/core';
 import { courses } from '../courses';
 import * as Masonry from 'masonry-layout';
 import { FormControl } from '@angular/forms';
@@ -14,7 +14,7 @@ const numberOrdering = (a: Course, b: Course) => a.num && b.num ? (a.num > b.num
   templateUrl: './courses-list.component.html',
   styleUrls: ['./courses-list.component.scss']
 })
-export class CoursesListComponent implements AfterViewChecked, AfterViewInit, OnDestroy {
+export class CoursesListComponent implements OnInit, AfterViewChecked, OnDestroy {
 
   @ViewChild('grid') gridElem: ElementRef;
   selectedCourses: Course[];
@@ -23,11 +23,14 @@ export class CoursesListComponent implements AfterViewChecked, AfterViewInit, On
   ordering: BehaviorSubject<(a: Course, b: Course) => any> = new BehaviorSubject((a: Course, b: Course) => -dateOrdering(a,b));
   hasProjects = new FormControl(false);
 
-  ngAfterViewInit() {
-    this.hasProjects.valueChanges.pipe(takeUntil(this.stop), distinctUntilChanged()).subscribe(() => this.updateItems());
-    this.updateItems();
+  constructor(private changeDetector: ChangeDetectorRef) {
   }
 
+  ngOnInit() {
+    this.updateItems();
+    this.hasProjects.valueChanges.pipe(takeUntil(this.stop), distinctUntilChanged()).subscribe(() => this.updateItems());
+  }p
+  
   ngOnDestroy() {
     this.stop.next({});
   }
@@ -50,6 +53,7 @@ export class CoursesListComponent implements AfterViewChecked, AfterViewInit, On
     if(this.grid) {
       this.grid.layout();
     }
+    this.changeDetector.markForCheck();
   }
 
   sort(field: string, direction: number) {

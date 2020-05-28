@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef, AfterViewInit, AfterViewChecked, OnDestroy, OnInit } from '@angular/core';
+import { Component, ViewChild, ElementRef, AfterViewInit, AfterViewChecked, OnDestroy, OnInit, ChangeDetectorRef } from '@angular/core';
 import { projects } from '../projects';
 import * as Masonry from 'masonry-layout';
 import * as imagesLoaded from 'imagesloaded';
@@ -26,10 +26,10 @@ function getTechnologies(projects: Project[]): string[] {
   templateUrl: './projects-list.component.html',
   styleUrls: ['./projects-list.component.scss']
 })
-export class ProjectsListComponent implements AfterViewInit, AfterViewChecked, OnDestroy {
+export class ProjectsListComponent implements OnInit, AfterViewChecked, OnDestroy {
 
   @ViewChild('grid') gridElem: ElementRef;
-  selectedProjects: Project[];
+  selectedProjects: Project[] = [];
   grid: any = null;
   loadListener: any;
   stop$: Subject<any> = new Subject();
@@ -41,13 +41,13 @@ export class ProjectsListComponent implements AfterViewInit, AfterViewChecked, O
   focus$ = new Subject<string>();
   click$ = new Subject<string>();
 
-  constructor() {
+  constructor(private changeDetector: ChangeDetectorRef) {
     this.technologies = getTechnologies(projects);
   }
 
-  ngAfterViewInit() {
-    this.selectedTechnology.valueChanges.pipe(takeUntil(this.stop$), distinctUntilChanged()).subscribe(() => this.updateItems());
+  ngOnInit() {
     this.updateItems();
+    this.selectedTechnology.valueChanges.pipe(takeUntil(this.stop$), distinctUntilChanged()).subscribe(() => this.updateItems());
   }
 
   ngAfterViewChecked() {
@@ -76,6 +76,7 @@ export class ProjectsListComponent implements AfterViewInit, AfterViewChecked, O
     if(this.grid) {
       this.grid.layout();
     }
+    this.changeDetector.markForCheck();
   }
 
   sort(field: string, direction: number) {
@@ -101,5 +102,9 @@ export class ProjectsListComponent implements AfterViewInit, AfterViewChecked, O
     return merge(debouncedText$, inputFocus$, clicksWithClosedPopup$).pipe(
       map(term => (term === '' ? this.technologies : this.technologies.filter(v => v.toLowerCase().indexOf(term.toLowerCase()) > -1)).slice(0, 10))
     );
+  }
+
+  trackBy(project: Project) {
+    return project.title;
   }
 }

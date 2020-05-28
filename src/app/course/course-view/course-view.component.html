@@ -1,11 +1,11 @@
 <div class="m-2" *ngIf="course$ | async as course; else notFound">
   <div>
     <h1>{{course.name}}</h1>
-    <h2>{{course.semester}}</h2>
+    <h2>{{course.semester[0]}} {{course.semester[1]}}</h2>
     <h4>Formal Class Description:</h4>
     <p>{{course.desc}}</p>
-    <div *ngIf="course.projects">
-      <h4>Projects:</h4>
+    <div *ngIf="course.projects?.length">
+      <h4>Project{{course.projects.length > 1 ? 's' : ''}}:</h4>
       <div *ngFor="let project of course.projects; let index = index">
         <h5>{{project.title}}</h5>
         <div class="row">
@@ -42,8 +42,8 @@
             <img [src]="project.imgs[0]" class="img-fluid border border-dark">
           </div>
         </div>
+        <br *ngIf="index != 0">
       </div>
-      <br *ngIf="index != 0">
     </div>
   </div>
 </div>
