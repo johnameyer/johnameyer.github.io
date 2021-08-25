@@ -523,7 +523,9 @@ to register.',
             links: [{
                 link: 'https://github.com/danielle-galvao/web-terminal',
                 type: 'github'
-            }]
+            }],
+            imgs: ['/assets/screenshots/web-terminal/authentication.png', '/assets/screenshots/web-terminal/screenshot.png'],
+            cardImg: '/assets/card/web-terminal.png'
         }],
         semester: ['Spring', 2020]
     },
@@ -570,10 +572,12 @@ developing scripted strategy playbooks, and applying heuristics for real-time de
             title: 'Settlers of BOTan',
             shortDesc: 'Bot developed for the game Settlers of Catan using the open-source Java \'JSettlers2\' implementation.',
             desc: 'Our team decided to implement a bot for the game Settlers of Catan since our team was all pretty familiar with the game and we thought it would be feasible to create a bot that performed reasonably well.',
+            outcomes: 'The bot we were able to create by the end of the semester performs pretty well against a player, but tends to have problems in the late game against the built-in bot. Since that bot was built as the result of a PhD thesis, we are very happy with its performance.',
             links: [{
                 link: 'https://github.com/sambattalio/settlers_of_botan',
                 type: 'github'
             }],
+            imgs: ['/assets/screenshots/settlers-of-botan/game-outcome.png'],
             technologies: ['Java']
         }],
         semester: ['Spring', 2020]

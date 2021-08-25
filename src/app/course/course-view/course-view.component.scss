@@ -1,0 +1,22 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
+.img-wrapper-lg {
+    margin-left: 30px;
+    margin-bottom: 30px;
+    float: right;
+    max-width: 40vw;
+}
+
+img {
+    margin-bottom: 20px;
+}
+
+.img-wrapper-sm {
+    margin: auto;
+}
+
+.badge {
+    margin-right: 5px;
+}

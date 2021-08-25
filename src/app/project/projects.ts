@@ -2,7 +2,7 @@ import { StandaloneProject } from '../models/standalone-project';
 
 export const projects: StandaloneProject[] = [
     {
-        slug: 'rtb',
+        slug: 'raise-the-bar',
         title: 'Team Raise the Bar',
         cardImg: 'https://developer.att.com/wp-content/uploads/2016/12/hack-finalist-raise-the-bar-sm.png',
         startDate: 'Sept 2016',
@@ -21,8 +21,8 @@ export const projects: StandaloneProject[] = [
                 of: '16 teams'
             },
         ],
-        shortDesc: 'Developed an application for Android that interfaced with a smart' +
-        ' weight bar (TI SensorTag) and calculated reps and other statistics',
+        shortDesc: 'Developed an application for Android that interfaced with a smart weight bar (TI SensorTag) and \
+calculated reps and other statistics',
         desc: 'My freshman year I attended the AT&T Hackathon at Notre Dame and pitched myself as being a freshman, but already knowing Android and excited to develop something cool. I met two other students and an data scientist living in the area. The data scientist had an idea of making a kind of weight bar that tracks your reps, and since there was such a heavy emphasis on IoT event I came up with our \'smart\' weightbar solution.',
         challenge: 'The primary issue I ran into while developing this application was the move from just streaming data off of the phone-as-an-accelerometer over Bluetooth, to the differently structured Bluetooth Low Energy data of multiple channels of mostly unknown data from the Sensor Tag. While there was a bevy of documentation, I was unable to integrate that knowledge into my code until I was able to see the open source application they had made.',
         outcomes: 'While we intended to use the TI Sensor Tag that was provided to us at the event, my inexperience with Bluetooth Low Energy made it too difficult and so instead we connected two phones directly over Bluetooth, one serving as the user\'s device and the other connected to the weightbar. With this design that could track the number of reps a user did via PCA (Principal Component Analysis) and how good the form was, we won Best IoT solution. This then qualified us to enter into another competition, for which I improved the application to work with the Sensor Tag properly, and we recorded a video. We were then one of four teams then to be invited to Las Vegas for the AT&T Hackathon Invitational, for which I improved the app to have a backend API that would allow for gym owners to see their usage. We then won $5000 and third place.',
@@ -84,7 +84,7 @@ export const projects: StandaloneProject[] = [
         startup: true
     },
     {
-        slug: 'dunne',
+        slug: 'dunne-hall-website',
         title: 'Dunne Hall Website',
         startDate: 'Aug 2016',
         endDate: 'Jul 2019',
@@ -136,7 +136,7 @@ export const projects: StandaloneProject[] = [
         ]
     },
     {
-        slug: 'cdmc',
+        slug: 'cincinnati-dance-website',
         title: 'Cincinnati Dance and Movement Center Website',
         startDate: 'Aug 2018',
         endDate: 'Aug 2019',
@@ -206,7 +206,7 @@ export const projects: StandaloneProject[] = [
         startup: true
     },
     {
-        slug: 'sri',
+        slug: 'science-research-institute',
         title: 'Science Research Institute',
         awards: [],
         startDate: 'May 2015',
@@ -231,7 +231,7 @@ export const projects: StandaloneProject[] = [
         startup: true
     },
     {
-        slug: 'ndht',
+        slug: 'notre-dame-dining-hall-tracker',
         title: 'Notre Dame Dining Hall Tracker',
         cardImg: '/assets/card/dining-hall-tracker.png',
         startDate: '2017',
@@ -255,7 +255,7 @@ export const projects: StandaloneProject[] = [
         ].map(img => '/assets/screenshots/ndht/' + img)
     },
     {
-        slug: 'lab',
+        slug: 'labyrinthine',
         title: 'Labyrinthine',
         startDate: '2013',
         endDate: '2015',
@@ -267,7 +267,7 @@ export const projects: StandaloneProject[] = [
         technologies: ['Java', 'Swing']
     },
     {
-        slug: 'cards',
+        slug: 'can-i-have-that',
         title: 'Can I Have That',
         startDate: '2017',
         endDate: 'Current',
@@ -289,7 +289,7 @@ export const projects: StandaloneProject[] = [
         ]
     },
     {
-        slug: 'harmony',
+        slug: 'harmony-ts',
         title: 'Harmony-TS',
         startDate: '2020',
         endDate: 'Current',

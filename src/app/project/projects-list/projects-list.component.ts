@@ -71,7 +71,6 @@ export class ProjectsListComponent implements OnInit, AfterViewChecked, OnDestro
       selectedProjects = selectedProjects.filter(project => project.technologies?.includes(this.selectedTechnology.value));
     }
     selectedProjects.sort(this.ordering$.value);
-    console.log(selectedProjects);
     this.selectedProjects = selectedProjects;
     if(this.grid) {
       this.grid.layout();

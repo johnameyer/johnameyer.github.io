@@ -29,7 +29,7 @@ export class CoursesListComponent implements OnInit, AfterViewChecked, OnDestroy
   ngOnInit() {
     this.updateItems();
     this.hasProjects.valueChanges.pipe(takeUntil(this.stop), distinctUntilChanged()).subscribe(() => this.updateItems());
-  }p
+  }
   
   ngOnDestroy() {
     this.stop.next({});
@@ -48,7 +48,6 @@ export class CoursesListComponent implements OnInit, AfterViewChecked, OnDestroy
       selectedCourses = selectedCourses.filter(course => course.projects?.length);
     }
     selectedCourses.sort(this.ordering.value);
-    console.log(selectedCourses);
     this.selectedCourses = selectedCourses;
     if(this.grid) {
       this.grid.layout();
