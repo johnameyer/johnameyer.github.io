@@ -6,11 +6,11 @@ import { ResumeViewComponent } from './resume-view/resume-view.component';
 const routes: Routes = [
   {
     path: 'project',
-    loadChildren: './project/project.module#ProjectModule'
+    loadChildren: () => import('./project/project.module').then(m => m.ProjectModule)
   },
   {
     path: 'course',
-    loadChildren: './course/course.module#CourseModule'
+    loadChildren: () => import('./course/course.module').then(m => m.CourseModule)
   },
   {
     path: 'resume',
@@ -29,7 +29,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
