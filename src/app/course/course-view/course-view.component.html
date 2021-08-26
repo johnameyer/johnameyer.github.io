@@ -1,6 +1,6 @@
 <div class="m-2" *ngIf="course$ | async as course; else notFound">
   <div>
-    <h1>{{course.name}}</h1>
+    <h1 class="mb-0">{{course.name}}</h1>
     <h2>{{course.semester[0]}} {{course.semester[1]}}</h2>
     <h4>Formal Class Description:</h4>
     <p>{{course.desc}}</p>
@@ -25,6 +25,13 @@
               {{project.challenge}}
               <br>
             </ng-container>
+            <span *ngIf="project.technologies && project.technologies.length">
+              <span>Built on:</span>
+              <span *ngFor="let tech of project.technologies" class="ml-1"> 
+                <app-technology-badge [tech]="tech"></app-technology-badge>
+              </span>
+              <br>
+            </span>
             <ng-container *ngIf="project.links">
               <b>Links:</b>
               <div *ngFor="let link of project.links">

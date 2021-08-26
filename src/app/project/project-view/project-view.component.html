@@ -1,7 +1,7 @@
 <div class="row justify-content-md-center m-2" *ngIf="project$ | async as project">
   <div class="col-md">
-    <h1>{{project.title}}</h1>
-    <h2>{{project.dates}}</h2>
+    <h1 class="mb-0">{{project.title}}</h1>
+    <h2>{{project.startDate}} - {{project.endDate || 'Current'}}</h2>
     <div *ngIf="project.imgs" class="img-wrapper-lg d-none d-lg-block">
       <img *ngFor="let img of project.imgs" class="img-fluid d-block border border-dark" src="{{img}}" alt="Card image cap">
     </div>
@@ -23,8 +23,10 @@
       </div>
     </ng-container>
     <span *ngIf="project.technologies && project.technologies.length">
-      Built on: 
-      <app-technology-badge *ngFor="let tech of project.technologies" [tech]="tech"></app-technology-badge>
+      <span>Built on:</span>
+      <span *ngFor="let tech of project.technologies" class="ml-1"> 
+        <app-technology-badge [tech]="tech"></app-technology-badge>
+      </span>
     </span>
     <br>
     <ng-container *ngIf="project.awards && project.awards.length">
