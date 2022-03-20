@@ -1,5 +1,10 @@
-<h1>Past Projects</h1>
-<p>Projects I have had the pleasure of working on in the past outside of a course environment</p>
+<h1>Independent Projects</h1>
+
+<div class="d-flex mb-4">
+  <p class="text-center my-auto w-100">
+    Projects I have had the pleasure of working on in the past outside of a course or internship environment
+  </p>
+</div>
 <div class="row mb-2">
   <div class="col-md-auto">
     <div class="form-group row">
@@ -17,7 +22,7 @@
     </div>
   </div>
 </div>
-<div class="grid" #grid>
+<div class="row" #grid>
   <!--div class="grid-sizer col-md-4 col-lg-3"></div-->
   <div class="grid-item col-md-6 col-lg-4 col-xl-3" *ngFor="let project of selectedProjects; trackBy: trackBy">
     <app-project-item [project]="project"></app-project-item>

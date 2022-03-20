@@ -27,6 +27,6 @@ export default class ColorUtil {
 
     public static getColor(tech: string) {
         tech = mapping[tech.toLowerCase()] || tech;
-        return GitHubColors.get(tech, '#333').color;
+        return GitHubColors.get(tech, false)?.color || '#333';
     }
 }

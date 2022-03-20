@@ -30,7 +30,7 @@ export class ProjectsListComponent implements OnInit, AfterViewChecked, OnDestro
 
   @ViewChild('grid') gridElem: ElementRef;
   selectedProjects: Project[] = [];
-  grid: any = null;
+  grid: Masonry = null;
   loadListener: any;
   stop$: Subject<any> = new Subject();
   ordering$: BehaviorSubject<(a: Project, b: Project) => any> = new BehaviorSubject((a: StandaloneProject, b: StandaloneProject) => -dateOrdering(a,b));

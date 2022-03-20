@@ -27,7 +27,7 @@ jobs:
       - name: Install Dependencies
         run: pnpm i
 
-      - name: Documentation
+      - name: Build
         run: pnpm ng build -- --configuration production --base-href 'https://johnmeyer.dev'
 
       - name: Commit Files
@@ -35,11 +35,12 @@ jobs:
           git checkout --orphan gh-pages
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          find * -maxdepth 0 ! -name 'docs' -exec rm -r {} \;
+          find * -maxdepth 0 ! -name 'dist' -exec rm -r {} \;
           mv dist/* ./
           echo "johnmeyer.dev" > CNAME
+          touch .nojekyll
           git add -A
-          git commit -m "Update docs"
+          git commit -m "Update build"
       - name: Push Changes
         uses: ad-m/github-push-action@master
         with:
