@@ -270,12 +270,12 @@ calculated reps and other statistics',
         slug: 'can-i-have-that',
         title: 'Can I Have That',
         startDate: '2017',
-        endDate: 'Current',
+        endDate: '2020',
         awards: [],
-        shortDesc: 'Implementation of a card game my grandmother popularized in our family, currently for command line and web browser',
+        shortDesc: 'CLI implementation of a card game my grandmother popularized in our family.',
         desc: 'At some point in 2017, since I had never done a significant project in Python and was feeling inspired to make an online version of my grandmother\'s card game like there are of so many other games, I decided to create a Python command line implementation of the game that users could play. Eventually I decided to port the project over to Typescript to allow for maximum cross-platform possibility.',
         challenge: 'The greatest challenge I had faced was been making an artificial intelligence that can play the game as well as a human could. The game is fairly tricky for a human to play and this is also seen for the AI. When writing the Python version, I had never had any experience with making a game AI save for the limited experience I had from the Labyrinthine game. However, the implementation I have chosen for the Typescript version seeks to minimize the value the current set of cards would give the player turn end (as the game is golf-scored). This seems to perform better and cover more edge cases than the original hand-written rules based version for Python. This performs very well, but additional functionality in the search is needed, like strategizing around other players discards and pick-ups or long term strategy. Additionally some way to control the difficulty of this might be desired.',
-        outcomes: 'Currently, one is able to play the game locally against several AI opponents in the Typescript version as well as in a basic web client-server websocket implementation. Future plans include making a networked version for command line, and a nice web (Websocket) and Electron interface.',
+        outcomes: 'Before migrating over to the Cards TS library, one was successfully able to play locally against AI opponents on the CLI in both the Python and Typescript versions.',
         technologies: ['Python', 'Typescript', 'Inquirer', 'Mocha'],
         links: [
             {
@@ -286,6 +286,49 @@ calculated reps and other statistics',
         cardImg: '/assets/card/can-i-have-that.png',
         imgs: [
             '/assets/screenshots/can-i-have-that/terminal.png'
+        ]
+    },
+    {
+        slug: 'cards-ts',
+        title: 'Cards TS',
+        startDate: '2020',
+        endDate: 'Current',
+        awards: [],
+        shortDesc: 'Card/turn-based game framework and card game implementations, currently for command line and web browser. (Extension of Can I Have That)',
+        desc: 'After doing significant work on my Can I Have That card game, realized the potential for moving to a more generic model and implementing many of my other favorite games.',
+        challenge: 'My favorite challenge so far has been just generally thinking about genericization of what a card game is as well as figuring out how to lessen the size of the individual games and make them as concise as possible. One particularly fun challenge has been writing the library such that it can support not only the local play mode, but also playing online wherein the environment might not be preserved and the state preserved and restored several times.',
+        outcomes: 'Today, one is able to play several games both locally on the CLI as well as on the CardsTS website. Adding new games is relatively simple.',
+        future: 'Future plans include making a networked version for command line and desktop as well as continuing to add additional games.',
+        technologies: ['Typescript', 'Inquirer', 'Mocha'],
+        links: [
+            {
+                link: 'https://github.com/johnameyer/cards-ts',
+                type: 'github'
+            }
+        ],
+        cardImg: '/assets/card/cards-ts.png',
+        imgs: [
+            '/assets/screenshots/cards-ts/screenshot.png'
+        ]
+    },
+    {
+        slug: 'cards-ts-web',
+        title: 'Cards TS Web',
+        startDate: '2020',
+        endDate: 'Current',
+        awards: [],
+        shortDesc: 'Online cards playing platform',
+        desc: 'A client/server implementation of the Cards TS games supporting joining lobbies and games (with websocket push) or playing alone.',
+        challenge: 'Figuring out various of the race conditions that can occur due to using DynamoDB and with multiple clients (even for the same user) and replicating data to those clients has been a fun but challenging activity.',
+        outcomes: 'Today, one is able to play every game from Cards TS both locally as well as in a lobby (if allowlisted). Lobby work continues to improve operations and reduce chances of being billed massively.',
+        future: 'Social elements.',
+        technologies: ['Angular', 'Node', 'NX/NRWL', 'AWS CDK'],
+        links: [
+        ],
+        cardImg: '/assets/card/cards-ts-web.png',
+        imgs: [
+            '/assets/screenshots/cards-ts-web/can-i-have-that.png',
+            '/assets/screenshots/cards-ts-web/euchre.png'
         ]
     },
     {

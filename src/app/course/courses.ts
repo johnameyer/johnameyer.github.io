@@ -497,7 +497,17 @@ with real world social sensing and cyber-physical system problems.',
 
         ],
         primaryLang: 'Python',
-        // projects: [],
+        // projects: [{
+        //     title: 'Social Movie Recommender',
+        //     duration: 'Semester-Long',
+        //     shortDesc: 'A project to build a movie recommender based on user\'s past tweets and interests',
+        //     desc: '',
+        //     challenge: '',
+        //     technologies: ['Python'],
+        //     links: ['https://github.com/msalaman/movieRecommender'],
+        //     imgs: [],
+        //     cardImg: ''
+        // }],
         semester: ['Spring', 2020]
     },
     {

@@ -5,10 +5,12 @@ import { CourseProject } from '../models/course-project';
 import { StandaloneProject } from '../models/standalone-project';
 
 const selectedNames: (string | [string, number])[] = [
+    'cards-ts',
     'raise-the-bar',
     'harmony-ts',
-    'can-i-have-that',
+    'cards-ts-web',
     'dunne-hall-website',
+    ['CSE40746', 0],
     'cincinnati-dance-website',
     'notre-dame-dining-hall-tracker',
     ['CSE30246', 0]

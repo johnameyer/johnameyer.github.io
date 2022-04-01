@@ -13,6 +13,12 @@ export class TechnologyBadgeComponent implements OnInit {
     ColorUtil.init();
   }
 
-  getColor = (tech: string) => ColorUtil.getColor(tech);
-
+  getBackgroundColor = (tech: string) => ColorUtil.getColor(tech);
+  
+  getTextColor = (tech: string) => (
+    Array.from<string>(ColorUtil.getColor(tech).substring(1))
+      .filter((_, i) => i % 2)
+      .map(n => parseInt(n, 16))
+      .reduce((a, b) => a + b, 0)
+    ) > 10 ? '#222' : '#FFF';
 }
