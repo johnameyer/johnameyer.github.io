@@ -13,8 +13,4 @@ export class ProjectItemComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  getAwardsJoined(awards: any[]): string {
-    return awards.map(award => award.award + ' (' + award.from + ')').join(' & ');
-  }
 }

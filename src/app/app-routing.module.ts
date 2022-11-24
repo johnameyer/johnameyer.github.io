@@ -13,6 +13,10 @@ const routes: Routes = [
     loadChildren: () => import('./course/course.module').then(m => m.CourseModule)
   },
   {
+    path: 'industry',
+    loadChildren: () => import('./industry/industry.module').then(m => m.IndustryModule)
+  },
+  {
     path: 'resume',
     pathMatch: 'full',
     component: ResumeViewComponent

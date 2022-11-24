@@ -118,9 +118,9 @@ color matching functions. Our system then powered an Arduino to appropriately mo
 certain hue and brightness',
                 links: [
                     {
+                        title: 'Final project video presentation',
                         link: 'https://www.youtube.com/watch?v=PaCzTv-gPG4',
                         type: 'youtube',
-                        description: 'Final video presentation of our project.'
                     }
                 ]
             }
@@ -174,8 +174,8 @@ one can move the character around the level, avoiding the ghosts while picking u
                 technologies: ['Verilog'],
                 links: [
                     {
+                        title: 'Final project video presentation',
                         link: 'https://www.youtube.com/watch?v=cSL-TNYXvBs',
-                        description: '',
                         type: 'youtube'
                     }
                 ]

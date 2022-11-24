@@ -1,6 +1,6 @@
 export class Link {
     link: string;
-    description?: string;
+    title?: string;
     type: string | string[];
 }
 

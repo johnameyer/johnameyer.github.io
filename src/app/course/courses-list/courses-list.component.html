@@ -1,34 +1,36 @@
-<h1>Courses</h1>
-<div class="d-flex mb-4">
-  <p class="text-center my-auto w-100">
-    Please take a look at the work I have done through projects, classes, and internships.
-  </p>
-</div>
-<div class="row mb-4">
-  <div class="col-sm-auto">
-    <div class="btn-group btn-group-toggle" role="group">
-      <input type="checkbox" class="btn-check" id="hasProject" [formControl]="hasProjects">
-      <label class="btn btn-primary" for="hasProject">
-        Filter Courses with Projects
-      </label>
-    </div>
+<div class="container-fluid mx-auto">
+  <h1>Courses</h1>
+  <div class="d-flex mb-4">
+    <p class="text-center my-auto w-100">
+      Please take a look at the work I have done through projects, classes, and internships.
+    </p>
   </div>
-  <div class="col-sm-auto">
-    <div ngbDropdown class="d-inline-block">
-      <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Ordering by</button>
-      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-        <button ngbDropdownItem (click)="sort('number', -1)">Order By Course # Desc</button>
-        <button ngbDropdownItem (click)="sort('number', 1)">Order By Course # Asc</button>
-        <button ngbDropdownItem (click)="sort('date', -1)">Order By Date Desc</button>
-        <button ngbDropdownItem (click)="sort('date', 1)">Order By Date Asc</button>
+  <div class="row mb-4">
+    <div class="col-sm-auto">
+      <div class="btn-group btn-group-toggle" role="group">
+        <input type="checkbox" class="btn-check" id="hasProject" [formControl]="hasProjects">
+        <label class="btn btn-outline-primary" for="hasProject">
+          Filter Courses with Projects
+        </label>
+      </div>
+    </div>
+    <div class="col-sm-auto">
+      <div ngbDropdown class="d-inline-block">
+        <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Ordering by</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button ngbDropdownItem (click)="sort('number', -1)">Order By Course # Desc</button>
+          <button ngbDropdownItem (click)="sort('number', 1)">Order By Course # Asc</button>
+          <button ngbDropdownItem (click)="sort('date', -1)">Order By Date Desc</button>
+          <button ngbDropdownItem (click)="sort('date', 1)">Order By Date Asc</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<div #grid class="row">
-  <ng-container *ngFor="let course of selectedCourses">
-    <div *ngIf="!course.hidden" class="grid-item col-md-6 col-lg-4">
-      <app-course-item [course]="course"></app-course-item>
-    </div>
-  </ng-container>
+  <div #grid class="row">
+    <ng-container *ngFor="let course of selectedCourses">
+      <div *ngIf="!course.hidden" class="grid-item col-md-6 col-lg-4">
+        <app-course-item [course]="course"></app-course-item>
+      </div>
+    </ng-container>
+  </div>
 </div>

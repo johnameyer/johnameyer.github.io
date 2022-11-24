@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <div class="container-lg mx-auto">
     <a class="navbar-brand" routerLink="/">John Meyer</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -8,6 +8,9 @@
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
           <a class="nav-link" routerLink="/project" routerLinkActive="link-active" (click)="isCollapsed = true">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/industry" routerLinkActive="link-active" (click)="isCollapsed=true">Industry</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="/course" routerLinkActive="link-active" (click)="isCollapsed=true">Coursework</a>
@@ -19,6 +22,6 @@
     </div>
   </div>
 </nav>
-<div class="container-fluid pt-4 pl-2 pr-2">
+<div class="pt-4 pl-2 pr-2">
   <router-outlet></router-outlet>
 </div>
