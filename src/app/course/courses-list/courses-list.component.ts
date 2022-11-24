@@ -1,7 +1,7 @@
 import { Component, ViewChild, ElementRef, AfterViewChecked, OnDestroy, AfterViewInit, ChangeDetectorRef, OnInit } from '@angular/core';
 import { courses } from '../courses';
 import * as Masonry from 'masonry-layout';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 import { distinctUntilChanged, takeUntil } from 'rxjs/operators';
 import { Subject, BehaviorSubject } from 'rxjs';
 import { Course } from 'src/app/models/course';
@@ -21,7 +21,7 @@ export class CoursesListComponent implements OnInit, AfterViewChecked, OnDestroy
   grid: any;
   stop: Subject<any> = new Subject();
   ordering: BehaviorSubject<(a: Course, b: Course) => any> = new BehaviorSubject((a: Course, b: Course) => -dateOrdering(a,b));
-  hasProjects = new FormControl(false);
+  hasProjects = new UntypedFormControl(false);
 
   constructor(private changeDetector: ChangeDetectorRef) {
   }

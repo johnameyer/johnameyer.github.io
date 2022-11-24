@@ -3,7 +3,7 @@ import { projects } from '../projects';
 import * as Masonry from 'masonry-layout';
 import * as imagesLoaded from 'imagesloaded';
 import { Subject, BehaviorSubject, Observable, merge } from 'rxjs';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 import { takeUntil, distinctUntilChanged, debounceTime, filter, map } from 'rxjs/operators';
 import { Project } from 'src/app/models/project';
 import { NgbTypeahead } from '@ng-bootstrap/ng-bootstrap';
@@ -35,7 +35,7 @@ export class ProjectsListComponent implements OnInit, AfterViewChecked, OnDestro
   stop$: Subject<any> = new Subject();
   ordering$: BehaviorSubject<(a: Project, b: Project) => any> = new BehaviorSubject((a: StandaloneProject, b: StandaloneProject) => -dateOrdering(a,b));
   technologies: string[];
-  selectedTechnology = new FormControl('');
+  selectedTechnology = new UntypedFormControl('');
 
   @ViewChild('instance', {static: true}) instance: NgbTypeahead;
   focus$ = new Subject<string>();
