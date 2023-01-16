@@ -9,7 +9,7 @@ const luminanceRGB = [21, 71, 7];
   styleUrls: ['./technology-badge.component.scss']
 })
 export class TechnologyBadgeComponent implements OnInit {
-  @Input('tech') tech;
+  @Input() tech;
 
   ngOnInit(): void {
     ColorUtil.init();

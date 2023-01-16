@@ -1,6 +1,6 @@
 <figure class="card">
-    <img class="img-fluid d-block card-img-top" [class.rounded-bottom]="!img.description" [src]="img.img || img" [alt]="img.description || 'Screenshot image'">
-    <div class="card-body" *ngIf="img.description">
-        <figcaption class="card-text" *ngIf="img.description">{{img.description}}</figcaption>
+    <img class="img-fluid d-block card-img-top" [class.rounded-bottom]="!$any(img).description" [src]="$any(img).img || img" [alt]="$any(img).description || 'Screenshot image'">
+    <div class="card-body" *ngIf="$any(img).description">
+        <figcaption class="card-text" *ngIf="$any(img).description">{{img.description}}</figcaption>
     </div>
 </figure>

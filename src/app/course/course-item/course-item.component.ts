@@ -6,7 +6,7 @@ import { Component, OnInit, Input, ElementRef, ChangeDetectorRef, ChangeDetectio
   styleUrls: ['./course-item.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class CourseItemComponent implements OnInit, AfterViewInit {
+export class CourseItemComponent implements AfterViewInit {
 
   @Input() course;
   shouldTruncate = true;
@@ -14,9 +14,6 @@ export class CourseItemComponent implements OnInit, AfterViewInit {
   @ViewChild('body') body: ElementRef<HTMLParagraphElement>;
 
   constructor(private changeDetector: ChangeDetectorRef) { }
-
-  ngOnInit() {
-  }
 
   ngAfterViewInit() {
     this.checkForClamp();

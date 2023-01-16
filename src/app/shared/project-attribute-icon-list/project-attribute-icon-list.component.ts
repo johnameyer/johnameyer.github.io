@@ -6,15 +6,12 @@ import { Project } from 'src/app/models/project';
   templateUrl: './project-attribute-icon-list.component.html',
   styleUrls: ['./project-attribute-icon-list.component.scss']
 })
-export class ProjectAttributeIconListComponent implements OnInit {
+export class ProjectAttributeIconListComponent {
 
-  @Input('project') project: Project;
+  @Input() project: Project;
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  
   getAwardsJoined(awards: any[]): string {
     return awards.map(award => award.award + ' (' + award.from + ')').join(' & ');
   }

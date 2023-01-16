@@ -6,13 +6,10 @@ import { Link } from 'src/app/models/link';
   templateUrl: './link-item.component.html',
   styleUrls: ['./link-item.component.scss']
 })
-export class LinkItemComponent implements OnInit {
-  @Input('link') link: Link;
+export class LinkItemComponent {
+  @Input() link: Link;
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
   getIcon = (type: string | string[]): string[] => Array.isArray(type) ? type : ['fab', type];
 }

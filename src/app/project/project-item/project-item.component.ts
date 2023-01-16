@@ -5,12 +5,9 @@ import { Component, OnInit, Input } from '@angular/core';
   templateUrl: './project-item.component.html',
   styleUrls: ['./project-item.component.scss']
 })
-export class ProjectItemComponent implements OnInit {
+export class ProjectItemComponent {
 
   @Input() project;
 
   constructor() { }
-
-  ngOnInit() {
-  }
 }

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { GenericImage } from 'src/app/models/image';
 
 @Component({
@@ -6,13 +6,10 @@ import { GenericImage } from 'src/app/models/image';
   templateUrl: './screenshot-item.component.html',
   styleUrls: ['./screenshot-item.component.scss']
 })
-export class ScreenshotItemComponent implements OnInit {
+export class ScreenshotItemComponent {
 
-  @Input('img') img: GenericImage;
+  @Input() img: GenericImage;
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

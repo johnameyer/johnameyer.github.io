@@ -6,13 +6,10 @@ import { IndustryPosition } from 'src/app/models/industry-project';
   templateUrl: './industry-item.component.html',
   styleUrls: ['./industry-item.component.scss']
 })
-export class IndustryItemComponent implements OnInit {
+export class IndustryItemComponent {
 
-  @Input("position") position: IndustryPosition;
+  @Input() position: IndustryPosition;
 
   constructor() { }
-
-  ngOnInit() {
-  }
 
 }

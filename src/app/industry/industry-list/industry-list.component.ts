@@ -7,15 +7,11 @@ import { industryPositions } from '../industry';
   templateUrl: './industry-list.component.html',
   styleUrls: ['./industry-list.component.scss']
 })
-export class IndustryListComponent implements OnInit {
+export class IndustryListComponent {
   
   selectedPositions: IndustryPosition[] = industryPositions;
 
   constructor() { }
-
-  ngOnInit() {
-  }
-
   
   trackBy(position: IndustryPosition) {
     return position.slug;

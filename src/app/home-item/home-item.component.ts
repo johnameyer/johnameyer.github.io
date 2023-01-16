@@ -6,13 +6,11 @@ import { CourseProject } from '../models/course-project';
   templateUrl: './home-item.component.html',
   styleUrls: ['./home-item.component.scss']
 })
-export class HomeItemComponent implements OnInit {
+export class HomeItemComponent {
 
   @Input() project;
 
   constructor() { }
-
-  ngOnInit() { }
 
   getLink() {
     if (this.project.link){

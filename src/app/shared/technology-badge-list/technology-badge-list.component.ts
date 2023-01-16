@@ -5,12 +5,9 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './technology-badge-list.component.html',
   styleUrls: ['./technology-badge-list.component.scss']
 })
-export class TechnologyBadgeListComponent implements OnInit {
-  @Input("technologies") technologies: String[];
+export class TechnologyBadgeListComponent {
+  @Input() technologies: String[];
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }
