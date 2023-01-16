@@ -1,4 +1,3 @@
-import { Project } from './project';
 import { GenericLink } from './link';
 import { CourseProject } from './course-project';
 

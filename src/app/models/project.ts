@@ -1,10 +1,11 @@
 import { GenericLink } from './link';
 import { Award } from './award';
+import { GenericImage } from './image';
 
 export class Project {
     title: string;
     cardImg?: string;
-    imgs?: string[];
+    imgs?: GenericImage[];
     shortDesc: string;
     desc: string;
     challenge?: string;

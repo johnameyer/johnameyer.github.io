@@ -1,4 +1,7 @@
-@import '~bootstrap/dist/css/bootstrap.min.css';
+$color-mode-type: media-query;
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
 body {
     margin: 0px;
 }
@@ -23,4 +26,12 @@ h2 {
 .container-fluid {
     margin-left: 0;
     margin-right: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+fa-icon:has(title) {
+    cursor: help;
 }

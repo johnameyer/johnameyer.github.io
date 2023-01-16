@@ -11,7 +11,10 @@ const mapping = {
     mysql: 'SQL',
     opencv: 'OpenCV',
     swing: 'Java',
-    nodered: 'JavaScript'
+    springboot: 'Java',
+    node: 'JavaScript',
+    nodered: 'JavaScript',
+    rubyonrails: 'Ruby'
 };
 
 export default class ColorUtil {
@@ -26,7 +29,7 @@ export default class ColorUtil {
     }
 
     public static getColor(tech: string) {
-        tech = mapping[tech.toLowerCase()] || tech;
+        tech = mapping[tech.toLowerCase().replaceAll(' ', '')] || tech;
         return GitHubColors.get(tech, false)?.color || '#333';
     }
 }

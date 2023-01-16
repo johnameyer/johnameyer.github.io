@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
-import { faAward, faLightbulb, faFlask } from '@fortawesome/free-solid-svg-icons';
+import { faAward, faLightbulb, faFlask, faBlog } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faYoutube, faChrome } from '@fortawesome/free-brands-svg-icons';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -34,6 +34,6 @@ import { SharedModule } from './shared/shared.module';
 export class AppModule {
   constructor(library: FaIconLibrary) {
     // Add an icon to the library for convenient access in other components
-    library.addIcons(faAward, faLightbulb, faFlask, faGithub, faYoutube, faChrome);
+    library.addIcons(faAward, faLightbulb, faFlask, faBlog, faGithub, faYoutube, faChrome);
   }
 }

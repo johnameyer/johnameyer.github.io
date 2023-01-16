@@ -1,0 +1,6 @@
+<span *ngIf="technologies && technologies.length">
+    <span class="me-1">Built on:</span>
+    <span *ngFor="let tech of technologies" class="ms-1"> 
+        <app-technology-badge [tech]="tech"></app-technology-badge>
+    </span>
+</span>

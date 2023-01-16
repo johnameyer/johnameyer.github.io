@@ -3,17 +3,14 @@
   <!--TODO different form for mobile devices-->
   <div class="card-body">
     <h5 class="card-title">
-      {{project.title}}
-      <fa-icon *ngIf="project.awards && project.awards.length > 0" [icon]="['fas', 'award']" [title]="getAwardsJoined(project.awards)"></fa-icon>
-      <fa-icon *ngIf="project.hackathon" [icon]="['fas', 'lightbulb']" title="Hackathon Project"></fa-icon>
-      <fa-icon *ngIf="project.startup" [icon]="['fas', 'flask']" title="Startup Weekend Project"></fa-icon>
-      <fa-icon *ngIf="project.live" [icon]="['fab','chrome']" title="Live Product"></fa-icon>
+      <span class="me-1">{{project.title}}<span *ngIf="project.company"> @ {{project.company}}</span></span>
+      <project-attribute-icon-list [project]="project"></project-attribute-icon-list>
     </h5>
     <h6 class="card-subtitle mb-2 text-muted">{{renderDate()}}</h6>
     <p class="card-text">{{project.shortDesc}}</p>
     <a [routerLink]="getLink()" class="card-link">Read More</a>
   </div>
-  <div class="card-footer"><!--.text-muted-->
-    <app-technology-badge *ngFor="let tech of project.technologies" [tech]="tech" style="margin-right: 5px"></app-technology-badge>
+  <div class="card-footer">
+    <app-technology-badge *ngFor="let tech of project.technologies" [tech]="tech" class="ms-1"></app-technology-badge>
   </div>
 </div>

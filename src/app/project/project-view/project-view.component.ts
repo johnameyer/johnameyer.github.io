@@ -18,7 +18,4 @@ export class ProjectViewComponent implements OnInit {
   ngOnInit() {
     this.project$ = this.route.params.pipe(map(params => projects.find(project => params.slug === project.slug)));
   }
-
-  getIcon = (type: string | string[]): string[] => Array.isArray(type) ? type : ['fab', type];
-
 }
