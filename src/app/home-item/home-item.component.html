@@ -3,7 +3,7 @@
   <!--TODO different form for mobile devices-->
   <div class="card-body">
     <h5 class="card-title">
-      <span class="me-1">{{project.title}}<span *ngIf="project.company"> @ {{project.company}}</span></span>
+      <span class="me-1">{{project.title}}<span *ngIf="project.company"> &#64; {{project.company}}</span></span>
       <project-attribute-icon-list [project]="project"></project-attribute-icon-list>
     </h5>
     <h6 class="card-subtitle mb-2 text-muted">{{renderDate()}}</h6>
