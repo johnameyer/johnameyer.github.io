@@ -68,18 +68,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "johnameyer-github-io:build"
+            "buildTarget": "johnameyer-github-io:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "johnameyer-github-io:build:production"
+              "buildTarget": "johnameyer-github-io:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "johnameyer-github-io:build"
+            "buildTarget": "johnameyer-github-io:build"
           }
         },
         "test": {
