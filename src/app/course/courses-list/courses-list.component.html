@@ -29,7 +29,7 @@
   <div #grid class="row">
     <ng-container *ngFor="let course of selectedCourses">
       <div *ngIf="!course.hidden" class="grid-item col-md-6 col-lg-4">
-        <app-course-item [course]="course"></app-course-item>
+        <app-course-item [course]="course"/>
       </div>
     </ng-container>
   </div>

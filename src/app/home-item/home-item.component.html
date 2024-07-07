@@ -3,14 +3,14 @@
   <!--TODO different form for mobile devices-->
   <div class="card-body">
     <h5 class="card-title">
-      <span class="me-1">{{project.title}}<span *ngIf="project.company"> &#64; {{project.company}}</span></span>
-      <project-attribute-icon-list [project]="project"></project-attribute-icon-list>
+      <span class="me-1">{{project.title}}<span *ngIf="'company' in project"> &#64; {{project.company}}</span></span>
+      <project-attribute-icon-list [project]="project"/>
     </h5>
     <h6 class="card-subtitle mb-2 text-muted">{{renderDate()}}</h6>
     <p class="card-text">{{project.shortDesc}}</p>
     <a [routerLink]="getLink()" class="card-link">Read More</a>
   </div>
   <div class="card-footer">
-    <app-technology-badge *ngFor="let tech of project.technologies" [tech]="tech" class="ms-1"></app-technology-badge>
+    <app-technology-badge *ngFor="let tech of project.technologies" [tech]="tech" class="ms-1"/>
   </div>
 </div>

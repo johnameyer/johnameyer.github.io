@@ -16,13 +16,13 @@
             <div>
               <b *ngIf="project.outcomes || project.challenge">Description</b> {{project.desc}}
               <br>
-              <text-section title="Outcomes" [text]="project.outcomes"></text-section>
-              <text-section title="Favorite Challenge" [text]="project.challenge"></text-section>
-              <technology-badge-list [technologies]="project.technologies"></technology-badge-list>
+              <text-section title="Outcomes" [text]="project.outcomes"/>
+              <text-section title="Favorite Challenge" [text]="project.challenge"/>
+              <technology-badge-list [technologies]="project.technologies"/>
               <ng-container *ngIf="project.links">
                 <b>Links</b>
                 <div *ngFor="let link of project.links">
-                  <link-item [link]="link"></link-item>
+                  <link-item [link]="link"/>
                   <br>
                 </div>
               </ng-container>
