@@ -5,7 +5,7 @@
   <!--TODO different form for mobile devices-->
   <div class="card-body">
     <h5 class="card-title">
-      <span class="me-1">{{project.title}}@if (project.company) {<span> &#64; {{project.company}}</span>}</span>
+      <span class="me-1">{{project.title}}@if (isIndustryPosition(project)) {<span> &#64; {{project.company}}</span>}</span>
       <project-attribute-icon-list [project]="project"/>
     </h5>
     <h6 class="card-subtitle mb-2 text-muted">{{renderDate()}}</h6>

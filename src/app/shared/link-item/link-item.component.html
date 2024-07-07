@@ -1,4 +1,4 @@
-@if (link.type) {
+@if (!isString(link)) {
   <span>
     <a [href]="link.link">
       <fa-icon [icon]="getIcon(link.type)"></fa-icon>

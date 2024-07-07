@@ -4,6 +4,7 @@ import { StandaloneProject } from '../models/standalone-project';
 import { TechnologyBadgeComponent } from '../shared/technology-badge/technology-badge.component';
 import { RouterLink } from '@angular/router';
 import { ProjectAttributeIconListComponent } from '../shared/project-attribute-icon-list/project-attribute-icon-list.component';
+import { IndustryPosition, isIndustryPosition } from '../models/industry-project';
 
 
 @Component({
@@ -15,7 +16,7 @@ import { ProjectAttributeIconListComponent } from '../shared/project-attribute-i
 })
 export class HomeItemComponent {
 
-  @Input({required: true}) project: StandaloneProject | CourseProject & { link: String };
+  @Input({required: true}) project: StandaloneProject | CourseProject & { link: string } | IndustryPosition;
 
   constructor() { }
 
@@ -43,4 +44,5 @@ export class HomeItemComponent {
     }
   }
 
+  protected isIndustryPosition = isIndustryPosition;
 }

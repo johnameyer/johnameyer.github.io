@@ -10,7 +10,7 @@ const luminanceRGB = [21, 71, 7];
     standalone: true
 })
 export class TechnologyBadgeComponent implements OnInit {
-  @Input({required: true}) tech: String;
+  @Input({required: true}) tech: string;
 
   ngOnInit(): void {
     ColorUtil.init();

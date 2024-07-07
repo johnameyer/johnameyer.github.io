@@ -36,7 +36,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           find * -maxdepth 0 ! -name 'dist' -exec rm -r {} \;
-          mv dist/* ./
+          mv dist/browser/* ./
           cp index.html 404.html
           echo "johnmeyer.dev" > CNAME
           touch .nojekyll

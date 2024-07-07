@@ -10,3 +10,7 @@ export class IndustryPosition extends Project {
     startDate: string;
     endDate: string;
 }
+
+export function isIndustryPosition(p: Project): p is IndustryPosition {
+    return 'company' in p;
+}

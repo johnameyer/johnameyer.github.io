@@ -20,5 +20,8 @@
     ],
     "resolveJsonModule": true,
     "useDefineForClassFields": false
-  }
+  }// ,
+  // "angularCompilerOptions": {
+  //   "strictTemplates": true
+  // }
 }

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { GenericImage } from 'src/app/models/image';
+import { GenericImage, Image } from 'src/app/models/image';
 
 
 @Component({

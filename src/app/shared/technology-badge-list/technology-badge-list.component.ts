@@ -10,7 +10,7 @@ import { TechnologyBadgeComponent } from '../technology-badge/technology-badge.c
     imports: [TechnologyBadgeComponent]
 })
 export class TechnologyBadgeListComponent {
-  @Input({required: true}) technologies: String[];
+  @Input({required: true}) technologies: string[];
 
   constructor() { }
 

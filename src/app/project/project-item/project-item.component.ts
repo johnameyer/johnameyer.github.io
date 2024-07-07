@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Project } from 'src/app/models/project';
+import { StandaloneProject } from 'src/app/models/standalone-project';
 import { TechnologyBadgeComponent } from '../../shared/technology-badge/technology-badge.component';
 import { RouterLink } from '@angular/router';
 import { ProjectAttributeIconListComponent } from '../../shared/project-attribute-icon-list/project-attribute-icon-list.component';
@@ -14,7 +14,7 @@ import { ProjectAttributeIconListComponent } from '../../shared/project-attribut
 })
 export class ProjectItemComponent {
 
-  @Input({required: true}) project: Project;
+  @Input({required: true}) project: StandaloneProject;
 
   constructor() { }
 }
