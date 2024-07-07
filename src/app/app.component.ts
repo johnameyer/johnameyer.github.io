@@ -15,7 +15,7 @@ import { NgbCollapse } from '@ng-bootstrap/ng-bootstrap';
 export class AppComponent {
   isCollapsed = true;
 
-  constructor(private router: Router, private iconLibrary: FaIconLibrary) {
+  constructor(private router: Router, iconLibrary: FaIconLibrary) {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         (window as any).gtag('event', 'page_view', {page_path: event.urlAfterRedirects});

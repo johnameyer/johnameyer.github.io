@@ -1,5 +1,5 @@
 <div class="container-xl mx-auto">
-  <div class="row justify-content-md-center m-2" *ngIf="industryPosition$ | async as industryPosition; else notFound">
+  <div class="row justify-content-md-center m-2" *ngIf="industryPosition; else notFound">
     <div>
       <h1 class="mb-0">{{industryPosition.title}}<span *ngIf="industryPosition.company"> &#64; {{industryPosition.company}}</span></h1>
       <h2>{{industryPosition.startDate}} - {{industryPosition.endDate || 'Current'}}</h2>

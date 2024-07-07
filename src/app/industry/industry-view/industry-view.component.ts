@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, map } from 'rxjs';
 import { IndustryPosition } from 'src/app/models/industry-project';
@@ -18,14 +18,11 @@ import { NgIf, NgFor, AsyncPipe } from '@angular/common';
     standalone: true,
     imports: [NgIf, TextSectionComponent, TechnologyBadgeListComponent, NgFor, LinkItemComponent, ScreenshotItemComponent, AsyncPipe]
 })
-export class IndustryViewComponent implements OnInit {
+export class IndustryViewComponent {
+  industryPosition: IndustryPosition | undefined;
 
-  industryPosition$: Observable<IndustryPosition>;
-
-  constructor(private route: ActivatedRoute) { }
-
-  ngOnInit() {
-    this.industryPosition$ = this.route.params.pipe(map(params => industryPositions.find(position => params.slug === position.slug)));
+  @Input()
+  set slug(slug: string) {
+    this.industryPosition = industryPositions.find(position => slug === position.slug);
   }
-
 }

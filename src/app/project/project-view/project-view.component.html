@@ -1,5 +1,5 @@
 <div class="container-xl mx-auto">
-  <div class="row justify-content-md-center m-2" *ngIf="project$ | async as project; else notFound">
+  <div class="row justify-content-md-center m-2" *ngIf="project; else notFound">
     <div>
       <h1 class="mb-0">{{project.title}}</h1>
       <h2>{{project.startDate}} - {{project.endDate || 'Current'}}</h2>
@@ -37,7 +37,7 @@
   </div>
   <ng-template #notFound>
     <p>
-      Course not found
+      Project not found
     </p>
   </ng-template>
 </div>

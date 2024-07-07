@@ -1,5 +1,5 @@
 <div class="container-xl mx-auto">
-  <div class="m-2" *ngIf="course$ | async as course; else notFound">
+  <div class="m-2" *ngIf="course; else notFound">
     <div>
       <h1 class="mb-0">{{course.name}}</h1>
       <h2>{{course.semester[0]}} {{course.semester[1]}}</h2>
