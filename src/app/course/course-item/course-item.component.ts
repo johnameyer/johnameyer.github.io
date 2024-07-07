@@ -2,7 +2,7 @@ import { Component, Input, ElementRef, ChangeDetectorRef, ChangeDetectionStrateg
 import { Course } from 'src/app/models/course';
 import { TechnologyBadgeComponent } from '../../shared/technology-badge/technology-badge.component';
 import { RouterLink } from '@angular/router';
-import { NgIf } from '@angular/common';
+
 
 @Component({
     selector: 'app-course-item',
@@ -10,7 +10,7 @@ import { NgIf } from '@angular/common';
     styleUrls: ['./course-item.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush,
     standalone: true,
-    imports: [NgIf, RouterLink, TechnologyBadgeComponent]
+    imports: [RouterLink, TechnologyBadgeComponent]
 })
 export class CourseItemComponent implements AfterViewInit {
 

@@ -3,14 +3,14 @@ import { Project } from 'src/app/models/project';
 import { TechnologyBadgeComponent } from '../../shared/technology-badge/technology-badge.component';
 import { RouterLink } from '@angular/router';
 import { ProjectAttributeIconListComponent } from '../../shared/project-attribute-icon-list/project-attribute-icon-list.component';
-import { NgIf, NgFor } from '@angular/common';
+
 
 @Component({
     selector: 'app-project-item',
     templateUrl: './project-item.component.html',
     styleUrls: ['./project-item.component.scss'],
     standalone: true,
-    imports: [NgIf, ProjectAttributeIconListComponent, RouterLink, NgFor, TechnologyBadgeComponent]
+    imports: [ProjectAttributeIconListComponent, RouterLink, TechnologyBadgeComponent]
 })
 export class ProjectItemComponent {
 

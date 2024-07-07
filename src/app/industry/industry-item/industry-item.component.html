@@ -1,18 +1,26 @@
 <div class="row">
   <div class="col-lg-1 col-sm-2">
-    <img *ngIf="position.companyLogo" [src]="position.companyLogo" class="img-fluid img-thumbnail">
+    @if (position.companyLogo) {
+      <img [src]="position.companyLogo" class="img-fluid img-thumbnail">
+    }
   </div>
   <div class="col-lg-11 col-sm-10">
     <div>
-      <h3>{{position.title}}<span *ngIf="position.company"> &#64; {{position.company}}</span></h3>
+      <h3>{{position.title}}@if (position.company) {<span> &#64; {{position.company}}</span>}</h3>
       <!-- <fa-icon *ngIf="project.awards && project.awards.length > 0" [icon]="['fas', 'award']" [title]="getAwardsJoined(project.awards)"/>
       <fa-icon *ngIf="project.live" [icon]="['fab','chrome']" title="Live Product"/> -->
     </div>
     <h6 class="text-muted">{{position.startDate}} - {{position.endDate}}</h6>
-    <div *ngIf="position.technologies?.length"><!--.text-muted-->
-      <app-technology-badge *ngFor="let tech of position.technologies" [tech]="tech" class="me-1"/>
-    </div>
+    @if (position.technologies?.length) {
+      <div><!--.text-muted-->
+        @for (tech of position.technologies; track tech) {
+          <app-technology-badge [tech]="tech" class="me-1"/>
+        }
+      </div>
+    }
     <p class="my-1">{{position.shortDesc}}</p>
-    <a  *ngIf="position.desc" [routerLink]="'/industry/' + position.slug">Read More</a>
+    @if (position.desc) {
+      <a  [routerLink]="'/industry/' + position.slug">Read More</a>
+    }
   </div>
 </div>

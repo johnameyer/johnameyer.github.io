@@ -1,6 +1,14 @@
 <span style="white-space: nowrap;">
-  <fa-icon *ngIf="project.awards && project.awards.length > 0" [icon]="['fas', 'award']" [title]="getAwardsJoined(project.awards)"/>
-  <fa-icon *ngIf="project.hackathon" [icon]="['fas', 'lightbulb']" title="Hackathon Project"/>
-  <fa-icon *ngIf="project.startup" [icon]="['fas', 'flask']" title="Startup Weekend Project"/>
-  <fa-icon *ngIf="project.live" [icon]="['fab','chrome']" title="Live Product"/>
+  @if (project.awards && project.awards.length > 0) {
+    <fa-icon [icon]="['fas', 'award']" [title]="getAwardsJoined(project.awards)"/>
+  }
+  @if (project.hackathon) {
+    <fa-icon [icon]="['fas', 'lightbulb']" title="Hackathon Project"/>
+  }
+  @if (project.startup) {
+    <fa-icon [icon]="['fas', 'flask']" title="Startup Weekend Project"/>
+  }
+  @if (project.live) {
+    <fa-icon [icon]="['fab','chrome']" title="Live Product"/>
+  }
 </span>

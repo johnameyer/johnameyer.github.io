@@ -1,6 +1,6 @@
-<ng-container *ngIf="text">
-    <div>
-        <b>{{title}}</b>
-        <p>{{text}}</p>
-    </div>
-</ng-container>
+@if (text) {
+  <div>
+    <b>{{title}}</b>
+    <p>{{text}}</p>
+  </div>
+}

@@ -13,9 +13,11 @@
   <div>
     <h2>Favorite Projects</h2>
     <div #grid class="row">
-      <div *ngFor="let project of selected" class="col-md-6 col-lg-4 grid-item">
-        <app-home-item [project]="project"/>
-      </div>
+      @for (project of selected; track project) {
+        <div class="col-md-6 col-lg-4 grid-item">
+          <app-home-item [project]="project"/>
+        </div>
+      }
     </div>
   </div>
 </div>

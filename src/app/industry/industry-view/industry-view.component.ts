@@ -9,14 +9,14 @@ import { ScreenshotItemComponent } from '../../shared/screenshot-item/screenshot
 import { LinkItemComponent } from '../../shared/link-item/link-item.component';
 import { TechnologyBadgeListComponent } from '../../shared/technology-badge-list/technology-badge-list.component';
 import { TextSectionComponent } from '../../shared/text-section/text-section.component';
-import { NgIf, NgFor, AsyncPipe } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
     selector: 'app-industry-view',
     templateUrl: './industry-view.component.html',
     styleUrls: ['./industry-view.component.scss'],
     standalone: true,
-    imports: [NgIf, TextSectionComponent, TechnologyBadgeListComponent, NgFor, LinkItemComponent, ScreenshotItemComponent, AsyncPipe]
+    imports: [TextSectionComponent, TechnologyBadgeListComponent, LinkItemComponent, ScreenshotItemComponent, AsyncPipe]
 })
 export class IndustryViewComponent {
   industryPosition: IndustryPosition | undefined;

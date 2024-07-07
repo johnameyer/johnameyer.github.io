@@ -1,9 +1,11 @@
 <div class="card truncate">
-  <img *ngIf="project.cardImg" class="card-img-top" [src]="project.cardImg">
+  @if (project.cardImg) {
+    <img class="card-img-top" [src]="project.cardImg">
+  }
   <!--TODO different form for mobile devices-->
   <div class="card-body">
     <h5 class="card-title">
-      <span class="me-1">{{project.title}}<span *ngIf="project.company"> &#64; {{project.company}}</span></span>
+      <span class="me-1">{{project.title}}@if (project.company) {<span> &#64; {{project.company}}</span>}</span>
       <project-attribute-icon-list [project]="project"/>
     </h5>
     <h6 class="card-subtitle mb-2 text-muted">{{renderDate()}}</h6>
@@ -11,6 +13,8 @@
     <a [routerLink]="getLink()" class="card-link">Read More</a>
   </div>
   <div class="card-footer">
-    <app-technology-badge *ngFor="let tech of project.technologies" [tech]="tech" class="ms-1"/>
+    @for (tech of project.technologies; track tech) {
+      <app-technology-badge [tech]="tech" class="ms-1"/>
+    }
   </div>
 </div>
