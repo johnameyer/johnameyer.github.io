@@ -1,6 +1,6 @@
 import { Component, ViewChild, ElementRef, AfterViewChecked, OnDestroy, AfterViewInit, ChangeDetectorRef, OnInit } from '@angular/core';
 import { courses } from '../courses';
-import * as Masonry from 'masonry-layout';
+import Masonry from 'masonry-layout';
 import { UntypedFormControl } from '@angular/forms';
 import { distinctUntilChanged, takeUntil } from 'rxjs/operators';
 import { Subject, BehaviorSubject } from 'rxjs';

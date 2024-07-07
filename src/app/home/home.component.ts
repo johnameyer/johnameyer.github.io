@@ -1,7 +1,7 @@
 import { Component, ViewChild, AfterViewInit, AfterViewChecked, OnDestroy, ElementRef } from '@angular/core';
 import { selected } from './home-selected';
-import * as Masonry from 'masonry-layout';
-import * as imagesLoaded from 'imagesloaded';
+import Masonry from 'masonry-layout';
+import imagesLoaded from 'imagesloaded';
 
 @Component({
   selector: 'app-home',

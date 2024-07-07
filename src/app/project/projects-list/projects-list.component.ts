@@ -1,7 +1,7 @@
 import { Component, ViewChild, ElementRef, AfterViewInit, AfterViewChecked, OnDestroy, OnInit, ChangeDetectorRef } from '@angular/core';
 import { projects } from '../projects';
-import * as Masonry from 'masonry-layout';
-import * as imagesLoaded from 'imagesloaded';
+import Masonry from 'masonry-layout';
+import imagesLoaded from 'imagesloaded';
 import { Subject, BehaviorSubject, Observable, merge } from 'rxjs';
 import { UntypedFormControl } from '@angular/forms';
 import { takeUntil, distinctUntilChanged, debounceTime, filter, map } from 'rxjs/operators';
