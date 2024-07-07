@@ -1,13 +1,20 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Project } from 'src/app/models/project';
+import { TechnologyBadgeComponent } from '../../shared/technology-badge/technology-badge.component';
+import { RouterLink } from '@angular/router';
+import { ProjectAttributeIconListComponent } from '../../shared/project-attribute-icon-list/project-attribute-icon-list.component';
+
 
 @Component({
-  selector: 'app-project-item',
-  templateUrl: './project-item.component.html',
-  styleUrls: ['./project-item.component.scss']
+    selector: 'app-project-item',
+    templateUrl: './project-item.component.html',
+    styleUrls: ['./project-item.component.scss'],
+    standalone: true,
+    imports: [ProjectAttributeIconListComponent, RouterLink, TechnologyBadgeComponent]
 })
 export class ProjectItemComponent {
 
-  @Input() project;
+  @Input({required: true}) project: Project;
 
   constructor() { }
 }

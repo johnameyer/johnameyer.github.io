@@ -8,8 +8,8 @@ describe('ResumeViewComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ ResumeViewComponent ]
-    })
+    imports: [ResumeViewComponent]
+})
     .compileComponents();
   }));
 

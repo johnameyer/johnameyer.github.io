@@ -1,14 +1,18 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Project } from 'src/app/models/project';
+import { FaIconComponent } from '@fortawesome/angular-fontawesome';
+
 
 @Component({
-  selector: 'project-attribute-icon-list',
-  templateUrl: './project-attribute-icon-list.component.html',
-  styleUrls: ['./project-attribute-icon-list.component.scss']
+    selector: 'project-attribute-icon-list',
+    templateUrl: './project-attribute-icon-list.component.html',
+    styleUrls: ['./project-attribute-icon-list.component.scss'],
+    standalone: true,
+    imports: [FaIconComponent]
 })
 export class ProjectAttributeIconListComponent {
 
-  @Input() project: Project;
+  @Input({required: true}) project: Project;
 
   constructor() { }
   

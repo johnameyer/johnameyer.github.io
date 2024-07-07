@@ -8,8 +8,8 @@ describe('ScreenshotItemComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ScreenshotItemComponent ]
-    })
+    imports: [ScreenshotItemComponent]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(ScreenshotItemComponent);

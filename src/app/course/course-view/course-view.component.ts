@@ -1,24 +1,23 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { Component, Input } from '@angular/core';
 import { courses } from '../courses';
-import ColorUtil from '../../color-util';
 import { Course } from 'src/app/models/course';
+import { LinkItemComponent } from '../../shared/link-item/link-item.component';
+import { TechnologyBadgeListComponent } from '../../shared/technology-badge-list/technology-badge-list.component';
+import { TextSectionComponent } from '../../shared/text-section/text-section.component';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
-  selector: 'app-course-view',
-  templateUrl: './course-view.component.html',
-  styleUrls: ['./course-view.component.scss']
+    selector: 'app-course-view',
+    templateUrl: './course-view.component.html',
+    styleUrls: ['./course-view.component.scss'],
+    standalone: true,
+    imports: [TextSectionComponent, TechnologyBadgeListComponent, LinkItemComponent, AsyncPipe]
 })
-export class CourseViewComponent implements OnInit {
-  course$: Observable<Course>;
+export class CourseViewComponent {
+  course: Course | undefined;
 
-  constructor(private route: ActivatedRoute) { }
-
-  ngOnInit() {
-    ColorUtil.init();
-    this.course$ = this.route.params.pipe(map(params => courses.find(course => params.slug === course.subj + course.num)));
+  @Input()
+  set slug(slug: string) {
+    this.course = courses.find(course => slug === course.subj + course.num);
   }
-
 }

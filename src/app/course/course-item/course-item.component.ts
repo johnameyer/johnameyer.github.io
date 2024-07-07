@@ -1,14 +1,20 @@
-import { Component, OnInit, Input, ElementRef, ChangeDetectorRef, ChangeDetectionStrategy, AfterContentInit, ViewChild, AfterContentChecked, AfterViewChecked, AfterViewInit } from '@angular/core';
+import { Component, Input, ElementRef, ChangeDetectorRef, ChangeDetectionStrategy, ViewChild, AfterViewInit } from '@angular/core';
+import { Course } from 'src/app/models/course';
+import { TechnologyBadgeComponent } from '../../shared/technology-badge/technology-badge.component';
+import { RouterLink } from '@angular/router';
+
 
 @Component({
-  selector: 'app-course-item',
-  templateUrl: './course-item.component.html',
-  styleUrls: ['./course-item.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'app-course-item',
+    templateUrl: './course-item.component.html',
+    styleUrls: ['./course-item.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true,
+    imports: [RouterLink, TechnologyBadgeComponent]
 })
 export class CourseItemComponent implements AfterViewInit {
 
-  @Input() course;
+  @Input({required: true}) course: Course;
   shouldTruncate = true;
   isBodyClamped = false;
   @ViewChild('body') body: ElementRef<HTMLParagraphElement>;

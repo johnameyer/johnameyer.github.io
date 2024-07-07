@@ -1,9 +1,10 @@
-<span *ngIf="link.type; else linkStr">
+@if (link.type) {
+  <span>
     <a [href]="link.link">
-        <fa-icon [icon]="getIcon(link.type)"></fa-icon>
-        {{link.title || link.link}}
+      <fa-icon [icon]="getIcon(link.type)"></fa-icon>
+      {{link.title || link.link}}
     </a>
-</span>
-<ng-template #linkStr>
-    <a [href]="link">{{link}}</a>
-</ng-template>
+  </span>
+} @else {
+  <a [href]="link">{{link}}</a>
+}
