@@ -8,8 +8,8 @@ describe('TechnologyBadgeComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ TechnologyBadgeComponent ]
-    })
+    imports: [TechnologyBadgeComponent]
+})
     .compileComponents();
   }));
 

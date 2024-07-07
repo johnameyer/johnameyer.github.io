@@ -1,11 +1,16 @@
 import { Component, Input, ElementRef, ChangeDetectorRef, ChangeDetectionStrategy, ViewChild, AfterViewInit } from '@angular/core';
 import { Course } from 'src/app/models/course';
+import { TechnologyBadgeComponent } from '../../shared/technology-badge/technology-badge.component';
+import { RouterLink } from '@angular/router';
+import { NgIf } from '@angular/common';
 
 @Component({
-  selector: 'app-course-item',
-  templateUrl: './course-item.component.html',
-  styleUrls: ['./course-item.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'app-course-item',
+    templateUrl: './course-item.component.html',
+    styleUrls: ['./course-item.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true,
+    imports: [NgIf, RouterLink, TechnologyBadgeComponent]
 })
 export class CourseItemComponent implements AfterViewInit {
 

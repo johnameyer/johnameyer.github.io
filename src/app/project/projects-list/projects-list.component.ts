@@ -3,11 +3,13 @@ import { projects } from '../projects';
 import Masonry from 'masonry-layout';
 import imagesLoaded from 'imagesloaded';
 import { Subject, BehaviorSubject, Observable, merge } from 'rxjs';
-import { UntypedFormControl } from '@angular/forms';
+import { UntypedFormControl, ReactiveFormsModule } from '@angular/forms';
 import { takeUntil, distinctUntilChanged, debounceTime, filter, map } from 'rxjs/operators';
 import { Project } from 'src/app/models/project';
-import { NgbTypeahead } from '@ng-bootstrap/ng-bootstrap';
+import { NgbTypeahead, NgbDropdown, NgbDropdownToggle, NgbDropdownMenu, NgbDropdownButtonItem, NgbDropdownItem } from '@ng-bootstrap/ng-bootstrap';
 import { StandaloneProject } from 'src/app/models/standalone-project';
+import { ProjectItemComponent } from '../project-item/project-item.component';
+import { NgFor } from '@angular/common';
 
 const dateOrdering = (a: StandaloneProject, b: StandaloneProject) => a.endDate == 'Current' ? 1 : b.endDate == 'Current' ? -1 : new Date(a.endDate).valueOf() - new Date(b.endDate).valueOf();
 
@@ -22,9 +24,11 @@ function getTechnologies(projects: Project[]): string[] {
 }
 
 @Component({
-  selector: 'app-projects-list',
-  templateUrl: './projects-list.component.html',
-  styleUrls: ['./projects-list.component.scss']
+    selector: 'app-projects-list',
+    templateUrl: './projects-list.component.html',
+    styleUrls: ['./projects-list.component.scss'],
+    standalone: true,
+    imports: [ReactiveFormsModule, NgbTypeahead, NgbDropdown, NgbDropdownToggle, NgbDropdownMenu, NgbDropdownButtonItem, NgbDropdownItem, NgFor, ProjectItemComponent]
 })
 export class ProjectsListComponent implements OnInit, AfterViewChecked, OnDestroy {
 

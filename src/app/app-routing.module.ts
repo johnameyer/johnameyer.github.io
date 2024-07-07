@@ -6,15 +6,15 @@ import { ResumeViewComponent } from './resume-view/resume-view.component';
 const routes: Routes = [
   {
     path: 'project',
-    loadChildren: () => import('./project/project.module').then(m => m.ProjectModule)
+    loadChildren: () => import('./project/project-routing.module')
   },
   {
     path: 'course',
-    loadChildren: () => import('./course/course.module').then(m => m.CourseModule)
+    loadChildren: () => import('./course/course-routing.module')
   },
   {
     path: 'industry',
-    loadChildren: () => import('./industry/industry.module').then(m => m.IndustryModule)
+    loadChildren: () => import('./industry/industry-routing.module')
   },
   {
     path: 'resume',
@@ -32,8 +32,4 @@ const routes: Routes = [
   }
 ];
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes, {})],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }
+export default routes;

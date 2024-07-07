@@ -1,11 +1,17 @@
 import { Component, Input } from '@angular/core';
 import { CourseProject } from '../models/course-project';
 import { StandaloneProject } from '../models/standalone-project';
+import { TechnologyBadgeComponent } from '../shared/technology-badge/technology-badge.component';
+import { RouterLink } from '@angular/router';
+import { ProjectAttributeIconListComponent } from '../shared/project-attribute-icon-list/project-attribute-icon-list.component';
+import { NgIf, NgFor } from '@angular/common';
 
 @Component({
-  selector: 'app-home-item',
-  templateUrl: './home-item.component.html',
-  styleUrls: ['./home-item.component.scss']
+    selector: 'app-home-item',
+    templateUrl: './home-item.component.html',
+    styleUrls: ['./home-item.component.scss'],
+    standalone: true,
+    imports: [NgIf, ProjectAttributeIconListComponent, RouterLink, NgFor, TechnologyBadgeComponent]
 })
 export class HomeItemComponent {
 

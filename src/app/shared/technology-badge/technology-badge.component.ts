@@ -4,9 +4,10 @@ import ColorUtil from 'src/app/color-util';
 const luminanceRGB = [21, 71, 7];
 
 @Component({
-  selector: 'app-technology-badge',
-  templateUrl: './technology-badge.component.html',
-  styleUrls: ['./technology-badge.component.scss']
+    selector: 'app-technology-badge',
+    templateUrl: './technology-badge.component.html',
+    styleUrls: ['./technology-badge.component.scss'],
+    standalone: true
 })
 export class TechnologyBadgeComponent implements OnInit {
   @Input({required: true}) tech: String;

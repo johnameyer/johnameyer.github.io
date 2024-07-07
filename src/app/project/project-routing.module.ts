@@ -1,5 +1,4 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes } from '@angular/router';
 import { ProjectsListComponent } from './projects-list/projects-list.component';
 import { ProjectViewComponent } from './project-view/project-view.component';
 
@@ -15,8 +14,4 @@ const routes: Routes = [
   }
 ];
 
-@NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
-})
-export class ProjectRoutingModule { }
+export default routes;

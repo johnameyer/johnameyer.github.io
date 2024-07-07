@@ -8,8 +8,8 @@ describe('IndustryViewComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ IndustryViewComponent ]
-    })
+    imports: [IndustryViewComponent]
+})
     .compileComponents();
   }));
 

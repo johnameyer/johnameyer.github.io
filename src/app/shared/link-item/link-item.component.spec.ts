@@ -8,8 +8,8 @@ describe('LinkItemComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LinkItemComponent ]
-    })
+    imports: [LinkItemComponent]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(LinkItemComponent);
