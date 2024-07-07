@@ -8,7 +8,7 @@ import { GenericImage } from 'src/app/models/image';
 })
 export class ScreenshotItemComponent {
 
-  @Input() img: GenericImage;
+  @Input({required: true}) img: GenericImage;
 
   constructor() { }
 

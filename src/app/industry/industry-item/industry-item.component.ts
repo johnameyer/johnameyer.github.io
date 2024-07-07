@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { IndustryPosition } from 'src/app/models/industry-project';
 
 @Component({
@@ -8,7 +8,7 @@ import { IndustryPosition } from 'src/app/models/industry-project';
 })
 export class IndustryItemComponent {
 
-  @Input() position: IndustryPosition;
+  @Input({required: true}) position: IndustryPosition;
 
   constructor() { }
 

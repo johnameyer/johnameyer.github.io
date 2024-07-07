@@ -1,4 +1,5 @@
-import { Component, OnInit, Input, ElementRef, ChangeDetectorRef, ChangeDetectionStrategy, AfterContentInit, ViewChild, AfterContentChecked, AfterViewChecked, AfterViewInit } from '@angular/core';
+import { Component, Input, ElementRef, ChangeDetectorRef, ChangeDetectionStrategy, ViewChild, AfterViewInit } from '@angular/core';
+import { Course } from 'src/app/models/course';
 
 @Component({
   selector: 'app-course-item',
@@ -8,7 +9,7 @@ import { Component, OnInit, Input, ElementRef, ChangeDetectorRef, ChangeDetectio
 })
 export class CourseItemComponent implements AfterViewInit {
 
-  @Input() course;
+  @Input({required: true}) course: Course;
   shouldTruncate = true;
   isBodyClamped = false;
   @ViewChild('body') body: ElementRef<HTMLParagraphElement>;

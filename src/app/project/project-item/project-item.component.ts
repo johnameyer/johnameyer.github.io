@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Project } from 'src/app/models/project';
 
 @Component({
   selector: 'app-project-item',
@@ -7,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ProjectItemComponent {
 
-  @Input() project;
+  @Input({required: true}) project: Project;
 
   constructor() { }
 }

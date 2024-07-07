@@ -1,5 +1,6 @@
-import { Component, OnInit, Input, AfterViewInit, AfterViewChecked, OnDestroy } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CourseProject } from '../models/course-project';
+import { StandaloneProject } from '../models/standalone-project';
 
 @Component({
   selector: 'app-home-item',
@@ -8,12 +9,12 @@ import { CourseProject } from '../models/course-project';
 })
 export class HomeItemComponent {
 
-  @Input() project;
+  @Input({required: true}) project: StandaloneProject | CourseProject & { link: String };
 
   constructor() { }
 
   getLink() {
-    if (this.project.link){
+    if ('link' in this.project){
       return this.project.link;
     }
     return '/project/' + this.project.slug;

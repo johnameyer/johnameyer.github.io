@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Link } from 'src/app/models/link';
 
 @Component({
@@ -7,7 +7,7 @@ import { Link } from 'src/app/models/link';
   styleUrls: ['./link-item.component.scss']
 })
 export class LinkItemComponent {
-  @Input() link: Link;
+  @Input({required: true}) link: Link;
 
   constructor() { }
 

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Project } from 'src/app/models/project';
 
 @Component({
@@ -8,7 +8,7 @@ import { Project } from 'src/app/models/project';
 })
 export class ProjectAttributeIconListComponent {
 
-  @Input() project: Project;
+  @Input({required: true}) project: Project;
 
   constructor() { }
   

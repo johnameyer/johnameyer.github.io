@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'technology-badge-list',
@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./technology-badge-list.component.scss']
 })
 export class TechnologyBadgeListComponent {
-  @Input() technologies: String[];
+  @Input({required: true}) technologies: String[];
 
   constructor() { }
 

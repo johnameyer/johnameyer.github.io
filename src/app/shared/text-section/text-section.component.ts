@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'text-section',
@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./text-section.component.scss']
 })
 export class TextSectionComponent {
-  @Input() title: String;
+  @Input({required: true}) title: String;
   @Input() text: String | undefined;
 
   constructor() { }
