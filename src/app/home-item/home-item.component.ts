@@ -1,45 +1,54 @@
-import { Component, Input } from '@angular/core';
-import { CourseProject } from '../models/course-project';
+import { ChangeDetectionStrategy, Component, computed, input } from '@angular/core';
+import { CourseProject, HomeCourseProject } from '../models/course-project';
 import { StandaloneProject } from '../models/standalone-project';
-import { TechnologyBadgeComponent } from '../shared/technology-badge/technology-badge.component';
-import { RouterLink } from '@angular/router';
-import { ProjectAttributeIconListComponent } from '../shared/project-attribute-icon-list/project-attribute-icon-list.component';
-import { IndustryPosition, isIndustryPosition } from '../models/industry-project';
+import { IndustryPosition, isIndustryPosition } from '../models/industry-position';
+import { CardComponent } from '../shared/card/card.component';
 
 @Component({
   selector: 'app-home-item',
   templateUrl: './home-item.component.html',
-  styleUrls: ['./home-item.component.scss'],
   standalone: true,
-  imports: [ProjectAttributeIconListComponent, RouterLink, TechnologyBadgeComponent],
+  imports: [CardComponent],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomeItemComponent {
-  @Input({ required: true }) project: StandaloneProject | (CourseProject & { link: string }) | IndustryPosition;
+  project = input.required<StandaloneProject | HomeCourseProject | IndustryPosition>();
 
   constructor() {}
 
-  getLink() {
-    if ('link' in this.project) {
-      return this.project.link;
+  title = computed(() => {
+    const project = this.project();
+    if (isIndustryPosition(project)) {
+      return `${project.title} @ ${project.company}`;
+    } else {
+      return project.title;
     }
-    return '/project/' + this.project.slug;
-  }
+  });
 
-  renderDate() {
-    if (this.project instanceof CourseProject) {
-      if (this.project.duration) {
-        return this.project.duration + ' - ' + this.project.semester[0] + ' ' + this.project.semester[1];
+  getLink = computed(() => {
+    const project = this.project();
+    if ('link' in project) {
+      return project.link;
+    }
+    return '/project/' + project.slug;
+  });
+
+  renderDate = computed(() => {
+    const project = this.project();
+    if ('semester' in project) {
+      if (project.duration) {
+        return project.duration + ' - ' + project.semester[0] + ' ' + project.semester[1];
       } else {
-        return this.project.semester[0] + ' ' + this.project.semester[1];
+        return project.semester[0] + ' ' + project.semester[1];
       }
     } else {
-      if (this.project.startDate != this.project.endDate) {
-        return this.project.startDate + ' - ' + this.project.endDate;
+      if (project.startDate != project.endDate) {
+        return project.startDate + ' - ' + project.endDate;
       } else {
-        return this.project.startDate;
+        return project.startDate;
       }
     }
-  }
+  });
 
   protected isIndustryPosition = isIndustryPosition;
 }

@@ -1,0 +1,16 @@
+fa-icon {
+  margin-right: 5px;
+}
+
+img {
+  max-height: 35vh;
+  object-fit: scale-down;
+  background-color: #000;
+}
+
+.truncate .card-text {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+}

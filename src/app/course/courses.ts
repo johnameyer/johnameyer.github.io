@@ -110,7 +110,7 @@ Engineering. Structured programming and software skills are further developed. S
 light bulb capable of producing both the energizing effect of the GE Align AM bulb and the soothing effect of the GE Align PM bulb. \
 A combined AM/PM bulb is easier for customers to install and use, and enables them to manage their circadian rhythms more effectively.',
         technologies: ['Matlab', 'Arduino'],
-        imgs: ['/assets/GE-Align.png'],
+        imgs: [{ src: '/assets/GE-Align.png' }],
         outcomes:
           'Developed an application that would allow a user to manually specify the hue they desired the bulb to show, \
 as well as set a desired wake-up and bedtime which our model would then appropriately change to simulate the AM and PM bulbs based on \
@@ -306,7 +306,7 @@ consist of the design and the implementation of a database system with a Web int
           "The most interesting challenge I faced was creating a MYSQL query that calculated how interested a user might be in a particular post based on the post's tags and based on how in-line those are with that user's interests, and similar user's interests.",
         technologies: ['PHP', 'MySQL'],
         links: ['https://github.com/samanthaccorn/reddit_data_processing'],
-        imgs: ['/assets/screenshots/breaddit.png'],
+        imgs: [{ src: '/assets/screenshots/breaddit.png' }],
         cardImg: '/assets/card/breaddit.png',
       },
     ],
@@ -467,7 +467,6 @@ evolution. (3) You will understand the C language inside and out, which will mak
     primaryLang: 'C',
     projects: [
       {
-        semester: ['Fall', 2019],
         duration: 'Semester-Long',
         title: 'B-Minor Compiler',
         shortDesc: 'A fully-fledged compiler for the language B-Minor, featuring type-checking and code generation.',
@@ -531,7 +530,6 @@ to register.',
     primaryLang: 'Typescript',
     projects: [
       {
-        semester: ['Spring', 2020],
         title: 'WebTerminal',
         shortDesc:
           'The hope of the WebTerminal project was to create a terminal like Jupyter that could be opened in the browser and be easier to use for new programmers.',
@@ -544,8 +542,8 @@ to register.',
           },
         ],
         imgs: [
-          '/assets/screenshots/web-terminal/authentication.png',
-          '/assets/screenshots/web-terminal/screenshot.png',
+          { src: '/assets/screenshots/web-terminal/authentication.png' },
+          { src: '/assets/screenshots/web-terminal/screenshot.png' },
         ],
         cardImg: '/assets/card/web-terminal.png',
       },
@@ -563,7 +561,6 @@ prizes and awards.",
     primaryLang: 'SQL',
     projects: [
       {
-        semester: ['Spring', 2020],
         title: 'tiNDer',
         shortDesc:
           "An dating application for the discerning Notre Dame, Holy Cross, or Saint Mary's student providing a more laid-back environment than mainline dating apps.",
@@ -594,7 +591,6 @@ developing scripted strategy playbooks, and applying heuristics for real-time de
     primaryLang: 'Java',
     projects: [
       {
-        semester: ['Spring', 2020],
         title: 'Settlers of BOTan',
         shortDesc:
           "Bot developed for the game Settlers of Catan using the open-source Java 'JSettlers2' implementation.",
@@ -607,7 +603,7 @@ developing scripted strategy playbooks, and applying heuristics for real-time de
             type: 'github',
           },
         ],
-        imgs: ['/assets/screenshots/settlers-of-botan/game-outcome.png'],
+        imgs: [{ src: '/assets/screenshots/settlers-of-botan/game-outcome.png' }],
         technologies: ['Java'],
       },
     ],

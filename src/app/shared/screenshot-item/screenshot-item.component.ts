@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { GenericImage, Image } from 'src/app/models/image';
+import { Image } from 'src/app/models/image';
 
 @Component({
   selector: 'screenshot-item',
@@ -9,7 +9,7 @@ import { GenericImage, Image } from 'src/app/models/image';
   imports: [],
 })
 export class ScreenshotItemComponent {
-  @Input({ required: true }) img: GenericImage;
+  @Input({ required: true }) img: Image;
 
   constructor() {}
 }

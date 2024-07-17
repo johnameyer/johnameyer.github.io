@@ -1,0 +1,27 @@
+<div class="card" [class.truncate]="truncate()">
+  @if (img()) {
+    <img class="card-img-top" [src]="img()" />
+  }
+  <div class="card-body">
+    <h5 class="card-title">
+      <span [ngClass]="attributes() ? 'me-1' : ''">{{ title() }}</span>
+      <project-attribute-icon-list [attributes]="attributes()" />
+    </h5>
+    @if (subtitle()) {
+      <h6 class="card-subtitle mb-2 text-muted">{{ subtitle() }}</h6>
+    }
+    @if (description()) {
+      <p #body class="card-text">{{ description() }}</p>
+    }
+    @if (link()) {
+      <a [routerLink]="link()" class="card-link">{{ linkText() }}</a>
+    }
+  </div>
+  @if (technologies().length) {
+    <div class="card-footer">
+      @for (tech of technologies(); track tech) {
+        <app-technology-badge [tech]="tech" class="ms-1" />
+      }
+    </div>
+  }
+</div>

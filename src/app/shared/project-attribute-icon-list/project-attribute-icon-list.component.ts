@@ -1,6 +1,7 @@
-import { Component, Input } from '@angular/core';
-import { Project } from 'src/app/models/project';
+import { ChangeDetectionStrategy, Component, Input, input } from '@angular/core';
+import { Attributes } from 'src/app/models/project';
 import { FaIconComponent } from '@fortawesome/angular-fontawesome';
+import { ViewComponent } from '../view/view.component';
 
 @Component({
   selector: 'project-attribute-icon-list',
@@ -8,9 +9,10 @@ import { FaIconComponent } from '@fortawesome/angular-fontawesome';
   styleUrls: ['./project-attribute-icon-list.component.scss'],
   standalone: true,
   imports: [FaIconComponent],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProjectAttributeIconListComponent {
-  @Input({ required: true }) project: Project;
+  attributes = input.required<Attributes>();
 
   constructor() {}
 

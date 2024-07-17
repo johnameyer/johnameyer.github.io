@@ -8,5 +8,6 @@
   "typescript.tsserver.watchOptions": {
     // https://www.typescriptlang.org/docs/handbook/configuring-watch.html
     "excludeDirectories": ["**/.angular", "**/node_modules", "**/dist"]
-  }
+  },
+  "editor.indentSize": 2
 }

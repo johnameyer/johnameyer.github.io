@@ -1,11 +1,11 @@
 import { GenericLink } from './link';
 import { Award } from './award';
-import { GenericImage } from './image';
+import { Image } from './image';
 
 export class Project {
   title: string;
   cardImg?: string;
-  imgs?: GenericImage[];
+  imgs?: Image[];
   shortDesc: string;
   desc: string;
   challenge?: string;
@@ -18,3 +18,5 @@ export class Project {
   startup? = false;
   live? = false;
 }
+
+export type Attributes = Pick<Project, 'awards' | 'hackathon' | 'live' | 'startup'>;
