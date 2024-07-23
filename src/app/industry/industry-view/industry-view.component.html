@@ -2,26 +2,31 @@
   @if (industryPosition) {
     <div class="row justify-content-md-center m-2">
       <div>
-        <h1 class="mb-0">{{industryPosition.title}}@if (industryPosition.company) {<span> &#64; {{industryPosition.company}}</span>}</h1>
-        <h2>{{industryPosition.startDate}} - {{industryPosition.endDate || 'Current'}}</h2>
+        <h1 class="mb-0">
+          {{ industryPosition.title }}
+          @if (industryPosition.company) {
+            <span> &#64; {{ industryPosition.company }}</span>
+          }
+        </h1>
+        <h2>{{ industryPosition.startDate }} - {{ industryPosition.endDate || 'Current' }}</h2>
       </div>
       <div [class.col-lg-7]="industryPosition.imgs">
         <div>
           @if (industryPosition.outcomes || industryPosition.challenge) {
             <b>Description</b>
           }
-          <p>{{industryPosition.desc || industryPosition.shortDesc}}</p>
+          <p>{{ industryPosition.desc || industryPosition.shortDesc }}</p>
         </div>
-        <text-section title="Outcomes" [text]="industryPosition.outcomes"/>
-        <text-section title="Favorite Challenge" [text]="industryPosition.challenge"/>
-        <technology-badge-list [technologies]="industryPosition.technologies"/>
-        <br/>
+        <text-section title="Outcomes" [text]="industryPosition.outcomes" />
+        <text-section title="Favorite Challenge" [text]="industryPosition.challenge" />
+        <technology-badge-list [technologies]="industryPosition.technologies" />
+        <br />
         @if (industryPosition.awards && industryPosition.awards.length) {
           <h4 class="mt-3">Awards</h4>
           @for (award of industryPosition.awards; track award) {
             <div>
-              <b>{{award.award}}</b> ({{award.from}}) - {{award.date}}
-              <br/>
+              <b>{{ award.award }}</b> ({{ award.from }}) - {{ award.date }}
+              <br />
             </div>
           }
         }
@@ -29,8 +34,8 @@
           <h4 class="mt-3">Links</h4>
           @for (link of industryPosition.links; track link) {
             <div>
-              <link-item [link]="link"/>
-              <br/>
+              <link-item [link]="link" />
+              <br />
             </div>
           }
         }
@@ -39,14 +44,12 @@
         <div class="col-lg-5">
           <h4 class="mt-3 d-lg-none">Screenshots</h4>
           @for (img of industryPosition.imgs; track img) {
-            <screenshot-item [img]="img"/>
+            <screenshot-item [img]="img" />
           }
         </div>
       }
     </div>
   } @else {
-    <p>
-      Position not found
-    </p>
+    <p>Position not found</p>
   }
 </div>

@@ -11,11 +11,11 @@ import { TextSectionComponent } from '../../shared/text-section/text-section.com
 import { AsyncPipe } from '@angular/common';
 
 @Component({
-    selector: 'app-project-view',
-    templateUrl: './project-view.component.html',
-    styleUrls: ['./project-view.component.scss'],
-    standalone: true,
-    imports: [TextSectionComponent, TechnologyBadgeListComponent, LinkItemComponent, ScreenshotItemComponent, AsyncPipe]
+  selector: 'app-project-view',
+  templateUrl: './project-view.component.html',
+  styleUrls: ['./project-view.component.scss'],
+  standalone: true,
+  imports: [TextSectionComponent, TechnologyBadgeListComponent, LinkItemComponent, ScreenshotItemComponent, AsyncPipe],
 })
 export class ProjectViewComponent {
   project: Project | undefined = undefined;

@@ -7,11 +7,11 @@ import { TextSectionComponent } from '../../shared/text-section/text-section.com
 import { AsyncPipe } from '@angular/common';
 
 @Component({
-    selector: 'app-course-view',
-    templateUrl: './course-view.component.html',
-    styleUrls: ['./course-view.component.scss'],
-    standalone: true,
-    imports: [TextSectionComponent, TechnologyBadgeListComponent, LinkItemComponent, AsyncPipe]
+  selector: 'app-course-view',
+  templateUrl: './course-view.component.html',
+  styleUrls: ['./course-view.component.scss'],
+  standalone: true,
+  imports: [TextSectionComponent, TechnologyBadgeListComponent, LinkItemComponent, AsyncPipe],
 })
 export class CourseViewComponent {
   course: Course | undefined;

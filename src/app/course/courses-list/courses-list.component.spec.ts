@@ -8,9 +8,8 @@ describe('CoursesListComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-    imports: [CoursesListComponent]
-})
-    .compileComponents();
+      imports: [CoursesListComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

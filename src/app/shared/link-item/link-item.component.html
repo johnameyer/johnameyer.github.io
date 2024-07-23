@@ -2,9 +2,9 @@
   <span>
     <a [href]="link.link">
       <fa-icon [icon]="getIcon(link.type)"></fa-icon>
-      {{link.title || link.link}}
+      {{ link.title || link.link }}
     </a>
   </span>
 } @else {
-  <a [href]="link">{{link}}</a>
+  <a [href]="link">{{ link }}</a>
 }

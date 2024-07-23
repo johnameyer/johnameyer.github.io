@@ -6,19 +6,22 @@ import { faAward, faLightbulb, faFlask, faBlog } from '@fortawesome/free-solid-s
 import { NgbCollapse } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss'],
-    standalone: true,
-    imports: [RouterLink, NgbCollapse, RouterLinkActive, RouterOutlet]
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
+  standalone: true,
+  imports: [RouterLink, NgbCollapse, RouterLinkActive, RouterOutlet],
 })
 export class AppComponent {
   isCollapsed = true;
 
-  constructor(private router: Router, iconLibrary: FaIconLibrary) {
+  constructor(
+    private router: Router,
+    iconLibrary: FaIconLibrary,
+  ) {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        (window as any).gtag('event', 'page_view', {page_path: event.urlAfterRedirects});
+        (window as any).gtag('event', 'page_view', { page_path: event.urlAfterRedirects });
       }
     });
 

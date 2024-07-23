@@ -6,7 +6,7 @@
     Longer description goes here
   </p>
 </div> -->
-<!-- <div class="row mb-2">
+  <!-- <div class="row mb-2">
 <div class="col-md-auto">
   <div class="form-group row">
     <label for="typeahead-focus" class="col-sm-auto col-form-label">Filter by Technology</label>
@@ -23,12 +23,12 @@
   </div>
 </div>
 </div> -->
-<div class="row">
-  @for (position of selectedPositions; track position) {
-    <div>
-      <industry-item [position]="position"/>
-      <br/>
-    </div>
-  }
+  <div class="row">
+    @for (position of selectedPositions; track position) {
+      <div>
+        <industry-item [position]="position" />
+        <br />
+      </div>
+    }
   </div>
 </div>
