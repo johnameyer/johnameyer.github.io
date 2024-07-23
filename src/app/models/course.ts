@@ -12,3 +12,5 @@ export class Course {
   projects?: CourseProject[];
   links?: GenericLink[];
 }
+
+export const matchesSlug = (slug: string) => (course: Course) => slug === course.subj + course.num;

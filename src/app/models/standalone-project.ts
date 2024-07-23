@@ -7,3 +7,5 @@ export class StandaloneProject extends Project {
   startDate: string;
   endDate: string;
 }
+
+export const matchesSlug = (slug: string) => (position: StandaloneProject) => slug === position.slug;

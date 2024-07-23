@@ -1,6 +1,5 @@
 export class Image {
-  img: string;
+  src: string;
+  // TODO absolute, type/folder (screenshot)
   description?: string;
 }
-
-export type GenericImage = Image | string;

@@ -1,13 +1,13 @@
 <figure class="card">
   <img
     class="img-fluid d-block card-img-top"
-    [class.rounded-bottom]="!$any(img).description"
-    [src]="$any(img).img || img"
-    [alt]="$any(img).description || 'Screenshot image'"
+    [class.rounded-bottom]="!img.description"
+    [src]="img.src"
+    [alt]="img.description || 'Screenshot image'"
   />
-  @if ($any(img).description) {
+  @if (img.description) {
     <div class="card-body">
-      @if ($any(img).description) {
+      @if (img.description) {
         <figcaption class="card-text">{{ img.description }}</figcaption>
       }
     </div>

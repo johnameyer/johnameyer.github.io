@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { IndustryPosition } from 'src/app/models/industry-project';
+import { IndustryPosition } from 'src/app/models/industry-position';
 import { RouterLink } from '@angular/router';
 import { TechnologyBadgeComponent } from '../../shared/technology-badge/technology-badge.component';
 

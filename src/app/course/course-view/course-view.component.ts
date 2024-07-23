@@ -1,23 +1,19 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, computed, input } from '@angular/core';
 import { courses } from '../courses';
-import { Course } from 'src/app/models/course';
-import { LinkItemComponent } from '../../shared/link-item/link-item.component';
-import { TechnologyBadgeListComponent } from '../../shared/technology-badge-list/technology-badge-list.component';
-import { TextSectionComponent } from '../../shared/text-section/text-section.component';
-import { AsyncPipe } from '@angular/common';
+import { Course, matchesSlug } from 'src/app/models/course';
+import { ViewComponent } from 'src/app/shared/view/view.component';
+import { DetailViewComponent } from '../../shared/detail-view/detail-view.component';
 
 @Component({
   selector: 'app-course-view',
   templateUrl: './course-view.component.html',
   styleUrls: ['./course-view.component.scss'],
   standalone: true,
-  imports: [TextSectionComponent, TechnologyBadgeListComponent, LinkItemComponent, AsyncPipe],
+  imports: [ViewComponent, DetailViewComponent],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CourseViewComponent {
-  course: Course | undefined;
+  course = input.required<Course>();
 
-  @Input()
-  set slug(slug: string) {
-    this.course = courses.find(course => slug === course.subj + course.num);
-  }
+  subtitle = computed(() => `${this.course().semester[0]} ${this.course().semester[1]}`);
 }

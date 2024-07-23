@@ -1,18 +1,18 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, input } from '@angular/core';
 import { StandaloneProject } from 'src/app/models/standalone-project';
-import { TechnologyBadgeComponent } from '../../shared/technology-badge/technology-badge.component';
-import { RouterLink } from '@angular/router';
-import { ProjectAttributeIconListComponent } from '../../shared/project-attribute-icon-list/project-attribute-icon-list.component';
+import { CardComponent } from '../../shared/card/card.component';
 
 @Component({
   selector: 'app-project-item',
   templateUrl: './project-item.component.html',
-  styleUrls: ['./project-item.component.scss'],
   standalone: true,
-  imports: [ProjectAttributeIconListComponent, RouterLink, TechnologyBadgeComponent],
+  imports: [CardComponent],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProjectItemComponent {
-  @Input({ required: true }) project: StandaloneProject;
+  project = input.required<StandaloneProject>();
 
   constructor() {}
+
+  subtitle = computed(() => `${this.project().startDate} - ${this.project().endDate || 'Current'}`);
 }

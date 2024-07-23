@@ -1,0 +1,23 @@
+.flush {
+  // counteract the left and right padding introduced by the gutters
+  margin: 0 calc(var(--bs-gutter-x) * -0.5);
+}
+
+.img-wrapper-lg {
+  margin-left: 30px;
+  margin-bottom: 30px;
+  float: right;
+  max-width: 40vw;
+}
+
+img {
+  margin-bottom: 20px;
+}
+
+.img-wrapper-sm {
+  margin: auto;
+}
+
+.badge {
+  margin-right: 5px;
+}

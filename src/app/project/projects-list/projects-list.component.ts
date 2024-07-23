@@ -61,7 +61,7 @@ function getTechnologies(projects: Project[]): string[] {
 })
 export class ProjectsListComponent implements OnInit, AfterViewChecked, OnDestroy {
   @ViewChild('grid') gridElem: ElementRef;
-  selectedProjects: Project[] = [];
+  selectedProjects: StandaloneProject[] = [];
   grid: Masonry = null;
   loadListener: any;
   stop$: Subject<any> = new Subject();

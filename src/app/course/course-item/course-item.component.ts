@@ -1,41 +1,23 @@
-import {
-  Component,
-  Input,
-  ElementRef,
-  ChangeDetectorRef,
-  ChangeDetectionStrategy,
-  ViewChild,
-  AfterViewInit,
-} from '@angular/core';
+import { Component, Input, ChangeDetectorRef, ChangeDetectionStrategy } from '@angular/core';
 import { Course } from 'src/app/models/course';
-import { TechnologyBadgeComponent } from '../../shared/technology-badge/technology-badge.component';
-import { RouterLink } from '@angular/router';
+import { CardComponent } from '../../shared/card/card.component';
 
 @Component({
   selector: 'app-course-item',
   templateUrl: './course-item.component.html',
-  styleUrls: ['./course-item.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
-  imports: [RouterLink, TechnologyBadgeComponent],
+  imports: [CardComponent],
 })
-export class CourseItemComponent implements AfterViewInit {
+export class CourseItemComponent {
   @Input({ required: true }) course: Course;
-  shouldTruncate = true;
   isBodyClamped = false;
-  @ViewChild('body') body: ElementRef<HTMLParagraphElement>;
 
   constructor(private changeDetector: ChangeDetectorRef) {}
 
-  ngAfterViewInit() {
-    this.checkForClamp();
-    window.addEventListener('resize', () => this.checkForClamp());
-  }
+  title = () => `${this.course.subj} ${this.course.num} ${this.course.name}`;
 
-  checkForClamp() {
-    this.isBodyClamped = this.body.nativeElement.scrollHeight > this.body.nativeElement.clientHeight;
-    this.changeDetector.detectChanges();
-  }
+  subtitle = () => `${this.course.semester[0]} ${this.course.semester[1]}`;
 
   linkText() {
     let text = 'See';
@@ -52,5 +34,10 @@ export class CourseItemComponent implements AfterViewInit {
       }
     }
     return text;
+  }
+
+  onClamp(clamp: boolean) {
+    this.isBodyClamped = clamp;
+    this.changeDetector.detectChanges();
   }
 }

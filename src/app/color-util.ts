@@ -15,6 +15,8 @@ const mapping = {
   node: 'JavaScript',
   nodered: 'JavaScript',
   rubyonrails: 'Ruby',
+  postgres: 'SQL',
+  jquery: 'JavaScript',
 };
 
 export default class ColorUtil {

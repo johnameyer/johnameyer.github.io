@@ -40,6 +40,20 @@ calculated reps and other statistics',
       'https://developer.att.com/blog/hackathon-invitational-finalists',
       'https://developer.att.com/blog/2017-summit-challenge-winners',
     ],
+    imgs: [
+      {
+        src: '/assets/screenshots/raise-the-bar/main-screen.png',
+        description: 'Main screen of app',
+      },
+      {
+        src: '/assets/screenshots/raise-the-bar/bluetooth-connection.png',
+        description: 'Bluetooth connection permissions',
+      },
+      {
+        src: '/assets/screenshots/raise-the-bar/acceleration-reps.jpg',
+        description: 'Graph showing principal component acceleration and calculated reps',
+      },
+    ],
     hackathon: true,
   },
   {
@@ -104,7 +118,7 @@ calculated reps and other statistics',
     challenge:
       "The greatest challenge in building this website was my attempt to make it that other administrators and stakeholders in Dunne could update the content on the site without needing me to do a full re-push of the code. I was able to set up a system where an 'update' request could be made that would download recent copies of Google Doc files and store them locally, with the site then parsing each to get a particular form.",
     outcomes:
-      'I built our website using PHP, which was the web language I was most familiar with at the time. Over the years, I added a mechanism to sync up the website with Google Docs so that non-technical members of the hall can update the various pages. As well, I am able to include the weekly newsletters so that parents can also see the weekly goings-on of the dorm.',
+      'I built our website using PHP, which was the web language I was most familiar with at the time. Over the years, I added a mechanism to sync up the website with Google Docs so that non-technical members of the hall can update the various pages. As well, I am able to include the weekly newsletters so that parents can also see the weekly goings-on of the dorm. The site was re-used by later classmen until the end of 2022.',
     technologies: ['PHP', 'Bootstrap'],
     links: [
       {
@@ -112,15 +126,24 @@ calculated reps and other statistics',
         type: 'github',
       },
       {
-        link: 'https://dunnehall.com',
+        link: 'https://web.archive.org/web/20211201052421/http://dunnehall.com/',
         type: 'chrome',
       },
     ],
-    live: true,
     imgs: [
-      '/assets/screenshots/dunne/home.png',
-      '/assets/screenshots/dunne/gallery.png',
-      '/assets/screenshots/dunne/leaders.png',
+      {
+        src: '/assets/screenshots/dunne/home.png',
+        description:
+          'Home page of the website, utilizing bootstrap responsive design and content stored in Google Docs',
+      },
+      {
+        src: '/assets/screenshots/dunne/gallery.png',
+        description: 'Carousel of images of dorm life',
+      },
+      {
+        src: '/assets/screenshots/dunne/leaders.png',
+        description: 'Responsive leader pictures and biographies stored in Google Docs but cached onto the webhost',
+      },
     ],
   },
   {
@@ -145,7 +168,12 @@ calculated reps and other statistics',
         type: 'github',
       },
     ],
-    imgs: ['/assets/ionic.png'],
+    imgs: [
+      {
+        src: '/assets/ionic.png',
+        description: 'Screenshot from app showing live positions of nearby "drones" through Firebase geo database',
+      },
+    ],
   },
   {
     slug: 'cincinnati-dance-website',
@@ -173,10 +201,10 @@ calculated reps and other statistics',
     ],
     live: true,
     imgs: [
-      '/assets/screenshots/cdmc/home.png',
-      '/assets/screenshots/cdmc/class-category.png',
-      '/assets/screenshots/cdmc/class.png',
-      '/assets/screenshots/cdmc/payment.png',
+      { src: '/assets/screenshots/cdmc/home.png' },
+      { src: '/assets/screenshots/cdmc/class-category.png' },
+      { src: '/assets/screenshots/cdmc/class.png' },
+      { src: '/assets/screenshots/cdmc/payment.png' },
     ],
   },
   {
@@ -227,9 +255,30 @@ calculated reps and other statistics',
     startDate: 'May 2015',
     endDate: 'May 2016',
     shortDesc: 'Research project generating a color-based 3-D controller',
-    desc: '',
+    desc: 'The goal of this project was to create a 3-D controller that could find the center of solid, single-colored area in 3D space using two webcams. The video feed was thresholded and then the two centroids were cross referenced to calculate its center in 3D space using triangulation/triganometry and FOV calculations. The two webcam approach was successful, and a test of precision (using two differently-colored objects spaced at 10cm) demonstrated that the technique had good precision.',
+    outcomes:
+      'I assembled a 20 page research paper, and presented my results in poster form at the Southwest Ohio Science and Engineering Expo and at my high school.',
     technologies: ['Java', 'OpenCV'],
+    imgs: [
+      {
+        src: '/assets/screenshots/color-controller/3d-coordinates.png',
+        description: 'Calculating 3D coordinates (shown at bottom) of a single object',
+      },
+      {
+        src: '/assets/screenshots/color-controller/color-thresholded.png',
+        description: 'Calibration of cameras to recognize the colors',
+      },
+      {
+        src: '/assets/screenshots/color-controller/measurement.png',
+        description: 'Calculating the distance betwen the two objects in 3D space (actual distance 10cm)',
+      },
+      {
+        src: '/assets/screenshots/color-controller/performance.png',
+        description: 'Graph showing accuracy of technique to place objects in 3D space',
+      },
+    ],
   },
+  // technolympics showcase
   {
     slug: 'lucy',
     title: 'Lucy',
@@ -243,7 +292,7 @@ calculated reps and other statistics',
       },
     ],
     shortDesc: 'Prototype software for a gig economy centered around recurring jobs like lawn care and grocery pickup',
-    desc: '',
+    desc: 'Prototype software for a gig economy centered around recurring jobs like lawn care and grocery pickup',
     technologies: null,
     startup: true,
   },
@@ -262,16 +311,16 @@ calculated reps and other statistics',
       'By the end of my time developing the application I had put it up on the Android Play store and given several demonstrations at the app fair Notre Dame held to showcase student app developers. I hope to revisit the app and improve it using new Android functionality in the future.',
     technologies: ['Java', 'Android'],
     imgs: [
-      'image0.png',
-      'image1.png',
-      'image2.png',
-      'image3.png',
-      'image4.png',
-      'image5.png',
-      'image6.png',
-      'image7.png',
-      'image8.png',
-    ].map(img => '/assets/screenshots/ndht/' + img),
+      { src: 'image0.png' },
+      { src: 'image1.png' },
+      { src: 'image2.png' },
+      { src: 'image3.png' },
+      { src: 'image4.png' },
+      { src: 'image5.png' },
+      { src: 'image6.png' },
+      { src: 'image7.png' },
+      { src: 'image8.png' },
+    ].map(obj => ({ ...obj, src: '/assets/screenshots/ndht/' + obj.src })),
   },
   {
     slug: 'labyrinthine',
@@ -307,7 +356,7 @@ calculated reps and other statistics',
       },
     ],
     cardImg: '/assets/card/can-i-have-that.png',
-    imgs: ['/assets/screenshots/can-i-have-that/terminal.png'],
+    imgs: [{ src: '/assets/screenshots/can-i-have-that/terminal.png' }],
   },
   {
     slug: 'cards-ts',
@@ -332,7 +381,7 @@ calculated reps and other statistics',
       },
     ],
     cardImg: '/assets/card/cards-ts.png',
-    imgs: ['/assets/screenshots/cards-ts/screenshot.png'],
+    imgs: [{ src: '/assets/screenshots/cards-ts/screenshot.png' }],
   },
   {
     slug: 'cards-ts-web',
@@ -346,11 +395,14 @@ calculated reps and other statistics',
       'Figuring out various of the race conditions that can occur due to using DynamoDB and with multiple clients (even for the same user) and replicating data to those clients has been a fun but challenging activity.',
     outcomes:
       'Today, one is able to play every game from Cards TS both locally as well as in a lobby (if allowlisted). Lobby work continues to improve operations and reduce chances of being billed massively.',
-    future: 'Social elements.',
+    // future: 'Social elements.',
     technologies: ['Angular', 'Node', 'NX/NRWL', 'AWS CDK'],
     links: [],
     cardImg: '/assets/card/cards-ts-web.png',
-    imgs: ['/assets/screenshots/cards-ts-web/can-i-have-that.png', '/assets/screenshots/cards-ts-web/euchre.png'],
+    imgs: [
+      { src: '/assets/screenshots/cards-ts-web/can-i-have-that.png' },
+      { src: '/assets/screenshots/cards-ts-web/euchre.png' },
+    ],
   },
   {
     slug: 'harmony-ts',
@@ -379,7 +431,13 @@ calculated reps and other statistics',
       },
     ],
     cardImg: '/assets/card/harmony-ts.png',
-    imgs: ['/assets/screenshots/harmony-ts/chorale-ui.png'],
+    imgs: [
+      {
+        src: '/assets/screenshots/harmony-ts/chorale-ui.png',
+        description:
+          'Screenshot from the demo website generating a 4-part chorale given only a key and a chord progression',
+      },
+    ],
   },
 ];
 

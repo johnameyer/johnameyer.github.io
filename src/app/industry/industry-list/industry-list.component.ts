@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IndustryPosition } from 'src/app/models/industry-project';
+import { IndustryPosition } from 'src/app/models/industry-position';
 import { industryPositions } from '../industry';
 import { IndustryItemComponent } from '../industry-item/industry-item.component';
 
