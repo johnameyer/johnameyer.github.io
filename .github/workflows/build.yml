@@ -41,7 +41,7 @@ jobs:
           echo "johnmeyer.dev" > CNAME
           touch .nojekyll
           git add -A
-          git commit -m "Update build"
+          git commit -m "Update build" --no-verify
       - name: Push Changes
         uses: ad-m/github-push-action@master
         with:
