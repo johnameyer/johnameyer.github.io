@@ -1,14 +1,14 @@
-<span style="white-space: nowrap;">
+<span style="white-space: nowrap">
   @if (project.awards && project.awards.length > 0) {
-    <fa-icon [icon]="['fas', 'award']" [title]="getAwardsJoined(project.awards)"/>
+    <fa-icon [icon]="['fas', 'award']" [title]="getAwardsJoined(project.awards)" />
   }
   @if (project.hackathon) {
-    <fa-icon [icon]="['fas', 'lightbulb']" title="Hackathon Project"/>
+    <fa-icon [icon]="['fas', 'lightbulb']" title="Hackathon Project" />
   }
   @if (project.startup) {
-    <fa-icon [icon]="['fas', 'flask']" title="Startup Weekend Project"/>
+    <fa-icon [icon]="['fas', 'flask']" title="Startup Weekend Project" />
   }
   @if (project.live) {
-    <fa-icon [icon]="['fab','chrome']" title="Live Product"/>
+    <fa-icon [icon]="['fab', 'chrome']" title="Live Product" />
   }
 </span>

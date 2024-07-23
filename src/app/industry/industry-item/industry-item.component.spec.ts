@@ -8,9 +8,8 @@ describe('IndustryItemComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-    imports: [IndustryItemComponent]
-})
-    .compileComponents();
+      imports: [IndustryItemComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

@@ -1,22 +1,23 @@
 <div class="card">
   @if (project.cardImg) {
-    <img class="card-img-top" [src]="project.cardImg">
+    <img class="card-img-top" [src]="project.cardImg" />
   }
   <!--TODO different form for mobile devices-->
   <div class="card-body">
     <h5 class="card-title">
-      <span class="me-1">{{project.title}}</span>
-      <project-attribute-icon-list [project]="project"/>
+      <span class="me-1">{{ project.title }}</span>
+      <project-attribute-icon-list [project]="project" />
     </h5>
-    <h6 class="card-subtitle mb-2 text-muted">{{project.startDate}} - {{project.endDate || 'Current'}}</h6>
-    <p class="card-text">{{project.shortDesc}}</p>
+    <h6 class="card-subtitle mb-2 text-muted">{{ project.startDate }} - {{ project.endDate || 'Current' }}</h6>
+    <p class="card-text">{{ project.shortDesc }}</p>
     <a [routerLink]="'/project/' + project.slug" class="card-link">Read More</a>
   </div>
   @if (project.technologies?.length) {
-    <div class="card-footer"><!--.text-muted-->
+    <div class="card-footer">
+      <!--.text-muted-->
       @for (tech of project.technologies; track tech) {
         <app-technology-badge [tech]="tech" style="margin-right: 5px"></app-technology-badge>
       }
     </div>
-}
+  }
 </div>

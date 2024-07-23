@@ -6,12 +6,12 @@ const routes: Routes = [
   {
     path: '',
     component: ProjectsListComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
   {
     path: ':slug',
-    component: ProjectViewComponent
-  }
+    component: ProjectViewComponent,
+  },
 ];
 
 export default routes;

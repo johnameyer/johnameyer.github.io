@@ -3,35 +3,35 @@ $color-mode-type: media-query;
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 
 body {
-    margin: 0px;
+  margin: 0px;
 }
 
 h1 {
-    text-align: center;
-    margin-bottom: .75em;
+  text-align: center;
+  margin-bottom: 0.75em;
 }
 
 h2 {
-    font-size: 1.5rem;
-    text-align: center;
-    margin-bottom: .5em;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 0.5em;
 }
 
 // 0 margins are needed for masonry (position: relative) and Bootstrap to play nice and centered
 .row {
-    margin-left: 0;
-    margin-right: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .container-fluid {
-    margin-left: 0;
-    margin-right: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 fa-icon:has(title) {
-    cursor: help;
+  cursor: help;
 }

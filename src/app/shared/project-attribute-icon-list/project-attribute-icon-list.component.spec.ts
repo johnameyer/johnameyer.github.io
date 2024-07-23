@@ -8,9 +8,8 @@ describe('ProjectAttributeIconListComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-    imports: [ProjectAttributeIconListComponent]
-})
-    .compileComponents();
+      imports: [ProjectAttributeIconListComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ProjectAttributeIconListComponent);
     component = fixture.componentInstance;

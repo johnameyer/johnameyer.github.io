@@ -6,12 +6,12 @@ const routes: Routes = [
   {
     path: '',
     component: IndustryListComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
   {
     path: ':slug',
-    component: IndustryViewComponent
-  }
+    component: IndustryViewComponent,
+  },
 ];
 
 export default routes;

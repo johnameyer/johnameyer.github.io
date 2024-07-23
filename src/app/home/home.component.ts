@@ -4,27 +4,25 @@ import Masonry from 'masonry-layout';
 import imagesLoaded from 'imagesloaded';
 import { HomeItemComponent } from '../home-item/home-item.component';
 
-
 @Component({
-    selector: 'app-home',
-    templateUrl: './home.component.html',
-    styleUrls: ['./home.component.scss'],
-    standalone: true,
-    imports: [HomeItemComponent]
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss'],
+  standalone: true,
+  imports: [HomeItemComponent],
 })
 export class HomeComponent implements AfterViewInit, AfterViewChecked, OnDestroy {
-
   selected = selected;
   loadListener: any;
   @ViewChild('grid') gridElem: ElementRef;
   grid: Masonry;
 
-  constructor() { }
+  constructor() {}
 
   ngAfterViewInit() {
-    this.grid = new Masonry( this.gridElem.nativeElement, {
+    this.grid = new Masonry(this.gridElem.nativeElement, {
       itemSelector: '.grid-item',
-      percentPosition: true
+      percentPosition: true,
     });
   }
 
@@ -37,5 +35,4 @@ export class HomeComponent implements AfterViewInit, AfterViewChecked, OnDestroy
   ngOnDestroy() {
     this.loadListener = null;
   }
-
 }

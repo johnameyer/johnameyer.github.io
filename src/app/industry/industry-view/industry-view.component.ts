@@ -12,11 +12,11 @@ import { TextSectionComponent } from '../../shared/text-section/text-section.com
 import { AsyncPipe } from '@angular/common';
 
 @Component({
-    selector: 'app-industry-view',
-    templateUrl: './industry-view.component.html',
-    styleUrls: ['./industry-view.component.scss'],
-    standalone: true,
-    imports: [TextSectionComponent, TechnologyBadgeListComponent, LinkItemComponent, ScreenshotItemComponent, AsyncPipe]
+  selector: 'app-industry-view',
+  templateUrl: './industry-view.component.html',
+  styleUrls: ['./industry-view.component.scss'],
+  standalone: true,
+  imports: [TextSectionComponent, TechnologyBadgeListComponent, LinkItemComponent, ScreenshotItemComponent, AsyncPipe],
 })
 export class IndustryViewComponent {
   industryPosition: IndustryPosition | undefined;

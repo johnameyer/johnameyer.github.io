@@ -8,10 +8,8 @@
   <div class="row mb-4">
     <div class="col-sm-auto">
       <div class="btn-group btn-group-toggle" role="group">
-        <input type="checkbox" class="btn-check" id="hasProject" [formControl]="hasProjects">
-        <label class="btn btn-outline-primary" for="hasProject">
-          Filter Courses with Projects
-        </label>
+        <input type="checkbox" class="btn-check" id="hasProject" [formControl]="hasProjects" />
+        <label class="btn btn-outline-primary" for="hasProject"> Filter Courses with Projects </label>
       </div>
     </div>
     <div class="col-sm-auto">
@@ -30,7 +28,7 @@
     @for (course of selectedCourses; track course) {
       @if (!course.hidden) {
         <div class="grid-item col-md-6 col-lg-4">
-          <app-course-item [course]="course"/>
+          <app-course-item [course]="course" />
         </div>
       }
     }

@@ -48,6 +48,6 @@ jobs:
           branch: gh-pages
           force: true
           github_token: ${{ secrets.GITHUB_TOKEN }}
-      
+
       - name: Restore
         uses: actions/checkout@v1

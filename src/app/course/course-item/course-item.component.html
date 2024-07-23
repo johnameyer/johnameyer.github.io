@@ -1,16 +1,14 @@
 <div class="card" [class.truncate]="shouldTruncate">
   <div class="card-body">
-    <h5 class="card-title">
-      {{course.subj}} {{course.num}} {{course.name}}
-    </h5>
+    <h5 class="card-title">{{ course.subj }} {{ course.num }} {{ course.name }}</h5>
     @if (course.semester) {
-      <h6 class="card-subtitle mb-2 text-muted">{{course.semester[0]}} {{course.semester[1]}}</h6>
+      <h6 class="card-subtitle mb-2 text-muted">{{ course.semester[0] }} {{ course.semester[1] }}</h6>
     }
     @if (course.desc) {
-      <p #body class="card-text">{{course.desc}}</p>
+      <p #body class="card-text">{{ course.desc }}</p>
     }
     @if (isBodyClamped || course.projects?.length) {
-      <a [routerLink]="[course.subj + course.num]" class="card-link">{{linkText()}}</a>
+      <a [routerLink]="[course.subj + course.num]" class="card-link">{{ linkText() }}</a>
     }
     @if (course.projects?.length) {
       <a [routerLink]="[course.subj + course.num]" class="card-link">See Projects</a>
@@ -18,7 +16,7 @@
   </div>
   @if (course.primaryLang) {
     <div class="card-footer">
-      <app-technology-badge [tech]="course.primaryLang" style="margin-right: 5px"/>
+      <app-technology-badge [tech]="course.primaryLang" style="margin-right: 5px" />
     </div>
   }
 </div>
