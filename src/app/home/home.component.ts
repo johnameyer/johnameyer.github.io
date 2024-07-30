@@ -3,13 +3,14 @@ import { selected } from './home-selected';
 import Masonry from 'masonry-layout';
 import imagesLoaded from 'imagesloaded';
 import { HomeItemComponent } from '../home-item/home-item.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
   standalone: true,
-  imports: [HomeItemComponent],
+  imports: [HomeItemComponent, RouterLink],
 })
 export class HomeComponent implements AfterViewInit, AfterViewChecked, OnDestroy {
   selected = selected;

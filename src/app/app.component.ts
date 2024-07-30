@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router, NavigationEnd, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
-import { faGithub, faYoutube, faChrome, faAws } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faYoutube, faChrome, faAws, faNpm } from '@fortawesome/free-brands-svg-icons';
 import { faAward, faLightbulb, faFlask, faBlog, faRocket } from '@fortawesome/free-solid-svg-icons';
 import { NgbCollapse } from '@ng-bootstrap/ng-bootstrap';
 
@@ -26,6 +26,6 @@ export class AppComponent {
     });
 
     // Add an icon to the library for convenient access in other components
-    iconLibrary.addIcons(faAward, faLightbulb, faFlask, faBlog, faGithub, faYoutube, faChrome, faRocket, faAws);
+    iconLibrary.addIcons(faAward, faLightbulb, faFlask, faBlog, faGithub, faYoutube, faChrome, faRocket, faAws, faNpm);
   }
 }

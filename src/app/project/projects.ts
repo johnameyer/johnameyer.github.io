@@ -124,10 +124,12 @@ calculated reps and other statistics',
       {
         link: 'https://github.com/johnameyer/dunne-hall-website',
         type: 'github',
+        title: 'Github',
       },
       {
         link: 'https://web.archive.org/web/20211201052421/http://dunnehall.com/',
         type: 'chrome',
+        title: 'Former Website',
       },
     ],
     imgs: [
@@ -366,22 +368,37 @@ calculated reps and other statistics',
     awards: [],
     shortDesc:
       'Card/turn-based game framework and card game implementations, currently for command line and web browser. (Extension of Can I Have That)',
-    desc: 'After doing significant work on my Can I Have That card game, realized the potential for moving to a more generic model and implementing many of my other favorite games.',
+    desc: 'After doing significant work on my Can I Have That card game, realized the potential for moving to a more generic model and implementing many of my other favorite games. As such, the library has evolved through a number of iterations from its humble single game origin initially becoming much more verbose but now increasingly allowing for more composition and re-use of constructs.',
     challenge:
-      'My favorite challenge so far has been just generally thinking about genericization of what a card game is as well as figuring out how to lessen the size of the individual games and make them as concise as possible. One particularly fun challenge has been writing the library such that it can support not only the local play mode, but also playing online wherein the environment might not be preserved and the state preserved and restored several times.',
+      'My favorite challenge so far has been just generally thinking about genericization of what a card game is as well as figuring out how to lessen the size of the individual games and make them as concise as possible. One particularly fun challenge has been writing the library such that it can support not only the local play mode, but also playing online wherein the state may be serialized and restored several times and clients may be synchronous or asynchronous.',
     outcomes:
-      'Today, one is able to play several games both locally on the CLI as well as on the CardsTS website. Adding new games is relatively simple.',
+      'Today, one is able to play several games (Euchre, Hearts, War, and Can I Have That) both locally on the CLI as well as on the CardsTS website (still private due to operational concerns) against hand-written bot implementations. Adding new games is becoming increasingly simple.',
     future:
-      'Future plans include making a networked version for command line and desktop as well as continuing to add additional games.',
+      'Future plans include making a networked version for command line and desktop as well as continuing to add additional games and driving down the boilerplate involved in those games.',
     technologies: ['Typescript', 'Inquirer', 'Mocha'],
     links: [
       {
         link: 'https://github.com/johnameyer/cards-ts',
         type: 'github',
+        title: 'Github',
       },
+      // TODO link to web version
     ],
     cardImg: '/assets/card/cards-ts.png',
-    imgs: [{ src: '/assets/screenshots/cards-ts/screenshot.png' }],
+    imgs: [
+      {
+        src: '/assets/screenshots/cards-ts/euchre.png',
+        description: 'Console experience playing Euchre',
+      },
+      {
+        src: '/assets/screenshots/cards-ts/hearts.png',
+        description: 'Console experience playing Hearts',
+      },
+      {
+        src: '/assets/screenshots/cards-ts/can-i-have-that.png',
+        description: 'Console experience playing Can I Have That',
+      },
+    ],
   },
   {
     slug: 'cards-ts-web',
@@ -390,14 +407,21 @@ calculated reps and other statistics',
     endDate: 'Current',
     awards: [],
     shortDesc: 'Online cards playing platform',
-    desc: 'A client/server implementation of the Cards TS games supporting joining lobbies and games (with websocket push) or playing alone.',
+    desc: 'A client/server implementation of the Cards TS games supporting joining lobbies and games (with websocket push) or playing alone (with local storage). Supports all games using the cards-ts framework due to the genericness intrinsic to the framework.',
     challenge:
       'Figuring out various of the race conditions that can occur due to using DynamoDB and with multiple clients (even for the same user) and replicating data to those clients has been a fun but challenging activity.',
     outcomes:
-      'Today, one is able to play every game from Cards TS both locally as well as in a lobby (if allowlisted). Lobby work continues to improve operations and reduce chances of being billed massively.',
+      'Today, one is able to play every game from Cards TS both locally as well as in a lobby (if allowlisted). Lobby work continues to improve operations and reduce chances of being billed massively by bots (API Gateway provides no means to prevent throttling on a websocket API).',
     // future: 'Social elements.',
     technologies: ['Angular', 'Node', 'NX/NRWL', 'AWS CDK'],
-    links: [],
+    links: [
+      {
+        link: 'https://cards-staging.whaleoftime.com',
+        type: 'chrome',
+        title: 'Website',
+      },
+    ],
+    live: true,
     cardImg: '/assets/card/cards-ts-web.png',
     imgs: [
       { src: '/assets/screenshots/cards-ts-web/can-i-have-that.png' },
@@ -414,20 +438,27 @@ calculated reps and other statistics',
       'This project is an engine for generating and analyzing four-part textures (and eventually other forms) in the style of Bach and the classical era. Currently, it allows one to pass a series of constraints and it will produce the complete texture using the settings provided.',
     desc: 'In the midst of my second music theory class, I again realized how formulaic and rule-based writing music for four-parts is. This inspired me to start working on an engine that could handle the basic music theory concepts but also generate valid four part textures given any number of constraints (like those given in a homework assignment). Since Typescript has been my current language of choice and I know I wanted to make a web interface for it that language was a natural choice.',
     challenge:
-      "In this project I've tried to take a different approach to development from the lessons I learned over the last two semesters at college. My main goals were to try to use a new development flow making use of testing and Github Actions, project management through Github as well, and avoiding my usual tendency to over-engineer. These have not been the easiest for me but it has been good learning.",
+      "In this project I've tried to take a different approach to development from the lessons I learned over the last two semesters at college. My main goals were to try to use a new development flow making use of testing and Github Actions, project management through Github as well, and avoiding my usual tendency to over-engineer. These have not been the easiest for me but it has been good learning. Particularly I have been appreciative of the changesets library which allows me to easily version and release my packages.",
     outcomes:
-      'Currently I am able to run the application through a web demo, which given a sequence of chords and key will try to generate a valid harmonization. The core library has a support for 90% of the content in the Music Theory I course, and I hope to continue expanding into the future.',
+      'Currently I am able to run the application through a web demo, which given a number of constraints (e.g. sequence of chords or harmony line) and key will try to generate a valid four part progression. The core library has a support for 90% of the content in the Music Theory I course and a good bit of chromatic elements as well, and I hope to continue expanding into the future.',
     future:
-      'For the 1.0 release, I hope to be able to support all of Music Theory II concepts as well and I have already broken these up into stories and issues on Github.',
+      'For the 1.0 release, I hope to be able to support all of Music Theory II concepts as well and I have already broken these up into stories and issues on Github. With 2.0 (whenever that comes around) I hope to start looking into supporting rhythmic figuration like non-harmonic tones. Ideally at that point, the library will be able to take in some sample (midi / musicxml) and be able to fully analyze it as well/',
     technologies: ['Typescript', 'Tone.JS', 'Vexflow'],
     links: [
       {
         link: 'https://github.com/johnameyer/harmony-ts',
         type: 'github',
+        title: 'Github repo',
       },
       {
         link: 'http://johnameyer.github.io/harmony-ts-demo',
         type: 'chrome',
+        title: 'Live demo website',
+      },
+      {
+        link: 'https://www.npmjs.com/package/harmony-ts',
+        type: 'npm',
+        title: 'NPM package',
       },
     ],
     cardImg: '/assets/card/harmony-ts.png',

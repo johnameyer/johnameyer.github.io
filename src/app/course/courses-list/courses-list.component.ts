@@ -55,7 +55,7 @@ export class CoursesListComponent implements OnInit, AfterViewChecked, OnDestroy
   ordering: BehaviorSubject<(a: Course, b: Course) => any> = new BehaviorSubject(
     (a: Course, b: Course) => -dateOrdering(a, b),
   );
-  hasProjects = new UntypedFormControl(false);
+  hasProjects = new UntypedFormControl(true);
 
   constructor(private changeDetector: ChangeDetectorRef) {}
 

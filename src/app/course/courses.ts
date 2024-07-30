@@ -534,11 +534,19 @@ to register.',
         shortDesc:
           'The hope of the WebTerminal project was to create a terminal like Jupyter that could be opened in the browser and be easier to use for new programmers.',
         desc: 'The WebTerminal project, done in the context of our open source projects course, was meant to be a larger project created with the intent to potentially allow external developers also come in and develop, and thus the project was more than the code at face value would suggest. The idea of the project was to create an application that can be opened in the web browser like Jupyter but instead is based on the terminal programmers use. The user installs and starts the Python client which links them to the browser side and gives them a unique code so that they can then enter commands.',
+        challenge:
+          'My favorite challenge was fixing up the server to properly handle requests asynchronously while running the command to avoid freezing up while waiting for a long-running command to finish and allowing the user to even cancel running commands.',
         technologies: ['Typescript', 'Python', 'Angular', 'Websockets'],
         links: [
           {
             link: 'https://github.com/danielle-galvao/web-terminal',
             type: 'github',
+            title: 'Github',
+          },
+          {
+            link: 'https://danielle-galvao.github.io/web-terminal/',
+            type: 'chrome',
+            title: 'Project website',
           },
         ],
         imgs: [
@@ -566,7 +574,7 @@ prizes and awards.",
           "An dating application for the discerning Notre Dame, Holy Cross, or Saint Mary's student providing a more laid-back environment than mainline dating apps.",
         desc: "In the course we were meant to choose between the topics of restaurants and dating for the app we were making. We thought that creating a dating app tailored for the Notre Dame community would be a novel idea, but would allow us to get some experience with a level of complexity that doesn't normally come up in normal projects.",
         challenge:
-          "The greatest challenge for the two of us was, since we decided to push ourselves and use popular technologies we hadn't worked with yet, getting all the pieces to mesh together and dealing with the various issues that came up we hadn't experienced before.",
+          "Since we decided to push ourselves and use popular technologies we hadn't ever used, the greatest challenge for the two of us was getting all the pieces to mesh together and dealing with the various issues that arose due to the environment. Likely if we were able to use Docker containers we would have had an easier time but we were constrained to use plain Linux / EC2 which made having control difficult.",
         technologies: ['SQL', 'OracleDB', 'Vue', 'Node', 'Express', 'Javascript', 'GraphQL', 'Websockets'],
         links: [
           {
