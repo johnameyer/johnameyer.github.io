@@ -2,6 +2,24 @@ import { StandaloneProject } from '../models/standalone-project';
 
 export const projects: StandaloneProject[] = [
   {
+    slug: 'johnmeyer-dev',
+    awards: [],
+    startDate: '2019',
+    endDate: 'Current',
+    title: 'johnmeyer.dev',
+    shortDesc: 'Portfolio written in Angular',
+    desc: 'Portfolio written in Angular that self-publishes through a Github Action.',
+    technologies: ['Angular', 'Bootstrap'],
+    links: [
+      {
+        link: 'https://github.com/johnameyer/johnameyer.github.io',
+        type: 'github',
+        title: 'Github',
+      },
+    ],
+    live: true,
+  },
+  {
     slug: 'raise-the-bar',
     title: 'Team Raise the Bar',
     cardImg: 'https://developer.att.com/wp-content/uploads/2016/12/hack-finalist-raise-the-bar-sm.png',

@@ -13,7 +13,23 @@ export const industryPositions: IndustryPosition[] = [
     technologies: ['Java', 'Kotlin', 'Gradle', 'AWS'],
     startDate: 'Oct 2021',
     endDate: 'Current',
+    // TODO sub-project features
+    // separate technical and other details?
+    // Identified and implemented strategies to reduce the duration of building (by 56%), testing (by 41%), and deploying (by 56%) for several packages saving a couple of dev-months of time.
+    // Built an internal tool in React to allow for quick previewing of how notifications would look across all three platforms (Slack, Teams, Chime) allowing for developers, designers, and product managers to speak a common language and understand the platform capabilities generic across all three - avoiding rework and speeding mockup development.
+    // Developed a prototype of a feature (hackathon) to render a service map diagram as an image using tuned d3 force-directed graph layout (e.g. through custom forces to arrange clusters separately and prefer downward arrow direction). Explored mermaid and graphviz but found they produced poor overall placement of nodes (i.e. crossing lines). Used Docker to build native dependencies for PNG generation to be rendered in Slack.
+    // Built a procedure to recover customer data in case of loss and built a script to reduce error points.
+    // Encouraged adoption of new tooling to reduce build speed and avoid errors (i.e. Kotlin: avoids NullPointerExceptions and reduces verbosity, CDK: allows for build-time validation, Smithy: <>)
+    // Creates automated scripts to migrate packages off ANT to Gradle, upgrade to Java 17, and restore deleted customer data.
+    // Cleaned backlog by closing out duplicate and irrelevant issues (1400 items to 900) and increased the quality of items using links and creating clear acceptance criteria.
+    // Reduced operational noise due to downstream client exceptions
+    // Allowed for away-team management of code
+    // Documented paths forward for shelved projects
+    // Decreased flakiness of tests creating operational load
+    // Mentored interns
+
     projects: [
+      // SDKv2
       {
         title: 'Microsoft Teams',
         launchDate: 'Q1 2023',
