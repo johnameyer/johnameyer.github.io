@@ -1,0 +1,55 @@
+name: build
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [22.x]
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: 'true'
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9.0.1
+          run_install: true
+
+      - name: Node ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install Dependencies
+        run: pnpm i
+
+      - name: Build
+        run: pnpm ng build --configuration production --base-href 'https://johnmeyer.dev'
+
+      - name: Commit Files
+        run: |
+          git checkout --orphan gh-pages
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          find * -maxdepth 0 ! -name 'dist' -exec rm -r {} \;
+          mv dist/browser/* ./
+          cp index.html 404.html
+          echo "johnmeyer.dev" > CNAME
+          touch .nojekyll
+          git add -A
+          git commit -m "Update build" --no-verify
+      - name: Push Changes
+        uses: ad-m/github-push-action@master
+        with:
+          branch: gh-pages
+          force: true
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Restore
+        uses: actions/checkout@v4
